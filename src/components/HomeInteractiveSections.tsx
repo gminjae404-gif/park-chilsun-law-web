@@ -11,6 +11,9 @@ type HomeInteractiveSectionsProps = {
   // page.tsx(Server Component)에서 그대로 전달받아 렌더링 순서만
   // 유지하며, 이 컴포넌트의 state와는 무관합니다.
   children: ReactNode;
+  // page.tsx(Server Component)에서 계산한 값을 ConsultationCTA까지 그대로
+  // 전달만 합니다.
+  emailConfigured: boolean;
 };
 
 type QueryInquiryPrefillProps = {
@@ -43,7 +46,7 @@ function QueryInquiryPrefill({ onDetected }: QueryInquiryPrefillProps) {
 // 신청 폼의 초기값으로 반영하는 state만 관리하는 클라이언트 경계입니다.
 // 상담 신청 개인정보는 이 state에 담기지 않으며, localStorage/
 // sessionStorage도 사용하지 않습니다.
-export default function HomeInteractiveSections({ children }: HomeInteractiveSectionsProps) {
+export default function HomeInteractiveSections({ children, emailConfigured }: HomeInteractiveSectionsProps) {
   const [prefillInquiryType, setPrefillInquiryType] = useState<InquiryType | null>(null);
 
   const handleQueryInquiryDetected = useCallback((type: InquiryType) => {
@@ -57,7 +60,7 @@ export default function HomeInteractiveSections({ children }: HomeInteractiveSec
       </Suspense>
       {children}
       <Reveal>
-        <ConsultationCTA prefillInquiryType={prefillInquiryType} />
+        <ConsultationCTA prefillInquiryType={prefillInquiryType} emailConfigured={emailConfigured} />
       </Reveal>
     </>
   );
