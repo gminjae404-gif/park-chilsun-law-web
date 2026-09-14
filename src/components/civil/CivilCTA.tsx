@@ -16,7 +16,7 @@ export default function CivilCTA() {
         </p>
         <div className="mt-8 flex justify-center">
           <Link
-            href="/?inquiry=civil-enforcement#consultation"
+            href="/?inquiry=civil#consultation"
             className="inline-flex items-center justify-center rounded-sm bg-white px-6 py-3 text-sm font-semibold text-brand transition-colors hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand active:bg-slate-100"
           >
             {CIVIL_CTA.buttonLabel}

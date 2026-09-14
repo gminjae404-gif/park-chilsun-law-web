@@ -41,7 +41,7 @@ export default function LeaseHero() {
           <p className="mt-4 max-w-xl text-sm leading-6 text-gray-500">{LEASE_HERO.note}</p>
           <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Link
-              href="/?inquiry=civil-enforcement#consultation"
+              href="/?inquiry=civil#consultation"
               className="inline-flex items-center justify-center rounded-sm bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 active:bg-brand-dark"
             >
               상담 신청

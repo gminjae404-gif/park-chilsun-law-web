@@ -1,35 +1,24 @@
-import { PROCESS_STEPS, type ProcessStep } from "@/lib/constants";
+import type { ProcessStep } from "@/lib/constants";
 
 type ProcessSectionProps = {
-  // detailed(기본값): 제목+설명 전체 표시 — 개인회생 상세 페이지.
-  // compact: 번호+제목만 표시하고 설명은 숨김 — 홈페이지(recovery 모드).
-  // timeline: 카드 그리드 대신 번호+얇은 연결선 기반 세로 타임라인으로
-  //   표시 — 개인파산 상세 페이지 전용. compact를 재사용하지 않고 별도
-  //   값으로 둔 이유는, compact가 recovery 모드 홈페이지에서도 이미
-  //   사용 중이라 그 자리에서 시각적으로 바뀌면 안 되기 때문입니다.
-  //   box-density-audit(카드/박스 밀도 1차 감사)에서 detailed·compact가
-  //   공유하는 카드 그리드에만 남아 있던 hover elevation(translate/
-  //   border/shadow)과 그 전환에만 쓰이던 transition을 제거했습니다 —
-  //   BankruptcyDischargeReview·RequiredDocuments 등에 이미 적용된
-  //   "카드는 유지하되 hover elevation만 제거" 원칙에 맞춘 것으로, 그
-  //   외 DOM 구조·배경·간격·타이포그래피·데이터는 전혀 건드리지
-  //   않았습니다.
+  // detailed(기본값): 제목+설명 전체 표시.
+  // compact: 번호+제목만 표시하고 설명은 숨김.
+  // timeline: 카드 그리드 대신 번호+얇은 연결선 기반 세로 타임라인으로 표시.
   variant?: "compact" | "detailed" | "timeline";
-  // 아래 3개는 다른 페이지(예: 개인파산)에서 이 컴포넌트를 재사용하기 위한
-  // 선택적 props입니다. 아무것도 전달하지 않으면 기존과 동일하게
-  // PROCESS_STEPS + "개인회생 진행 절차" + 설명 없음으로 렌더링됩니다.
-  steps?: ProcessStep[];
-  heading?: string;
+  // 이 사이트의 모든 업무 상세 페이지는 각자의 확정된 진행 절차 데이터를
+  // steps/heading으로 명시적으로 전달합니다(공용 기본값을 두지 않습니다).
+  steps: ProcessStep[];
+  heading: string;
   description?: string;
 };
 
 export default function ProcessSection({
   variant = "detailed",
   steps,
-  heading = "개인회생 진행 절차",
+  heading,
   description,
 }: ProcessSectionProps) {
-  const items = steps ?? PROCESS_STEPS;
+  const items = steps;
 
   return (
     <section id="process" className="scroll-mt-20 border-b border-gray-200 bg-slate-50">

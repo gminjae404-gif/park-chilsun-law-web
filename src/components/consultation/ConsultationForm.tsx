@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import PrivacyConsent from "./PrivacyConsent";
-import ChoiceGroup from "@/components/self-check/ChoiceGroup";
+import ChoiceGroup from "@/components/consultation/ChoiceGroup";
 import { formatPhoneInput, parsePhoneInput } from "@/lib/format";
 import {
   INITIAL_CONSULTATION_FORM_DATA,

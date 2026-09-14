@@ -16,7 +16,7 @@ type ChoiceGroupProps<T extends string> = {
 };
 
 // 라디오 버튼을 선택형 버튼 그룹처럼 보여주는 공통 컴포넌트입니다.
-// 여러 단계에서 반복되는 "있음/없음", "직업 형태" 등 선택형 질문에 재사용합니다.
+// 상담 신청 폼의 "상담 희망 시간"·"문의 유형" 선택에 사용합니다.
 export default function ChoiceGroup<T extends string>({
   legend,
   name,
