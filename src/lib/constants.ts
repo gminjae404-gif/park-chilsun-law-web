@@ -6,6 +6,12 @@ export type SiteConfig = {
   judicialScrivenerName: string | null;
   representativePhone: string | null;
   faxNumber: string | null;
+  // 연락처에 표시하는 공개 이메일 주소입니다(mailto: 링크로 연결). 상담
+  // 신청 폼의 서버측 수신 이메일(CONSULTATION_RECEIVER_EMAIL 환경변수,
+  // src/lib/consultation-email.ts)과는 별개입니다 — 그 값은 SMTP 발송
+  // 설정이 끝난 뒤에만 쓰이는 서버 전용 값이고, 이 값은 지금 바로 화면에
+  // 노출되는 공개 연락처입니다.
+  contactEmail: string | null;
   address: string | null;
   businessRegistrationNumber: string | null;
   // 확정되지 않았으면 null로 두어 Footer 등 화면에서 해당 항목 자체를
@@ -30,6 +36,7 @@ export const SITE_CONFIG: SiteConfig = {
   judicialScrivenerName: "박칠선",
   representativePhone: "043-423-6700",
   faxNumber: "043-423-6701",
+  contactEmail: "ps7345@naver.com",
   address: "충청북도 단양군 단양읍 별곡1로 16",
   businessRegistrationNumber: "376-34-00159",
   businessDays: null,

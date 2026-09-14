@@ -54,6 +54,19 @@ export default function DirectionsSection() {
                   <dd>{SITE_CONFIG.faxNumber}</dd>
                 </div>
               )}
+              {SITE_CONFIG.contactEmail && (
+                <div className="flex gap-2">
+                  <dt className="flex-shrink-0 font-medium text-gray-900">이메일</dt>
+                  <dd>
+                    <a
+                      href={`mailto:${SITE_CONFIG.contactEmail}`}
+                      className="underline-offset-4 transition-colors hover:text-brand hover:underline"
+                    >
+                      {SITE_CONFIG.contactEmail}
+                    </a>
+                  </dd>
+                </div>
+              )}
             </dl>
 
             <div className="mt-6 flex flex-wrap gap-3">
