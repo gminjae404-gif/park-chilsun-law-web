@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: #1e3a5f;
+  --color-brand-dark: #14283f;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 절제된 scroll reveal 효과(Reveal 컴포넌트에서 사용).
+   prefers-reduced-motion: no-preference 안에서만 숨김 상태를 적용하므로,
+   모션 최소화를 선호하는 환경에서는 이 클래스가 붙어 있어도 항상 즉시
+   보이는 상태(opacity:1, transform:none)를 유지합니다. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 인쇄 시에는 스크롤 여부와 무관하게 Reveal로 감싼 콘텐츠가 항상 보이도록
+   강제합니다. 페이지를 전혀 스크롤하지 않은 상태에서 브라우저 Ctrl+P나
+   window.print()를 바로 실행하면, 아직 IntersectionObserver로 뷰포트에
+   들어온 적이 없는 .reveal 요소는 opacity:0·translateY(12px)인 채로
+   남아 있어 인쇄 결과에서 해당 콘텐츠가 통째로 비어 보일 수 있었습니다.
+   이 규칙은 위 prefers-reduced-motion 규칙과 동일한 selector·동일한
+   specificity(.reveal)를 가지므로, 소스 순서만으로는 이후 이 파일이
+   수정될 때 쉽게 깨질 수 있어 !important로 명시적으로 항상 이기도록
+   했습니다. .reveal을 사용하는 페이지 전체에 공통 적용되지만 인쇄가
+   아닌 화면(@media screen)의 등장 애니메이션이나
+   prefers-reduced-motion 동작에는 전혀 영향이 없습니다(reduced-motion
+   환경에서는 애초에 .reveal에 opacity:0 자체가 적용되지 않으므로 이
+   규칙은 아무 효과가 없는 안전한 no-op입니다). */
+@media print {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
