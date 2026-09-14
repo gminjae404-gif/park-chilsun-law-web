@@ -1,20 +1,18 @@
 import Link from "next/link";
-import { FAQ_ITEMS, type FaqItem } from "@/lib/constants";
+import type { FaqItem } from "@/lib/constants";
 
 type FAQPreviewProps = {
-  // 아래는 모두 다른 페이지(예: 개인파산)에서 이 컴포넌트를 재사용하기 위한
-  // 선택적 props입니다. 아무것도 전달하지 않으면 기존과 동일하게 FAQ_ITEMS +
-  // "자주 묻는 질문" + 설명 없음 + id 없음 + 전체보기 링크 없음으로 렌더링됩니다.
-  items?: FaqItem[];
+  // 이 사이트의 모든 페이지는 각자의 확정된 FAQ 데이터를 items로 명시적으로
+  // 전달합니다(공용 기본값을 두지 않습니다).
+  items: FaqItem[];
   heading?: string;
   description?: string;
   id?: string;
-  // 지정하지 않으면 items(또는 FAQ_ITEMS) 전체를 표시합니다(개인회생 상세 페이지).
-  // 지정하면 앞에서부터 그 개수만큼만 표시합니다(홈페이지).
+  // 지정하지 않으면 items 전체를 표시합니다(업무 상세 페이지).
+  // 지정하면 앞에서부터 그 개수만큼만 표시합니다(홈페이지 등).
   // 문항 자체의 질문·답변·순서는 이 컴포넌트에서 변경하지 않습니다.
   limit?: number;
-  // 지정하면 목록 아래에 "전체보기" 링크를 추가로 표시합니다(홈페이지에서
-  // 개인회생 상세 페이지의 FAQ 전체 목록으로 안내할 때 사용). 지정하지
+  // 지정하면 목록 아래에 "전체보기" 링크를 추가로 표시합니다. 지정하지
   // 않으면 렌더링하지 않습니다.
   viewAllHref?: string;
   viewAllLabel?: string;
@@ -29,8 +27,7 @@ export default function FAQPreview({
   viewAllHref,
   viewAllLabel = "자주 묻는 질문 전체보기",
 }: FAQPreviewProps) {
-  const source = items ?? FAQ_ITEMS;
-  const visibleItems = typeof limit === "number" ? source.slice(0, limit) : source;
+  const visibleItems = typeof limit === "number" ? items.slice(0, limit) : items;
 
   return (
     <section id={id} className="scroll-mt-20 border-b border-gray-200 bg-slate-50">

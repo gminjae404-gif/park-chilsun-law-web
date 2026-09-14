@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
-// 사무소명·담당 법무사·대표전화·주소·사업자등록번호는 실제 사무소 정보가
-// 확정되기 전까지 SITE_CONFIG에 DEMO 예시값이 채워져 있습니다(카카오톡
-// 채널만 아직 null). 값이 없는 항목은 화면에 표시하지 않고, 실제 사무소에
-// 적용할 때 SITE_CONFIG 값만 채우면 자동으로 노출됩니다. isDemo=true인
-// 동안에는 대표전화·사업자등록번호 뒤에 "(예시)"가 함께 표시되어 예시
-// 정보임을 분명히 하고, isDemo=false가 되면 "(예시)" 표기는 사라집니다.
+// 사무소명·담당 법무사·대표전화·팩스·주소·사업자등록번호는 이 사이트가
+// 적용된 사무소의 실제 정보입니다. 값이 없는 항목(예: 아직 확정되지 않은
+// 영업시간, 개설되지 않은 카카오톡 채널)은 화면에 표시하지 않습니다.
+// isPreviewSite는 "정보가 예시"라는 의미가 아니라 "상담 신청이 아직 실제로
+// 접수되지 않는다"는 의미만 담당하므로, 위 사무소 정보에는 영향을 주지
+// 않습니다(예시 표기를 붙이지 않습니다).
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white">
@@ -28,9 +28,19 @@ export default function Footer() {
             <div className="flex gap-2">
               <dt className="flex-shrink-0 font-medium text-gray-700">대표전화</dt>
               <dd>
-                {SITE_CONFIG.representativePhone}
-                {SITE_CONFIG.isDemo && " (예시)"}
+                <a
+                  href={`tel:${SITE_CONFIG.representativePhone.replace(/-/g, "")}`}
+                  className="underline-offset-4 transition-colors hover:text-brand hover:underline"
+                >
+                  {SITE_CONFIG.representativePhone}
+                </a>
               </dd>
+            </div>
+          )}
+          {SITE_CONFIG.faxNumber && (
+            <div className="flex gap-2">
+              <dt className="flex-shrink-0 font-medium text-gray-700">팩스</dt>
+              <dd>{SITE_CONFIG.faxNumber}</dd>
             </div>
           )}
           {SITE_CONFIG.address && (
@@ -42,20 +52,18 @@ export default function Footer() {
           {SITE_CONFIG.businessRegistrationNumber && (
             <div className="flex gap-2">
               <dt className="flex-shrink-0 font-medium text-gray-700">사업자등록번호</dt>
+              <dd>{SITE_CONFIG.businessRegistrationNumber}</dd>
+            </div>
+          )}
+          {SITE_CONFIG.businessDays && SITE_CONFIG.businessHours && (
+            <div className="flex gap-2">
+              <dt className="flex-shrink-0 font-medium text-gray-700">운영시간</dt>
               <dd>
-                {SITE_CONFIG.businessRegistrationNumber}
-                {SITE_CONFIG.isDemo && " (예시)"}
+                {SITE_CONFIG.businessDays} {SITE_CONFIG.businessHours}
+                {SITE_CONFIG.closedDays && ` · ${SITE_CONFIG.closedDays}`}
               </dd>
             </div>
           )}
-          <div className="flex gap-2">
-            <dt className="flex-shrink-0 font-medium text-gray-700">
-              운영시간{SITE_CONFIG.isDemo && "(샘플)"}
-            </dt>
-            <dd>
-              {SITE_CONFIG.businessDays} {SITE_CONFIG.businessHours} · {SITE_CONFIG.closedDays}
-            </dd>
-          </div>
           {SITE_CONFIG.kakaoChannelUrl && (
             <div className="flex gap-2">
               <dt className="flex-shrink-0 font-medium text-gray-700">카카오톡 상담</dt>
@@ -72,15 +80,11 @@ export default function Footer() {
         </dl>
 
         <div className="mt-8 flex flex-col gap-4 border-t border-gray-200 pt-6 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
-          {SITE_CONFIG.isDemo ? (
+          {SITE_CONFIG.isPreviewSite && (
             <p>
-              본 사이트는 법무사사무소 홈페이지 제안용 샘플입니다. 위 사무소명·대표전화·주소·
-              사업자등록번호는 화면 구성 확인용 예시 정보이며 실제 사무소 정보가 아니고,
-              운영시간도 화면 구성 확인용 샘플 값입니다. 실제 적용 시 해당 사무소의 정보로
-              교체됩니다.
+              본 사이트는 검토용 샘플 페이지입니다. 온라인 상담 신청 기능은 아직 실제로 연결되어
+              있지 않습니다.
             </p>
-          ) : (
-            <p>상호명은 확정 전 임시 명칭이며, 그 외 사무소 정보는 확정 후 순차적으로 업데이트될 예정입니다.</p>
           )}
           <Link
             href="/privacy-policy"

@@ -11,30 +11,26 @@ export const PREFERRED_TIME_OPTIONS: { value: PreferredTime; label: string }[] =
   { value: "any", label: "시간 무관" },
 ];
 
-// full 모드의 6개 업무영역(법률정보 제외 — 법률정보는 상담 업무분야가
-// 아니므로 문의 유형에 포함하지 않습니다)을 반영합니다. 새로 추가한 4개
-// value는 HEADER_NAV_CATEGORIES(constants.ts)에서 이미 쓰고 있는 카테고리
-// id("civil-enforcement"/"family"/"real-estate-registration"/
-// "corporate-registration")를 그대로 재사용해 프로젝트 전체의 명명
-// 규칙과 맞췄습니다. 기존 "recovery"/"bankruptcy"/"other"는 자가진단
-// prefill 등 기존 코드와의 호환을 위해 값을 바꾸지 않았습니다.
+// 박칠선 법무사사무소가 실제로 다루는 5개 업무영역입니다(법률정보는
+// 상담 업무분야가 아니므로 포함하지 않습니다). 개인회생·개인파산은 이
+// 사무소의 취급 업무가 아니므로 문의 유형에서 제외합니다. value는
+// HEADER_NAV_CATEGORIES/SERVICE_CATEGORIES(constants.ts)와 동일한 규칙의
+// id를 사용합니다. 기존에 하나로 묶여 있던 "민사·집행"은 민사소송/
+// 강제집행을 별도 문의 유형으로 구분해 달라는 요청에 따라 "civil"/
+// "enforcement"로 분리했습니다.
 export type InquiryType =
-  | "recovery"
-  | "bankruptcy"
-  | "civil-enforcement"
-  | "family"
   | "real-estate-registration"
   | "corporate-registration"
-  | "other";
+  | "civil"
+  | "enforcement"
+  | "family";
 
 export const INQUIRY_TYPE_OPTIONS: { value: InquiryType; label: string }[] = [
-  { value: "recovery", label: "개인회생" },
-  { value: "bankruptcy", label: "개인파산" },
-  { value: "civil-enforcement", label: "민사·집행" },
-  { value: "family", label: "가사·상속" },
   { value: "real-estate-registration", label: "부동산등기" },
   { value: "corporate-registration", label: "법인등기" },
-  { value: "other", label: "기타" },
+  { value: "civil", label: "민사" },
+  { value: "enforcement", label: "강제집행" },
+  { value: "family", label: "가사·상속" },
 ];
 
 const INQUIRY_TYPE_VALUES = new Set<string>(INQUIRY_TYPE_OPTIONS.map((option) => option.value));

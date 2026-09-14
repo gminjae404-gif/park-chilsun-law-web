@@ -6,14 +6,10 @@ import { useEffect, useRef, useState } from "react";
 import {
   HEADER_BRAND_NAME,
   HEADER_NAV_CATEGORIES,
-  NAV_ITEMS,
   SITE_CONFIG,
-  SITE_MODE,
   type HeaderNavCategory,
 } from "@/lib/constants";
 
-// recovery/full 두 모드에서 공통으로 쓰는 nav 링크 스타일입니다. 기존 로직과
-// 동일한 결과를 내도록 그대로 함수로 옮긴 것뿐이며 동작을 바꾸지 않습니다.
 function navLinkClassName(isActive: boolean) {
   return `rounded-sm text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${
     isActive ? "font-semibold text-brand" : "font-medium text-gray-700 hover:text-brand"
@@ -36,9 +32,7 @@ function pathMatches(href: string, pathname: string): boolean {
 // 대분류 카테고리가 활성 상태인지 판정합니다. 하위 상세 페이지(예:
 // /family/inheritance)를 방문 중이어도 상위 대분류(가사·상속)가 active로
 // 표시되어야 하므로 카테고리 자신의 href뿐 아니라 items의 각 href도 함께
-// 확인합니다. pathMatches가 경로 경계를 지키므로, 예를 들어 향후
-// /legal-info 아래에 하위 route가 추가되어도 카테고리 목록을 따로 늘릴
-// 필요 없이 "법률정보"가 자연스럽게 active가 됩니다.
+// 확인합니다.
 function isCategoryActive(category: HeaderNavCategory, pathname: string): boolean {
   if (category.href && pathMatches(category.href, pathname)) return true;
   return category.items?.some((item) => pathMatches(item.href, pathname)) ?? false;
@@ -49,15 +43,10 @@ export default function Header() {
   const [openCategoryId, setOpenCategoryId] = useState<string | null>(null);
   const navRef = useRef<HTMLUListElement>(null);
   const pathname = usePathname();
-  const isFull = SITE_MODE === "full";
 
-  // 데스크톱 대분류 dropdown(개인회생·파산/민사·집행/가사·상속): 바깥 클릭
-  // 또는 Esc로 닫습니다. 한 번에 하나만 열리므로(openCategoryId 하나로 전체
-  // 제어) nav 전체를 감싸는 ref 하나로 바깥 클릭을 판정하는 것으로
-  // 충분합니다 — 다른 카테고리 버튼을 클릭하면 그 자체 onClick이
-  // openCategoryId를 바꾸므로 별도 처리가 필요 없습니다. (모바일
-  // 아코디언은 <details>의 기본 동작을 그대로 사용하므로 별도 처리가
-  // 필요 없습니다.)
+  // 데스크톱 대분류 dropdown(민사·집행/가사·상속): 바깥 클릭 또는 Esc로
+  // 닫습니다. 한 번에 하나만 열리므로(openCategoryId 하나로 전체 제어)
+  // nav 전체를 감싸는 ref 하나로 바깥 클릭을 판정하는 것으로 충분합니다.
   useEffect(() => {
     if (!openCategoryId) return;
     function handleClick(event: MouseEvent) {
@@ -78,12 +67,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
-      {/* 이 사이트가 특정 사무소의 실제 운영 사이트가 아니라 제안용 샘플임을
-          과도하게 눈에 띄지 않는 선에서 항상 보이도록 안내합니다. */}
-      {SITE_CONFIG.isDemo && (
+      {/* 이 사이트가 아직 실제로 상담을 접수하는 운영 사이트가 아니라
+          검토용 샘플 화면임을 과도하게 눈에 띄지 않는 선에서 항상 보이도록
+          안내합니다. */}
+      {SITE_CONFIG.isPreviewSite && (
         <p className="border-b border-gray-200 bg-slate-100 px-4 py-1.5 text-center text-xs text-gray-500 sm:px-6 lg:px-8">
-          본 사이트는 법무사사무소 홈페이지 제안용 샘플입니다. 실제 운영 시 사무소 정보와 상담
-          연결 정보가 적용됩니다.
+          본 사이트는 검토용 샘플 페이지입니다. 상담 신청 내용은 아직 실제로 접수되지 않습니다.
         </p>
       )}
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -95,113 +84,82 @@ export default function Header() {
           {HEADER_BRAND_NAME}
         </Link>
 
-        {/* 데스크톱 메뉴. full 모드는 6개 대분류 + 상담신청이 한 줄에 들어와야
-            하므로 md(768px)가 아니라 lg(1024px)부터 전환합니다. recovery
-            모드는 기존 5개 항목이 768px에서도 문제없으므로 md를 그대로
-            유지합니다(모드별로 breakpoint 자체가 다름 — 아래 햄버거
-            버튼·모바일 패널도 동일하게 분기). */}
-        <nav aria-label="주 메뉴" className={isFull ? "hidden lg:block" : "hidden md:block"}>
-          {isFull ? (
-            <ul ref={navRef} className="flex items-center gap-4 lg:gap-6">
-              {HEADER_NAV_CATEGORIES.map((category) => {
-                const active = isCategoryActive(category, pathname);
+        {/* 데스크톱 메뉴: 부동산등기/법인등기/민사·집행/가사·상속/상담신청
+            5개가 한 줄에 들어오므로 md(768px)부터 전환합니다. */}
+        <nav aria-label="주 메뉴" className="hidden md:block">
+          <ul ref={navRef} className="flex items-center gap-4 lg:gap-6">
+            {HEADER_NAV_CATEGORIES.map((category) => {
+              const active = isCategoryActive(category, pathname);
 
-                if (category.items) {
-                  const isOpen = openCategoryId === category.id;
-                  return (
-                    <li key={category.id} className="relative">
-                      <button
-                        type="button"
-                        aria-haspopup="true"
-                        aria-expanded={isOpen}
-                        aria-controls={`nav-dropdown-${category.id}`}
-                        onClick={() =>
-                          setOpenCategoryId((prev) => (prev === category.id ? null : category.id))
-                        }
-                        className={`flex items-center gap-1 ${navLinkClassName(active)}`}
-                      >
-                        {category.label}
-                        <svg
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                          className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
-                        </svg>
-                      </button>
-                      {isOpen && (
-                        <ul
-                          id={`nav-dropdown-${category.id}`}
-                          role="menu"
-                          className="absolute left-0 top-full z-50 mt-2 w-52 rounded-xl border border-gray-100 bg-white p-2 shadow-lg shadow-gray-900/5"
-                        >
-                          {category.items.map((item) => (
-                            <li key={item.href} role="none">
-                              <Link
-                                role="menuitem"
-                                href={item.href}
-                                aria-current={pathMatches(item.href, pathname) ? "page" : undefined}
-                                onClick={() => setOpenCategoryId(null)}
-                                className="block rounded-lg px-3 py-2.5 text-sm text-gray-700 transition-colors hover:bg-slate-50 hover:text-brand focus:outline-none focus-visible:bg-slate-50 focus-visible:text-brand"
-                              >
-                                {item.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  );
-                }
-
+              if (category.items) {
+                const isOpen = openCategoryId === category.id;
                 return (
-                  <li key={category.id}>
-                    <Link
-                      href={category.href ?? "#"}
-                      aria-current={active ? "page" : undefined}
-                      className={navLinkClassName(active)}
+                  <li key={category.id} className="relative">
+                    <button
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded={isOpen}
+                      aria-controls={`nav-dropdown-${category.id}`}
+                      onClick={() =>
+                        setOpenCategoryId((prev) => (prev === category.id ? null : category.id))
+                      }
+                      className={`flex items-center gap-1 ${navLinkClassName(active)}`}
                     >
                       {category.label}
-                    </Link>
+                      <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+                      </svg>
+                    </button>
+                    {isOpen && (
+                      <ul
+                        id={`nav-dropdown-${category.id}`}
+                        role="menu"
+                        className="absolute left-0 top-full z-50 mt-2 w-52 rounded-xl border border-gray-100 bg-white p-2 shadow-lg shadow-gray-900/5"
+                      >
+                        {category.items.map((item) => (
+                          <li key={item.href} role="none">
+                            <Link
+                              role="menuitem"
+                              href={item.href}
+                              aria-current={pathMatches(item.href, pathname) ? "page" : undefined}
+                              onClick={() => setOpenCategoryId(null)}
+                              className="block rounded-lg px-3 py-2.5 text-sm text-gray-700 transition-colors hover:bg-slate-50 hover:text-brand focus:outline-none focus-visible:bg-slate-50 focus-visible:text-brand"
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 );
-              })}
-              <li>
-                <Link href="/#consultation" className={navLinkClassName(false)}>
-                  상담신청
-                </Link>
-              </li>
-            </ul>
-          ) : (
-            <ul className="flex items-center gap-8">
-              {NAV_ITEMS.map((item) =>
-                item.disabled ? (
-                  <li key={item.label}>
-                    <span
-                      aria-disabled="true"
-                      className="cursor-not-allowed text-sm font-medium text-gray-400"
-                    >
-                      {item.label}
-                      <span className="ml-1 text-xs">(준비중)</span>
-                    </span>
-                  </li>
-                ) : (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      aria-current={pathname === item.href ? "page" : undefined}
-                      className={navLinkClassName(pathname === item.href)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ),
-              )}
-            </ul>
-          )}
+              }
+
+              return (
+                <li key={category.id}>
+                  <Link
+                    href={category.href ?? "#"}
+                    aria-current={active ? "page" : undefined}
+                    className={navLinkClassName(active)}
+                  >
+                    {category.label}
+                  </Link>
+                </li>
+              );
+            })}
+            <li>
+              <Link href="/#consultation" className={navLinkClassName(false)}>
+                상담신청
+              </Link>
+            </li>
+          </ul>
         </nav>
 
         {/* 모바일 햄버거 버튼 */}
@@ -211,9 +169,7 @@ export default function Header() {
           aria-controls="mobile-menu"
           aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className={`inline-flex h-10 w-10 items-center justify-center rounded-sm text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 ${
-            isFull ? "lg:hidden" : "md:hidden"
-          }`}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-sm text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 md:hidden"
         >
           {isMenuOpen ? (
             <svg
@@ -243,99 +199,69 @@ export default function Header() {
 
       {/* 모바일 메뉴 패널 */}
       {isMenuOpen && (
-        <nav
-          id="mobile-menu"
-          aria-label="모바일 메뉴"
-          className={`border-t border-gray-200 bg-white ${isFull ? "lg:hidden" : "md:hidden"}`}
-        >
+        <nav id="mobile-menu" aria-label="모바일 메뉴" className="border-t border-gray-200 bg-white md:hidden">
           <ul className="flex flex-col px-4 py-2 sm:px-6">
-            {isFull ? (
-              <>
-                {HEADER_NAV_CATEGORIES.map((category) => {
-                  const active = isCategoryActive(category, pathname);
+            {HEADER_NAV_CATEGORIES.map((category) => {
+              const active = isCategoryActive(category, pathname);
 
-                  if (category.items) {
-                    return (
-                      <li key={category.id} className="border-b border-gray-100">
-                        <details className="group">
-                          <summary
-                            className={`flex cursor-pointer list-none items-center justify-between rounded-sm py-3 text-base [&::-webkit-details-marker]:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand ${
-                              active ? "font-semibold text-brand" : "font-medium text-gray-700"
-                            }`}
-                          >
-                            {category.label}
-                            <span
-                              aria-hidden="true"
-                              className="text-lg font-light text-brand transition-transform duration-150 group-open:rotate-45"
-                            >
-                              +
-                            </span>
-                          </summary>
-                          <ul className="flex flex-col gap-1 pb-3 pl-4">
-                            {category.items.map((item) => (
-                              <li key={item.href}>
-                                <Link
-                                  href={item.href}
-                                  onClick={() => setIsMenuOpen(false)}
-                                  aria-current={pathMatches(item.href, pathname) ? "page" : undefined}
-                                  className="block rounded-sm py-2 text-sm text-gray-600 transition-colors hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-                                >
-                                  {item.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </details>
-                      </li>
-                    );
-                  }
-
-                  return (
-                    <li key={category.id} className="border-b border-gray-100">
-                      <Link
-                        href={category.href ?? "#"}
-                        onClick={() => setIsMenuOpen(false)}
-                        aria-current={active ? "page" : undefined}
-                        className={mobileNavLinkClassName(active)}
+              if (category.items) {
+                return (
+                  <li key={category.id} className="border-b border-gray-100">
+                    <details className="group">
+                      <summary
+                        className={`flex cursor-pointer list-none items-center justify-between rounded-sm py-3 text-base [&::-webkit-details-marker]:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand ${
+                          active ? "font-semibold text-brand" : "font-medium text-gray-700"
+                        }`}
                       >
                         {category.label}
-                      </Link>
-                    </li>
-                  );
-                })}
-                <li className="border-b border-gray-100 last:border-b-0">
+                        <span
+                          aria-hidden="true"
+                          className="text-lg font-light text-brand transition-transform duration-150 group-open:rotate-45"
+                        >
+                          +
+                        </span>
+                      </summary>
+                      <ul className="flex flex-col gap-1 pb-3 pl-4">
+                        {category.items.map((item) => (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              aria-current={pathMatches(item.href, pathname) ? "page" : undefined}
+                              className="block rounded-sm py-2 text-sm text-gray-600 transition-colors hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  </li>
+                );
+              }
+
+              return (
+                <li key={category.id} className="border-b border-gray-100">
                   <Link
-                    href="/#consultation"
+                    href={category.href ?? "#"}
                     onClick={() => setIsMenuOpen(false)}
-                    className={mobileNavLinkClassName(false)}
+                    aria-current={active ? "page" : undefined}
+                    className={mobileNavLinkClassName(active)}
                   >
-                    상담신청
+                    {category.label}
                   </Link>
                 </li>
-              </>
-            ) : (
-              NAV_ITEMS.map((item) =>
-                item.disabled ? (
-                  <li key={item.label} className="border-b border-gray-100 last:border-b-0">
-                    <span aria-disabled="true" className="block cursor-not-allowed py-3 text-base font-medium text-gray-400">
-                      {item.label}
-                      <span className="ml-1 text-xs">(준비중)</span>
-                    </span>
-                  </li>
-                ) : (
-                  <li key={item.label} className="border-b border-gray-100 last:border-b-0">
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsMenuOpen(false)}
-                      aria-current={pathname === item.href ? "page" : undefined}
-                      className={mobileNavLinkClassName(pathname === item.href)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ),
-              )
-            )}
+              );
+            })}
+            <li className="border-b border-gray-100 last:border-b-0">
+              <Link
+                href="/#consultation"
+                onClick={() => setIsMenuOpen(false)}
+                className={mobileNavLinkClassName(false)}
+              >
+                상담신청
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
