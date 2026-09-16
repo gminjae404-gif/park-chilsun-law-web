@@ -28,13 +28,11 @@ const title = {
 const description =
   "충청북도 단양군 소재 법무사 박칠선 사무소입니다. 부동산등기, 법인등기, 민사소송, 강제집행, 가사·상속 등 주요 업무 절차와 준비자료를 안내합니다.";
 
-// 네이버 서치어드바이저 등에서 사이트 소유를 확인할 때 필요한 HTML meta
-// verification 값입니다. 아직 실제 값이 없으므로 임의로 만들지 않고,
-// 환경변수(NAVER_SITE_VERIFICATION)가 설정된 경우에만 해당 meta 태그를
-// 추가합니다 — 값을 등록하면 재배포 시 자동으로 <meta name=
-// "naver-site-verification" content="..."> 태그가 생성되고, 값이 없으면
-// 이 필드 자체가 렌더링되지 않습니다.
-const naverSiteVerification = process.env.NAVER_SITE_VERIFICATION;
+// 네이버 서치어드바이저에서 발급받은 사이트 소유확인 값입니다. 검색엔진에
+// 사이트 소유를 증명하기 위해 모든 페이지의 <head>에 공개적으로 노출되는
+// 값이며(비밀번호·API 키와 달리 비밀로 취급할 필요가 없음), 사업자등록
+// 번호 등 다른 공개 정보와 동일하게 소스코드에 직접 기록합니다.
+const naverSiteVerification = "fcc7ad0da3bd6b042e2cac5b2fa7f03aaaaa8190";
 
 export const metadata: Metadata = {
   // canonical·OpenGraph url 등 상대경로를 이 주소 기준으로 해석합니다.
@@ -50,9 +48,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  ...(naverSiteVerification
-    ? { verification: { other: { "naver-site-verification": naverSiteVerification } } }
-    : {}),
+  verification: {
+    other: {
+      "naver-site-verification": naverSiteVerification,
+    },
+  },
   // SNS/카카오톡 등에 URL을 공유했을 때 빈 미리보기 카드가 뜨지 않도록
   // 텍스트 기반 기본 metadata를 추가합니다. 대표 이미지는 아직 없으므로
   // og:image는 이번 단계에서 추가하지 않습니다(실제 대표 이미지 준비 후
