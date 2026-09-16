@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   title: "법인등기",
   description:
     "회사 설립과 임원·상호·목적·본점·자본금 등 주요 변경등기의 기본 확인사항과 진행 흐름을 안내합니다.",
+  alternates: { canonical: "/registration/corporate" },
 };
 
 // corporate-registration-design-audit에서 "안 3"(ProcessSection/

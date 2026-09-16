@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   title: "강제집행",
   description:
     "판결·지급명령 등 집행의 기초가 되는 문서와 집행대상을 확인하고, 부동산·채권·유체동산·부동산 인도 등 강제집행 절차를 살펴볼 수 있는 안내 페이지입니다.",
+  alternates: { canonical: "/enforcement" },
 };
 
 // 강제집행(/enforcement) 페이지입니다. 민사(/civil)와 마찬가지로

@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   title: "개명허가",
   description:
     "개명과 가족관계등록부 정정을 구분하고, 개명허가 신청부터 허가 후 개명신고와 후속 명의변경까지 확인할 수 있는 안내 페이지입니다.",
+  alternates: { canonical: "/family/name-change" },
 };
 
 // 가사·상속(/family) 하위의 개명허가 상세 안내 페이지(/family/name-change)

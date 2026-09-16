@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { HEADER_BRAND_NAME } from "@/lib/constants";
+import { HEADER_BRAND_NAME, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,34 +17,50 @@ const geistMono = Geist_Mono({
 // `title: "페이지 이름"`만 지정해도 자동으로 "페이지 이름 | 사무소명" 형태로
 // 완성됩니다. template은 Header 로고와 동일한 HEADER_BRAND_NAME을 사용해,
 // 하위 페이지 탭 제목의 " | 사무소명" 부분이 Header에 보이는 브랜드명과
-// 일치하도록 합니다.
+// 일치하도록 합니다. default(홈 title)는 "단양"이라는 지역명을 포함해
+// 지역 검색에서 사무소를 찾을 수 있도록 하되, "전문"·"최고"·"1위" 같은
+// 근거 없는 표현은 사용하지 않습니다.
 const title = {
-  default: HEADER_BRAND_NAME,
+  default: "단양 법무사 | 법무사 박칠선 사무소",
   template: `%s | ${HEADER_BRAND_NAME}`,
 };
 
 const description =
-  "부동산등기를 중심으로 법인등기, 민사, 강제집행, 가사·상속 등 주요 업무를 안내하는 법무사 박칠선 사무소 홈페이지입니다.";
+  "충청북도 단양군 소재 법무사 박칠선 사무소입니다. 부동산등기, 법인등기, 민사소송, 강제집행, 가사·상속 등 주요 업무 절차와 준비자료를 안내합니다.";
+
+// 네이버 서치어드바이저 등에서 사이트 소유를 확인할 때 필요한 HTML meta
+// verification 값입니다. 아직 실제 값이 없으므로 임의로 만들지 않고,
+// 환경변수(NAVER_SITE_VERIFICATION)가 설정된 경우에만 해당 meta 태그를
+// 추가합니다 — 값을 등록하면 재배포 시 자동으로 <meta name=
+// "naver-site-verification" content="..."> 태그가 생성되고, 값이 없으면
+// 이 필드 자체가 렌더링되지 않습니다.
+const naverSiteVerification = process.env.NAVER_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
+  // canonical·OpenGraph url 등 상대경로를 이 주소 기준으로 해석합니다.
+  metadataBase: new URL(SITE_URL),
   title,
   description,
-  // 검토용 샘플 단계에서는 링크를 받은 사람은 바로 열어볼 수 있게 하되,
-  // 검색결과에는 노출되지 않도록 모든 페이지에 noindex/nofollow를 적용합니다.
-  // robots.txt로 크롤링 자체를 막으면 검색엔진이 이 meta 태그를 읽지 못해
-  // 오히려 색인이 남을 수 있으므로, 크롤링은 허용하고 meta로 색인만 막습니다.
-  // 실제 운영사이트로 전환할 때는 아래 robots 항목만 제거하면 됩니다.
-  robots: {
-    index: false,
-    follow: false,
+  alternates: {
+    canonical: "/",
   },
+  // 정식 오픈에 따라 검색엔진 색인·링크 추적을 허용합니다. robots.txt(전체
+  // 공개 페이지 수집 허용)와 함께 작동합니다.
+  robots: {
+    index: true,
+    follow: true,
+  },
+  ...(naverSiteVerification
+    ? { verification: { other: { "naver-site-verification": naverSiteVerification } } }
+    : {}),
   // SNS/카카오톡 등에 URL을 공유했을 때 빈 미리보기 카드가 뜨지 않도록
-  // 텍스트 기반 기본 metadata만 추가합니다. 실제 도메인이 아직 없으므로
-  // images/url/metadataBase는 이번 단계에서 추가하지 않습니다(도메인 확정
-  // 후 처리).
+  // 텍스트 기반 기본 metadata를 추가합니다. 대표 이미지는 아직 없으므로
+  // og:image는 이번 단계에서 추가하지 않습니다(실제 대표 이미지 준비 후
+  // 처리).
   openGraph: {
     type: "website",
     locale: "ko_KR",
+    url: "/",
     title: title.default,
     description,
     siteName: HEADER_BRAND_NAME,

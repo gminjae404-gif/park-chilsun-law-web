@@ -5,8 +5,8 @@ import { HEADER_BRAND_NAME, PRIVACY_POLICY_SECTIONS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "개인정보처리방침",
-  description:
-    "법무사사무소 홈페이지 DEMO의 개인정보 수집·이용 안내와 개인정보처리방침을 확인할 수 있습니다.",
+  description: "법무사 박칠선 사무소 홈페이지의 개인정보 수집·이용 안내와 개인정보처리방침을 확인할 수 있습니다.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

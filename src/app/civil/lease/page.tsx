@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "임대차·보증금",
   description:
     "임대차 종료 후 보증금 반환, 임차권등기명령, 제소전화해, 차임·원상회복·건물인도 및 관련 민사·집행 절차에서 확인할 사항을 안내합니다.",
+  alternates: { canonical: "/civil/lease" },
 };
 
 // 민사소송(/civil) 하위의 "임대차·보증금" 상세페이지(/civil/lease)입니다.

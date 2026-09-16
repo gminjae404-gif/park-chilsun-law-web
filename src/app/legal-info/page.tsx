@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "법률정보",
   description:
     "사건번호와 사건검색, 법원 절차 용어, 가족관계·주민등록 증명서 발급과 공식 법률정보 확인처를 안내합니다.",
+  alternates: { canonical: "/legal-info" },
 };
 
 // Header "법률정보" 대분류가 연결되는 페이지(/legal-info)입니다. 업무분야를

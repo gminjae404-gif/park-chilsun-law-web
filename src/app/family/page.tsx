@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   title: "가사·상속",
   description:
     "혼인·이혼, 친자·입양·가족관계, 후견, 상속 등 가사·상속 분야에서 현재 가족관계와 필요한 절차를 확인할 수 있는 안내 페이지입니다.",
+  alternates: { canonical: "/family" },
 };
 
 // 가사·상속(/family) 페이지입니다. 이 페이지의 가장 중요한 설계

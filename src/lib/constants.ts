@@ -43,7 +43,7 @@ export const SITE_CONFIG: SiteConfig = {
   businessHours: null,
   closedDays: null,
   kakaoChannelUrl: null,
-  isPreviewSite: true,
+  isPreviewSite: false,
 };
 
 // Hero·오시는 길 섹션의 지도에서 사용하는 사무소 위치 좌표입니다.
@@ -51,6 +51,11 @@ export const OFFICE_LOCATION = {
   lat: 36.984295,
   lng: 128.367004,
 };
+
+// 현재 정식 공개 주소입니다. metadataBase·canonical·OpenGraph url·
+// robots.txt·sitemap.xml이 전부 이 값 하나를 공유합니다(도메인이 바뀌면
+// 이 값만 수정하면 됩니다). 끝에 슬래시(/)를 붙이지 않습니다.
+export const SITE_URL = "https://park-chilsun-law-web.vercel.app";
 
 // ---- 업무분야 ----
 // Header 업무분야 nav, 홈 PracticeAreasOverview, /services 페이지가 동일한
