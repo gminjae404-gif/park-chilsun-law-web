@@ -30,6 +30,7 @@ export const metadata: Metadata = {
   title: "성년후견",
   description:
     "성년후견·한정후견·특정후견·임의후견 중 현재 상황에 필요한 제도가 무엇인지 먼저 구분하고, 위임·대리와의 차이와 일반적인 절차·준비자료를 확인할 수 있는 안내 페이지입니다.",
+  alternates: { canonical: "/family/guardianship" },
 };
 
 // 가사·상속(/family) 하위의 성년후견 상세 안내 페이지(/family/guardianship)

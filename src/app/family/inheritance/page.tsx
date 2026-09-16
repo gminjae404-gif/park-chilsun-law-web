@@ -28,6 +28,7 @@ export const metadata: Metadata = {
   title: "상속 실무 안내",
   description:
     "상속 발생 후 먼저 확인할 사항부터 상속포기·한정승인, 상속재산분할, 상속등기, 해외 상속인, 유언·유증까지 상황별로 확인할 절차와 준비서류를 안내합니다.",
+  alternates: { canonical: "/family/inheritance" },
 };
 
 // 가사·상속(/family) 하위의 상속 실무 안내 페이지(/family/inheritance)입니다.

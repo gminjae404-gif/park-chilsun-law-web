@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   title: "부동산등기",
   description:
     "매매·증여·상속에 따른 소유권이전등기와 근저당권·전세권 등 부동산등기의 기본 절차와 준비자료를 안내합니다.",
+  alternates: { canonical: "/registration/real-estate" },
 };
 
 // services-architecture-audit에서 첫 실제 업무 상세페이지로 선정된 부동산등기

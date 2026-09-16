@@ -1,0 +1,30 @@
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/constants";
+
+// 실제로 공개되어 있는 페이지만 나열합니다. /individual-recovery,
+// /personal-bankruptcy는 라우트 자체가 존재하지 않으므로(404) 포함하지
+// 않습니다. 우선순위는 홈 > 핵심 업무(부동산등기) > 그 외 업무 페이지 >
+// 안내성 페이지 순으로 상대적인 비중만 표시합니다.
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes: { path: string; priority: number }[] = [
+    { path: "/", priority: 1 },
+    { path: "/registration/real-estate", priority: 0.9 },
+    { path: "/registration/corporate", priority: 0.8 },
+    { path: "/civil", priority: 0.8 },
+    { path: "/civil/lease", priority: 0.7 },
+    { path: "/enforcement", priority: 0.8 },
+    { path: "/family", priority: 0.8 },
+    { path: "/family/inheritance", priority: 0.7 },
+    { path: "/family/guardianship", priority: 0.7 },
+    { path: "/family/name-change", priority: 0.7 },
+    { path: "/services", priority: 0.6 },
+    { path: "/legal-info", priority: 0.5 },
+    { path: "/privacy-policy", priority: 0.3 },
+  ];
+
+  return routes.map(({ path, priority }) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: new Date(),
+    priority,
+  }));
+}

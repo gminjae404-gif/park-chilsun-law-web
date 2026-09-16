@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   title: "민사소송",
   description:
     "대여금·매매대금·공사대금·임대차·손해배상 등 민사분쟁의 기본 확인사항과 민사소송 진행 흐름을 안내합니다.",
+  alternates: { canonical: "/civil" },
 };
 
 // civil-page-design-audit에서 확정한 구조로 기존 ServicePlaceholder
