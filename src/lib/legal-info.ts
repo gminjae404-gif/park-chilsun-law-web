@@ -1,3 +1,4 @@
+import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
@@ -245,6 +246,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: MORTGAGE_CANCELLATION_REGISTRATION_META.cardSummary,
     category: MORTGAGE_CANCELLATION_REGISTRATION_META.category,
     href: MORTGAGE_CANCELLATION_REGISTRATION_META.href,
+  },
+  {
+    title: CORPORATE_OFFICER_CHANGE_REGISTRATION_META.title,
+    summary: CORPORATE_OFFICER_CHANGE_REGISTRATION_META.cardSummary,
+    category: CORPORATE_OFFICER_CHANGE_REGISTRATION_META.category,
+    href: CORPORATE_OFFICER_CHANGE_REGISTRATION_META.href,
   },
 ];
 
