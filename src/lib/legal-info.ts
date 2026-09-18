@@ -1,4 +1,5 @@
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
+import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
 
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
@@ -238,6 +239,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_SALE_REGISTRATION_META.cardSummary,
     category: REAL_ESTATE_SALE_REGISTRATION_META.category,
     href: REAL_ESTATE_SALE_REGISTRATION_META.href,
+  },
+  {
+    title: MORTGAGE_CANCELLATION_REGISTRATION_META.title,
+    summary: MORTGAGE_CANCELLATION_REGISTRATION_META.cardSummary,
+    category: MORTGAGE_CANCELLATION_REGISTRATION_META.category,
+    href: MORTGAGE_CANCELLATION_REGISTRATION_META.href,
   },
 ];
 

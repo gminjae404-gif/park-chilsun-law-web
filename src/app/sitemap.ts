@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info", priority: 0.5 },
     { path: "/legal-info/inheritance-registration", priority: 0.4 },
     { path: "/legal-info/real-estate-sale-registration", priority: 0.4 },
+    { path: "/legal-info/mortgage-cancellation-registration", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
