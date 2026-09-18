@@ -84,9 +84,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
 ];
 
 // ---- Header 전용 상단 내비게이션 ----
-// 부동산등기·법인등기는 단순 링크, 민사·집행과 가사·상속은 dropdown으로
-// 하위 페이지를 묶습니다. /legal-info는 route 자체는 유지하되 주요
-// navigation에는 포함하지 않습니다.
+// 부동산등기·법인등기·법률정보는 단순 링크, 민사·집행과 가사·상속은
+// dropdown으로 하위 페이지를 묶습니다. 이 배열 순서가 PC 상단 메뉴와
+// 모바일 메뉴 순서를 그대로 결정하며(Header.tsx가 이 배열을 그대로
+// map), 배열 마지막에 항상 "상담신청" 링크가 하나 더 붙습니다
+// (Header.tsx에 하드코딩, 이 배열에는 포함하지 않음).
 export type HeaderNavLink = {
   label: string;
   href: string;
@@ -123,6 +125,7 @@ export const HEADER_NAV_CATEGORIES: HeaderNavCategory[] = [
       { label: "개명허가", href: "/family/name-change" },
     ],
   },
+  { id: "legal-info", label: "법률정보", href: "/legal-info" },
 ];
 
 // Header 로고, 페이지 타이틀 template 등에서 사용하는 사이트 표시명입니다.

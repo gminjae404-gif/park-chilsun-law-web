@@ -99,12 +99,20 @@ export default function Footer() {
               있지 않습니다.
             </p>
           )}
-          <Link
-            href="/privacy-policy"
-            className="flex-shrink-0 rounded-sm font-medium text-gray-500 underline-offset-4 transition-colors hover:text-brand hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand active:text-brand-dark"
-          >
-            개인정보처리방침
-          </Link>
+          <div className="flex flex-shrink-0 flex-wrap gap-x-4 gap-y-2">
+            <Link
+              href="/legal-info"
+              className="rounded-sm font-medium text-gray-500 underline-offset-4 transition-colors hover:text-brand hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand active:text-brand-dark"
+            >
+              법률정보
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="rounded-sm font-medium text-gray-500 underline-offset-4 transition-colors hover:text-brand hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-brand active:text-brand-dark"
+            >
+              개인정보처리방침
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
