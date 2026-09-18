@@ -8,6 +8,7 @@ import OfficeHero from "@/components/office/OfficeHero";
 import OfficeGuide from "@/components/office/OfficeGuide";
 import PracticeAreasOverview from "@/components/office/PracticeAreasOverview";
 import DirectionsSection from "@/components/office/DirectionsSection";
+import LegalInfoLink from "@/components/office/LegalInfoLink";
 import RegistrationTypesSection from "@/components/registration/RegistrationTypesSection";
 import { HOME_FAQ_ITEMS } from "@/lib/constants";
 import { REAL_ESTATE_TYPES } from "@/lib/real-estate-registration";
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
 };
 
 // 홈 section 순서: Header → Hero → 주요업무(부동산등기 강조) → 전체
-// 업무분야 → 업무 진행 안내 → FAQ → 상담/연락 → 오시는 길 → Footer.
+// 업무분야 → 업무 진행 안내 → FAQ → 상담/연락 → 오시는 길 → 법률정보 →
+// Footer.
 //
 // "주요업무 — 부동산등기" 섹션은 새 법률문구를 만들지 않고, 이미
 // /registration/real-estate에서 검토·확정된 REAL_ESTATE_TYPES를 그대로
@@ -61,6 +63,9 @@ export default function Home() {
         </HomeInteractiveSections>
         <Reveal>
           <DirectionsSection />
+        </Reveal>
+        <Reveal>
+          <LegalInfoLink />
         </Reveal>
       </main>
       <Footer />
