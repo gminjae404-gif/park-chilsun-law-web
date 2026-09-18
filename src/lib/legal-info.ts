@@ -1,4 +1,5 @@
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
+import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
 
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
 // 소개하는 곳이 아니라, 사건을 진행할 때 자주 접하는 공통적인 실무
@@ -231,6 +232,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: INHERITANCE_REGISTRATION_META.cardSummary,
     category: INHERITANCE_REGISTRATION_META.category,
     href: INHERITANCE_REGISTRATION_META.href,
+  },
+  {
+    title: REAL_ESTATE_SALE_REGISTRATION_META.title,
+    summary: REAL_ESTATE_SALE_REGISTRATION_META.cardSummary,
+    category: REAL_ESTATE_SALE_REGISTRATION_META.category,
+    href: REAL_ESTATE_SALE_REGISTRATION_META.href,
   },
 ];
 
