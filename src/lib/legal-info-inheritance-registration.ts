@@ -1,4 +1,5 @@
 import type { ProcessStep } from "@/lib/constants";
+import type { ArticleSection, LegalReference } from "@/lib/legal-info-article-types";
 
 // /legal-info/inheritance-registration 전용 콘텐츠입니다. 이 파일의 모든
 // 문구는 전달받은 확정 문구를 그대로 사용하거나(법률적 사실 부분), 안내
@@ -26,16 +27,6 @@ export const INHERITANCE_REGISTRATION_INTRO_PARAGRAPHS: string[] = [
   "상속등기는 단순히 가족관계증명서 한 장만으로 진행되는 것이 아니라 상속인의 범위, 상속재산분할 여부, 사망 시점, 대습상속이나 상속포기 여부 등에 따라 필요한 서류가 달라질 수 있습니다.",
   "아래 내용은 대한민국 국민인 피상속인에게 배우자와 자녀가 있는 일반적인 1순위 상속을 중심으로 안내합니다.",
 ];
-
-export type ArticleBlock =
-  | { type: "p"; text: string }
-  | { type: "list"; items: string[] }
-  | { type: "subheading"; text: string };
-
-export type ArticleSection = {
-  heading: string;
-  blocks: ArticleBlock[];
-};
 
 // "7. 상속등기 진행 절차"는 기존 ProcessSection(timeline)을 그대로
 // 재사용하므로 이 배열에는 포함하지 않습니다(아래
@@ -252,11 +243,6 @@ export const INHERITANCE_REGISTRATION_NOTICE_PARAGRAPHS: string[] = [
   "실제 필요한 서류와 절차는 상속개시 시점, 가족관계, 부동산의 등기상태, 상속재산분할 여부 및 상속인의 국적·주소 등에 따라 달라질 수 있습니다.",
   "개별 사건은 관련 서류를 확인한 후 판단하여야 합니다.",
 ];
-
-export type LegalReference = {
-  source: string;
-  detail: string;
-};
 
 // 공식 출처 URL은 이 환경에서 대법원 사법정보공개포털/법고을·국가법령
 // 정보센터의 실제 현행 페이지 여부를 확인할 수 없어(네트워크 접근 불가)
