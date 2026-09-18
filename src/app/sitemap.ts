@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/family/name-change", priority: 0.7 },
     { path: "/services", priority: 0.6 },
     { path: "/legal-info", priority: 0.5 },
+    { path: "/legal-info/inheritance-registration", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 

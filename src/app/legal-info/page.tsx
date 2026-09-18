@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LegalInfoArticles from "@/components/legal-info/LegalInfoArticles";
 import LegalInfoCaseGuide from "@/components/legal-info/LegalInfoCaseGuide";
 import LegalInfoTerms from "@/components/legal-info/LegalInfoTerms";
 import LegalInfoDocuments from "@/components/legal-info/LegalInfoDocuments";
@@ -48,6 +49,7 @@ export default function LegalInfoPage() {
           </div>
         </section>
 
+        <LegalInfoArticles />
         <LegalInfoCaseGuide />
         <LegalInfoTerms />
         <LegalInfoDocuments />

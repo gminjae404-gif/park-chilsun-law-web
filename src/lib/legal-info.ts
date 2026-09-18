@@ -1,3 +1,5 @@
+import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
+
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
 // 소개하는 곳이 아니라, 사건을 진행할 때 자주 접하는 공통적인 실무
 // 정보(사건번호·사건검색, 법원 문서 용어, 증명서 발급, 공식 확인처)를
@@ -203,6 +205,32 @@ export const LEGAL_INFO_OFFICIAL_LINKS: LegalInfoOfficialSite[] = [
     title: "대한법률구조공단",
     description: "법률상담·법률구조 안내와 소송비용 등 자동계산을 확인할 수 있습니다.",
     href: "https://www.klac.or.kr/",
+  },
+];
+
+// ---- 0. 법률정보 글 목록 ----
+// 실제 법률정보 상세글(예: /legal-info/inheritance-registration) 카드
+// 목록입니다. 카드의 제목·요약·카테고리는 각 글 전용 데이터 파일(예:
+// legal-info-inheritance-registration.ts)의 META를 그대로 참조해,
+// 같은 문구를 두 곳에 따로 적지 않습니다. 글이 늘어나면 이 배열에
+// 항목만 추가하면 됩니다.
+export const LEGAL_INFO_ARTICLES_HEADING = "법률정보 글";
+export const LEGAL_INFO_ARTICLES_DESCRIPTION =
+  "실무에서 자주 확인하는 절차와 준비서류를 주제별로 안내합니다.";
+
+export type LegalInfoArticleSummary = {
+  title: string;
+  summary: string;
+  category: string;
+  href: string;
+};
+
+export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
+  {
+    title: INHERITANCE_REGISTRATION_META.title,
+    summary: INHERITANCE_REGISTRATION_META.cardSummary,
+    category: INHERITANCE_REGISTRATION_META.category,
+    href: INHERITANCE_REGISTRATION_META.href,
   },
 ];
 
