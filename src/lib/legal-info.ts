@@ -1,3 +1,4 @@
+import { ADULT_GUARDIANSHIP_PROCEDURE_META } from "./legal-info-adult-guardianship-procedure";
 import { CLAIM_SEIZURE_COLLECTION_ORDER_META } from "./legal-info-claim-seizure-collection-order";
 import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
@@ -294,6 +295,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.cardSummary,
     category: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.category,
     href: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.href,
+  },
+  {
+    title: ADULT_GUARDIANSHIP_PROCEDURE_META.title,
+    summary: ADULT_GUARDIANSHIP_PROCEDURE_META.cardSummary,
+    category: ADULT_GUARDIANSHIP_PROCEDURE_META.category,
+    href: ADULT_GUARDIANSHIP_PROCEDURE_META.href,
   },
 ];
 
