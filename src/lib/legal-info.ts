@@ -1,6 +1,7 @@
 import { ADULT_ADOPTION_REGISTRATION_META } from "./legal-info-adult-adoption-registration";
 import { ADULT_GUARDIANSHIP_PROCEDURE_META } from "./legal-info-adult-guardianship-procedure";
 import { CLAIM_SEIZURE_COLLECTION_ORDER_META } from "./legal-info-claim-seizure-collection-order";
+import { CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META } from "./legal-info-co-owned-property-division-registration";
 import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
@@ -357,6 +358,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: PROVISIONAL_REGISTRATION_PROCEDURE_META.cardSummary,
     category: PROVISIONAL_REGISTRATION_PROCEDURE_META.category,
     href: PROVISIONAL_REGISTRATION_PROCEDURE_META.href,
+  },
+  {
+    title: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.title,
+    summary: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.cardSummary,
+    category: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.category,
+    href: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.href,
   },
 ];
 
