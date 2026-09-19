@@ -1,3 +1,4 @@
+import { ADULT_ADOPTION_REGISTRATION_META } from "./legal-info-adult-adoption-registration";
 import { ADULT_GUARDIANSHIP_PROCEDURE_META } from "./legal-info-adult-guardianship-procedure";
 import { CLAIM_SEIZURE_COLLECTION_ORDER_META } from "./legal-info-claim-seizure-collection-order";
 import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
@@ -308,6 +309,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: NAME_CHANGE_PERMISSION_PROCEDURE_META.cardSummary,
     category: NAME_CHANGE_PERMISSION_PROCEDURE_META.category,
     href: NAME_CHANGE_PERMISSION_PROCEDURE_META.href,
+  },
+  {
+    title: ADULT_ADOPTION_REGISTRATION_META.title,
+    summary: ADULT_ADOPTION_REGISTRATION_META.cardSummary,
+    category: ADULT_ADOPTION_REGISTRATION_META.category,
+    href: ADULT_ADOPTION_REGISTRATION_META.href,
   },
 ];
 
