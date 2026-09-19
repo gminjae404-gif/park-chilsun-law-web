@@ -13,6 +13,7 @@ import { JEONSE_RIGHT_REGISTRATION_META } from "./legal-info-jeonse-right-regist
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { MORTGAGE_ESTABLISHMENT_REGISTRATION_META } from "./legal-info-mortgage-establishment-registration";
 import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-permission-procedure";
+import { OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META } from "./legal-info-ownership-transfer-cancellation-restoration";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "./legal-info-provisional-registration-procedure";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
@@ -364,6 +365,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.cardSummary,
     category: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.category,
     href: CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META.href,
+  },
+  {
+    title: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.title,
+    summary: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.cardSummary,
+    category: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.category,
+    href: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.href,
   },
 ];
 
