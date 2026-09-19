@@ -3,6 +3,7 @@ import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
+import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
 
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
@@ -266,6 +267,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.cardSummary,
     category: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.category,
     href: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.href,
+  },
+  {
+    title: PAYMENT_ORDER_PROCEDURE_META.title,
+    summary: PAYMENT_ORDER_PROCEDURE_META.cardSummary,
+    category: PAYMENT_ORDER_PROCEDURE_META.category,
+    href: PAYMENT_ORDER_PROCEDURE_META.href,
   },
 ];
 
