@@ -4,6 +4,7 @@ import { CLAIM_SEIZURE_COLLECTION_ORDER_META } from "./legal-info-claim-seizure-
 import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
+import { INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META } from "./legal-info-inheritance-division-agreement-registration";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
@@ -315,6 +316,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: ADULT_ADOPTION_REGISTRATION_META.cardSummary,
     category: ADULT_ADOPTION_REGISTRATION_META.category,
     href: ADULT_ADOPTION_REGISTRATION_META.href,
+  },
+  {
+    title: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.title,
+    summary: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.cardSummary,
+    category: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.category,
+    href: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.href,
   },
 ];
 
