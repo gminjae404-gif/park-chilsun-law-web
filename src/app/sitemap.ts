@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/corporate-head-office-relocation-registration", priority: 0.4 },
     { path: "/legal-info/corporate-capital-increase-registration", priority: 0.4 },
     { path: "/legal-info/payment-order-procedure", priority: 0.4 },
+    { path: "/legal-info/claim-seizure-collection-order", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 

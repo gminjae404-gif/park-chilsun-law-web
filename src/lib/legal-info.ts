@@ -1,3 +1,4 @@
+import { CLAIM_SEIZURE_COLLECTION_ORDER_META } from "./legal-info-claim-seizure-collection-order";
 import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
@@ -273,6 +274,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: PAYMENT_ORDER_PROCEDURE_META.cardSummary,
     category: PAYMENT_ORDER_PROCEDURE_META.category,
     href: PAYMENT_ORDER_PROCEDURE_META.href,
+  },
+  {
+    title: CLAIM_SEIZURE_COLLECTION_ORDER_META.title,
+    summary: CLAIM_SEIZURE_COLLECTION_ORDER_META.cardSummary,
+    category: CLAIM_SEIZURE_COLLECTION_ORDER_META.category,
+    href: CLAIM_SEIZURE_COLLECTION_ORDER_META.href,
   },
 ];
 
