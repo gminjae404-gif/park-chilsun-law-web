@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/inheritance-estate-bankruptcy-procedure", priority: 0.4 },
     { path: "/legal-info/real-estate-gift-registration", priority: 0.4 },
     { path: "/legal-info/mortgage-establishment-registration", priority: 0.4 },
+    { path: "/legal-info/jeonse-right-registration", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 

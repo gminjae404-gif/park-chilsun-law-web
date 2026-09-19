@@ -8,6 +8,7 @@ import { INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META } from "./legal-info-i
 import { INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META } from "./legal-info-inheritance-estate-bankruptcy-procedure";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
+import { JEONSE_RIGHT_REGISTRATION_META } from "./legal-info-jeonse-right-registration";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { MORTGAGE_ESTABLISHMENT_REGISTRATION_META } from "./legal-info-mortgage-establishment-registration";
 import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-permission-procedure";
@@ -343,6 +344,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.cardSummary,
     category: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.category,
     href: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.href,
+  },
+  {
+    title: JEONSE_RIGHT_REGISTRATION_META.title,
+    summary: JEONSE_RIGHT_REGISTRATION_META.cardSummary,
+    category: JEONSE_RIGHT_REGISTRATION_META.category,
+    href: JEONSE_RIGHT_REGISTRATION_META.href,
   },
 ];
 
