@@ -5,6 +5,7 @@ import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corpo
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
 import { INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META } from "./legal-info-inheritance-division-agreement-registration";
+import { INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META } from "./legal-info-inheritance-estate-bankruptcy-procedure";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
@@ -322,6 +323,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.cardSummary,
     category: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.category,
     href: INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META.href,
+  },
+  {
+    title: INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META.title,
+    summary: INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META.cardSummary,
+    category: INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META.category,
+    href: INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META.href,
   },
 ];
 
