@@ -6,6 +6,7 @@ import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corpora
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
+import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-permission-procedure";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
@@ -301,6 +302,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: ADULT_GUARDIANSHIP_PROCEDURE_META.cardSummary,
     category: ADULT_GUARDIANSHIP_PROCEDURE_META.category,
     href: ADULT_GUARDIANSHIP_PROCEDURE_META.href,
+  },
+  {
+    title: NAME_CHANGE_PERMISSION_PROCEDURE_META.title,
+    summary: NAME_CHANGE_PERMISSION_PROCEDURE_META.cardSummary,
+    category: NAME_CHANGE_PERMISSION_PROCEDURE_META.category,
+    href: NAME_CHANGE_PERMISSION_PROCEDURE_META.href,
   },
 ];
 

@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/real-estate-compulsory-auction", priority: 0.4 },
     { path: "/legal-info/inheritance-renunciation-limited-acceptance", priority: 0.4 },
     { path: "/legal-info/adult-guardianship-procedure", priority: 0.4 },
+    { path: "/legal-info/name-change-permission-procedure", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
