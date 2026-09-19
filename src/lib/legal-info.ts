@@ -9,6 +9,7 @@ import { INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META } from "./legal-info-inher
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
+import { MORTGAGE_ESTABLISHMENT_REGISTRATION_META } from "./legal-info-mortgage-establishment-registration";
 import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-permission-procedure";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
@@ -336,6 +337,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_GIFT_REGISTRATION_META.cardSummary,
     category: REAL_ESTATE_GIFT_REGISTRATION_META.category,
     href: REAL_ESTATE_GIFT_REGISTRATION_META.href,
+  },
+  {
+    title: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.title,
+    summary: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.cardSummary,
+    category: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.category,
+    href: MORTGAGE_ESTABLISHMENT_REGISTRATION_META.href,
   },
 ];
 
