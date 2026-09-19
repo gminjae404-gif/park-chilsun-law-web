@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/name-change-permission-procedure", priority: 0.4 },
     { path: "/legal-info/adult-adoption-registration", priority: 0.4 },
     { path: "/legal-info/inheritance-division-agreement-registration", priority: 0.4 },
+    { path: "/legal-info/inheritance-estate-bankruptcy-procedure", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
