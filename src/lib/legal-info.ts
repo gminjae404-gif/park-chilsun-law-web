@@ -5,6 +5,7 @@ import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corpora
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
+import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
 
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
@@ -280,6 +281,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: CLAIM_SEIZURE_COLLECTION_ORDER_META.cardSummary,
     category: CLAIM_SEIZURE_COLLECTION_ORDER_META.category,
     href: CLAIM_SEIZURE_COLLECTION_ORDER_META.href,
+  },
+  {
+    title: REAL_ESTATE_COMPULSORY_AUCTION_META.title,
+    summary: REAL_ESTATE_COMPULSORY_AUCTION_META.cardSummary,
+    category: REAL_ESTATE_COMPULSORY_AUCTION_META.category,
+    href: REAL_ESTATE_COMPULSORY_AUCTION_META.href,
   },
 ];
 
