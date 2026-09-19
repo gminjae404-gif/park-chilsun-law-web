@@ -1,3 +1,4 @@
+import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
@@ -259,6 +260,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META.cardSummary,
     category: CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META.category,
     href: CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META.href,
+  },
+  {
+    title: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.title,
+    summary: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.cardSummary,
+    category: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.category,
+    href: CORPORATE_CAPITAL_INCREASE_REGISTRATION_META.href,
   },
 ];
 
