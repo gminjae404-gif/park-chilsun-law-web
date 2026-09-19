@@ -3,6 +3,7 @@ import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corpo
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
+import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
@@ -287,6 +288,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_COMPULSORY_AUCTION_META.cardSummary,
     category: REAL_ESTATE_COMPULSORY_AUCTION_META.category,
     href: REAL_ESTATE_COMPULSORY_AUCTION_META.href,
+  },
+  {
+    title: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.title,
+    summary: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.cardSummary,
+    category: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.category,
+    href: INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META.href,
   },
 ];
 
