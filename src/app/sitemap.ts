@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/mortgage-establishment-registration", priority: 0.4 },
     { path: "/legal-info/jeonse-right-registration", priority: 0.4 },
     { path: "/legal-info/provisional-registration-procedure", priority: 0.4 },
+    { path: "/legal-info/co-owned-property-division-registration", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
