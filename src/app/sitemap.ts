@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/mortgage-cancellation-registration", priority: 0.4 },
     { path: "/legal-info/corporate-officer-change-registration", priority: 0.4 },
     { path: "/legal-info/corporate-head-office-relocation-registration", priority: 0.4 },
+    { path: "/legal-info/corporate-capital-increase-registration", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
