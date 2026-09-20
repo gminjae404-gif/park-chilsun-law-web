@@ -17,6 +17,7 @@ import { OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META } from "./legal-info-o
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "./legal-info-provisional-registration-procedure";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
+import { REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_META } from "./legal-info-real-estate-disposition-provisional-injunction";
 import { REAL_ESTATE_GIFT_REGISTRATION_META } from "./legal-info-real-estate-gift-registration";
 import { REAL_ESTATE_PROVISIONAL_ATTACHMENT_META } from "./legal-info-real-estate-provisional-attachment";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
@@ -378,6 +379,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.cardSummary,
     category: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.category,
     href: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.href,
+  },
+  {
+    title: REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_META.title,
+    summary: REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_META.cardSummary,
+    category: REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_META.category,
+    href: REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_META.href,
   },
 ];
 
