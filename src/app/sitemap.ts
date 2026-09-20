@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/provisional-registration-procedure", priority: 0.4 },
     { path: "/legal-info/co-owned-property-division-registration", priority: 0.4 },
     { path: "/legal-info/ownership-transfer-cancellation-restoration", priority: 0.4 },
+    { path: "/legal-info/real-estate-provisional-attachment", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 

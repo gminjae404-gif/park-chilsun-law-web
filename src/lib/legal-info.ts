@@ -18,6 +18,7 @@ import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedu
 import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "./legal-info-provisional-registration-procedure";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
 import { REAL_ESTATE_GIFT_REGISTRATION_META } from "./legal-info-real-estate-gift-registration";
+import { REAL_ESTATE_PROVISIONAL_ATTACHMENT_META } from "./legal-info-real-estate-provisional-attachment";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
 
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
@@ -371,6 +372,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.cardSummary,
     category: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.category,
     href: OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META.href,
+  },
+  {
+    title: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.title,
+    summary: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.cardSummary,
+    category: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.category,
+    href: REAL_ESTATE_PROVISIONAL_ATTACHMENT_META.href,
   },
 ];
 
