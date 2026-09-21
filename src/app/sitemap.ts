@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/real-estate-possession-transfer-provisional-injunction", priority: 0.4 },
     { path: "/legal-info/real-estate-delivery-order", priority: 0.4 },
     { path: "/legal-info/real-estate-delivery-enforcement", priority: 0.4 },
+    { path: "/legal-info/debtor-property-disclosure-inquiry", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
