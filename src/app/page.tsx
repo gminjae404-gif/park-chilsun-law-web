@@ -4,6 +4,7 @@ import HomeInteractiveSections from "@/components/HomeInteractiveSections";
 import FAQPreview from "@/components/FAQPreview";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import SiteSearch from "@/components/SiteSearch";
 import OfficeHero from "@/components/office/OfficeHero";
 import OfficeGuide from "@/components/office/OfficeGuide";
 import PracticeAreasOverview from "@/components/office/PracticeAreasOverview";
@@ -20,9 +21,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-// 홈 section 순서: Header → Hero → 주요업무(부동산등기 강조) → 전체
-// 업무분야 → 업무 진행 안내 → FAQ → 상담/연락 → 오시는 길 → 법률정보 →
-// Footer.
+// 홈 section 순서: Header → Hero → 통합검색 → 주요업무(부동산등기 강조) →
+// 전체 업무분야 → 업무 진행 안내 → FAQ → 상담/연락 → 오시는 길 →
+// 법률정보 → Footer.
+//
+// 통합검색(SiteSearch)은 업무 페이지가 많아져 메뉴로 원하는 페이지를
+// 찾기 어려워진 문제를 해결하기 위해 Hero 바로 아래, 주요업무 section
+// 바로 위에 둡니다. state·keyboard 상호작용이 필요한 부분만
+// SiteSearch(Client Component)로 분리했고, Hero와 이 페이지 자체는
+// 그대로 Server Component로 유지합니다.
+//
+// 이 section은 다른 section들과 달리 Reveal로 감싸지 않습니다.
+// Reveal이 "visible" 상태가 되면 transform(translateY(0), 시각적으로는
+// 무변화)을 적용하는데, computed transform이 none이 아니면 새 stacking
+// context가 생겨 그 안의 검색결과 패널(z-20)이 다음 형제 section(같은
+// Reveal 패턴)의 stacking context에 가려지는 문제가 있었습니다(자체
+// Playwright 클릭 QA에서 실제로 재현·확인). OfficeHero도 이미 Reveal
+// 없이 렌더링되는 전례가 있어, 검색 section도 동일하게 Reveal을
+// 생략해 이 문제를 근본적으로 피합니다.
 //
 // "주요업무 — 부동산등기" 섹션은 새 법률문구를 만들지 않고, 이미
 // /registration/real-estate에서 검토·확정된 REAL_ESTATE_TYPES를 그대로
@@ -41,6 +57,13 @@ export default function Home() {
       <Header />
       <main id="main-content" className="flex-1">
         <OfficeHero />
+        <section className="bg-white">
+          <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+            <div className="mx-auto max-w-2xl">
+              <SiteSearch />
+            </div>
+          </div>
+        </section>
         <Reveal>
           <RegistrationTypesSection
             heading="주요업무 — 부동산등기"
