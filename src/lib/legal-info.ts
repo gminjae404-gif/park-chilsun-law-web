@@ -14,6 +14,7 @@ import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-i
 import { JEONSE_RIGHT_REGISTRATION_META } from "./legal-info-jeonse-right-registration";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { MORTGAGE_ESTABLISHMENT_REGISTRATION_META } from "./legal-info-mortgage-establishment-registration";
+import { MOVABLE_PROPERTY_ENFORCEMENT_META } from "./legal-info-movable-property-enforcement";
 import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-permission-procedure";
 import { OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META } from "./legal-info-ownership-transfer-cancellation-restoration";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
@@ -420,6 +421,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: DEBTOR_DEFAULT_LIST_REGISTRATION_META.cardSummary,
     category: DEBTOR_DEFAULT_LIST_REGISTRATION_META.category,
     href: DEBTOR_DEFAULT_LIST_REGISTRATION_META.href,
+  },
+  {
+    title: MOVABLE_PROPERTY_ENFORCEMENT_META.title,
+    summary: MOVABLE_PROPERTY_ENFORCEMENT_META.cardSummary,
+    category: MOVABLE_PROPERTY_ENFORCEMENT_META.category,
+    href: MOVABLE_PROPERTY_ENFORCEMENT_META.href,
   },
 ];
 
