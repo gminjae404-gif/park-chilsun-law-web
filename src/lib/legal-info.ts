@@ -5,6 +5,7 @@ import { CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META } from "./legal-info-co-ow
 import { CORPORATE_CAPITAL_INCREASE_REGISTRATION_META } from "./legal-info-corporate-capital-increase-registration";
 import { CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META } from "./legal-info-corporate-head-office-relocation-registration";
 import { CORPORATE_OFFICER_CHANGE_REGISTRATION_META } from "./legal-info-corporate-officer-change-registration";
+import { DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_META } from "./legal-info-debtor-property-disclosure-inquiry";
 import { INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META } from "./legal-info-inheritance-division-agreement-registration";
 import { INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META } from "./legal-info-inheritance-estate-bankruptcy-procedure";
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
@@ -406,6 +407,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_DELIVERY_ENFORCEMENT_META.cardSummary,
     category: REAL_ESTATE_DELIVERY_ENFORCEMENT_META.category,
     href: REAL_ESTATE_DELIVERY_ENFORCEMENT_META.href,
+  },
+  {
+    title: DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_META.title,
+    summary: DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_META.cardSummary,
+    category: DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_META.category,
+    href: DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_META.href,
   },
 ];
 
