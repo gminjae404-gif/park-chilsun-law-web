@@ -27,6 +27,7 @@ import { REAL_ESTATE_GIFT_REGISTRATION_META } from "./legal-info-real-estate-gif
 import { REAL_ESTATE_POSSESSION_TRANSFER_PROVISIONAL_INJUNCTION_META } from "./legal-info-real-estate-possession-transfer-provisional-injunction";
 import { REAL_ESTATE_PROVISIONAL_ATTACHMENT_META } from "./legal-info-real-estate-provisional-attachment";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
+import { VEHICLE_ENFORCEMENT_META } from "./legal-info-vehicle-enforcement";
 
 // /legal-info(법률정보) 전용 콘텐츠입니다. 이 페이지는 업무분야를 다시
 // 소개하는 곳이 아니라, 사건을 진행할 때 자주 접하는 공통적인 실무
@@ -427,6 +428,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: MOVABLE_PROPERTY_ENFORCEMENT_META.cardSummary,
     category: MOVABLE_PROPERTY_ENFORCEMENT_META.category,
     href: MOVABLE_PROPERTY_ENFORCEMENT_META.href,
+  },
+  {
+    title: VEHICLE_ENFORCEMENT_META.title,
+    summary: VEHICLE_ENFORCEMENT_META.cardSummary,
+    category: VEHICLE_ENFORCEMENT_META.category,
+    href: VEHICLE_ENFORCEMENT_META.href,
   },
 ];
 
