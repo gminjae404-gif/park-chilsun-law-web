@@ -116,6 +116,17 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "배당표 이의",
     "배당기일이의",
   ],
+  "/legal-info/real-estate-auction-sale-permission-objection-appeal": [
+    "매각허가",
+    "매각허가이의",
+    "매각허가 이의",
+    "매각불허가",
+    "경매즉시항고",
+    "경매 즉시항고",
+    "매각허가항고",
+    "매각허가 항고",
+    "경매항고보증",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
