@@ -105,6 +105,17 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "임차인 배당",
     "경매채권계산서",
   ],
+  "/legal-info/real-estate-auction-distribution-objection": [
+    "배당이의",
+    "배당 이의",
+    "배당이의소",
+    "배당이의의소",
+    "배당이의 소",
+    "배당이의의 소",
+    "배당표이의",
+    "배당표 이의",
+    "배당기일이의",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
