@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/debtor-default-list-registration", priority: 0.4 },
     { path: "/legal-info/movable-property-enforcement", priority: 0.4 },
     { path: "/legal-info/vehicle-enforcement", priority: 0.4 },
+    { path: "/legal-info/vehicle-provisional-seizure", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
