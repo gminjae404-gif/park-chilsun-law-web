@@ -19,6 +19,7 @@ import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-
 import { OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META } from "./legal-info-ownership-transfer-cancellation-restoration";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "./legal-info-provisional-registration-procedure";
+import { REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META } from "./legal-info-real-estate-auction-distribution-demand";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
 import { REAL_ESTATE_DELIVERY_ENFORCEMENT_META } from "./legal-info-real-estate-delivery-enforcement";
 import { REAL_ESTATE_DELIVERY_ORDER_META } from "./legal-info-real-estate-delivery-order";
@@ -448,6 +449,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_VOLUNTARY_AUCTION_META.cardSummary,
     category: REAL_ESTATE_VOLUNTARY_AUCTION_META.category,
     href: REAL_ESTATE_VOLUNTARY_AUCTION_META.href,
+  },
+  {
+    title: REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META.title,
+    summary: REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META.cardSummary,
+    category: REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META.category,
+    href: REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META.href,
   },
 ];
 

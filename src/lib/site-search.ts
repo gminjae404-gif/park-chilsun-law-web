@@ -95,6 +95,16 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "담보권경매",
     "담보권 실행",
   ],
+  "/legal-info/real-estate-auction-distribution-demand": [
+    "배당요구",
+    "경매배당",
+    "경매 배당",
+    "배당요구종기",
+    "배당 요구",
+    "임차인배당",
+    "임차인 배당",
+    "경매채권계산서",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
