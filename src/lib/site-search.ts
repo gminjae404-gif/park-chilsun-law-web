@@ -127,6 +127,20 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "매각허가 항고",
     "경매항고보증",
   ],
+  "/legal-info/real-estate-auction-withdrawal-stay-cancellation": [
+    "경매취하",
+    "경매 취하",
+    "경매정지",
+    "경매 정지",
+    "경매중지",
+    "경매 중지",
+    "경매취소",
+    "경매 취소",
+    "낙찰후취하",
+    "낙찰 후 취하",
+    "무잉여",
+    "무잉여경매",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
