@@ -22,6 +22,7 @@ import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "./legal-info-provisiona
 import { REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META } from "./legal-info-real-estate-auction-distribution-demand";
 import { REAL_ESTATE_AUCTION_DISTRIBUTION_OBJECTION_META } from "./legal-info-real-estate-auction-distribution-objection";
 import { REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_META } from "./legal-info-real-estate-auction-sale-permission-objection-appeal";
+import { REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META } from "./legal-info-real-estate-auction-withdrawal-stay-cancellation";
 import { REAL_ESTATE_COMPULSORY_AUCTION_META } from "./legal-info-real-estate-compulsory-auction";
 import { REAL_ESTATE_DELIVERY_ENFORCEMENT_META } from "./legal-info-real-estate-delivery-enforcement";
 import { REAL_ESTATE_DELIVERY_ORDER_META } from "./legal-info-real-estate-delivery-order";
@@ -469,6 +470,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_META.cardSummary,
     category: REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_META.category,
     href: REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_META.href,
+  },
+  {
+    title: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.title,
+    summary: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.cardSummary,
+    category: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.category,
+    href: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.href,
   },
 ];
 
