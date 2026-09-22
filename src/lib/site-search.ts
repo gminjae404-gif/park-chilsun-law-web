@@ -75,6 +75,15 @@ const SEARCH_ALIASES: Record<string, string[]> = {
   "/legal-info/name-change-permission-procedure": ["개명", "이름변경", "이름 변경"],
   "/legal-info/corporate-officer-change-registration": ["대표이사 변경", "대표 변경", "임원 변경", "이사 변경"],
   "/legal-info/corporate-capital-increase-registration": ["증자", "자본금 증가", "신주발행", "가수금증자", "가수금 증자"],
+  "/legal-info/vehicle-provisional-seizure": [
+    "자동차가압류",
+    "자동차 가압류",
+    "차량가압류",
+    "차량 가압류",
+    "차가압류",
+    "차 가압류",
+    "자동차 보전처분",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
