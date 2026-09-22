@@ -84,6 +84,17 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "차 가압류",
     "자동차 보전처분",
   ],
+  "/legal-info/real-estate-voluntary-auction": [
+    "임의경매",
+    "부동산임의경매",
+    "부동산 임의경매",
+    "근저당경매",
+    "근저당 경매",
+    "근저당권경매",
+    "근저당권 경매",
+    "담보권경매",
+    "담보권 실행",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {

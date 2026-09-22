@@ -27,6 +27,7 @@ import { REAL_ESTATE_GIFT_REGISTRATION_META } from "./legal-info-real-estate-gif
 import { REAL_ESTATE_POSSESSION_TRANSFER_PROVISIONAL_INJUNCTION_META } from "./legal-info-real-estate-possession-transfer-provisional-injunction";
 import { REAL_ESTATE_PROVISIONAL_ATTACHMENT_META } from "./legal-info-real-estate-provisional-attachment";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
+import { REAL_ESTATE_VOLUNTARY_AUCTION_META } from "./legal-info-real-estate-voluntary-auction";
 import { VEHICLE_ENFORCEMENT_META } from "./legal-info-vehicle-enforcement";
 import { VEHICLE_PROVISIONAL_SEIZURE_META } from "./legal-info-vehicle-provisional-seizure";
 
@@ -441,6 +442,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: VEHICLE_PROVISIONAL_SEIZURE_META.cardSummary,
     category: VEHICLE_PROVISIONAL_SEIZURE_META.category,
     href: VEHICLE_PROVISIONAL_SEIZURE_META.href,
+  },
+  {
+    title: REAL_ESTATE_VOLUNTARY_AUCTION_META.title,
+    summary: REAL_ESTATE_VOLUNTARY_AUCTION_META.cardSummary,
+    category: REAL_ESTATE_VOLUNTARY_AUCTION_META.category,
+    href: REAL_ESTATE_VOLUNTARY_AUCTION_META.href,
   },
 ];
 
