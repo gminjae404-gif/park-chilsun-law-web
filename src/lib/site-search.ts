@@ -141,6 +141,19 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "무잉여",
     "무잉여경매",
   ],
+  "/legal-info/objection-to-claim-enforcement-stay": [
+    "청구이의",
+    "청구이의소",
+    "청구이의의소",
+    "청구 이의",
+    "강제집행정지",
+    "강제집행 정지",
+    "집행정지신청",
+    "판결후변제",
+    "판결 후 변제",
+    "지급명령청구이의",
+    "공정증서청구이의",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
