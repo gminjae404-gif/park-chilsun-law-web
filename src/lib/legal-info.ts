@@ -33,6 +33,7 @@ import { REAL_ESTATE_POSSESSION_TRANSFER_PROVISIONAL_INJUNCTION_META } from "./l
 import { REAL_ESTATE_PROVISIONAL_ATTACHMENT_META } from "./legal-info-real-estate-provisional-attachment";
 import { REAL_ESTATE_SALE_REGISTRATION_META } from "./legal-info-real-estate-sale-registration";
 import { REAL_ESTATE_VOLUNTARY_AUCTION_META } from "./legal-info-real-estate-voluntary-auction";
+import { SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META } from "./legal-info-succession-execution-clause-objection";
 import { THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META } from "./legal-info-third-party-objection-enforcement-stay";
 import { VEHICLE_ENFORCEMENT_META } from "./legal-info-vehicle-enforcement";
 import { VEHICLE_PROVISIONAL_SEIZURE_META } from "./legal-info-vehicle-provisional-seizure";
@@ -490,6 +491,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META.cardSummary,
     category: THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META.category,
     href: THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META.href,
+  },
+  {
+    title: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.title,
+    summary: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.cardSummary,
+    category: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.category,
+    href: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.href,
   },
 ];
 
