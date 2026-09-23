@@ -3,6 +3,7 @@ import ProcessSection from "@/components/ProcessSection";
 import { SITE_CONFIG } from "@/lib/constants";
 import type { ProcessStep } from "@/lib/constants";
 import type { ArticleBlock, ArticleSection, LegalReference } from "@/lib/legal-info-article-types";
+import type { ReactNode } from "react";
 
 // /legal-info 하위 법률정보 상세글(inheritance-registration,
 // real-estate-sale-registration 등)이 공통으로 사용하는 레이아웃입니다.
@@ -11,9 +12,45 @@ import type { ArticleBlock, ArticleSection, LegalReference } from "@/lib/legal-i
 // 옮겨, 글이 늘어나도 같은 디자인을 재사용하고 새 디자인을 만들지
 // 않습니다. 실제 문구는 각 글 전용 데이터 파일에서 props로만 전달받고,
 // 이 컴포넌트 자체는 어떤 글의 문구도 직접 담지 않습니다.
+
+// 본문 문맥형 내부링크 전용 최소 파서입니다. 각 글의 텍스트 안에
+// "[앵커](/legal-info/slug)" 형태로 표시된 부분만 Link로 변환하고,
+// 그 외 텍스트는 그대로 둡니다(법률문장 자체를 바꾸지 않고 기존 표현을
+// 그대로 anchor로 감싸는 용도). 새 컴포넌트나 새 블록 타입을 만들지
+// 않고, 기존 문자열 렌더링 지점(문단·목록 항목)에서만 재사용합니다.
+function renderTextWithLinks(text: string) {
+  const linkPattern = /\[([^\]]+)\]\((\/legal-info\/[a-z0-9-]+)\)/g;
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index));
+    }
+    nodes.push(
+      <Link
+        key={`inline-link-${key++}`}
+        href={match[2]}
+        className="text-brand underline underline-offset-2 transition-colors hover:text-brand-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+      >
+        {match[1]}
+      </Link>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex === 0) {
+    return text;
+  }
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+  return nodes;
+}
+
 function ArticleBlockView({ block }: { block: ArticleBlock }) {
   if (block.type === "p") {
-    return <p className="text-sm leading-7 text-gray-700 sm:text-base sm:leading-8">{block.text}</p>;
+    return <p className="text-sm leading-7 text-gray-700 sm:text-base sm:leading-8">{renderTextWithLinks(block.text)}</p>;
   }
   if (block.type === "subheading") {
     return <p className="text-sm font-semibold text-gray-900 sm:text-base">{block.text}</p>;
@@ -23,7 +60,7 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
       {block.items.map((item) => (
         <li key={item} className="flex items-start gap-2 text-sm leading-6 text-gray-700 sm:text-base">
           <span aria-hidden="true" className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-gray-400" />
-          {item}
+          {renderTextWithLinks(item)}
         </li>
       ))}
     </ul>
@@ -98,7 +135,7 @@ export default function LegalInfoArticleLayout({
             <div className="flex flex-col gap-4">
               {introParagraphs.map((paragraph) => (
                 <p key={paragraph} className="text-base leading-7 text-gray-700 sm:text-lg sm:leading-8">
-                  {paragraph}
+                  {renderTextWithLinks(paragraph)}
                 </p>
               ))}
             </div>

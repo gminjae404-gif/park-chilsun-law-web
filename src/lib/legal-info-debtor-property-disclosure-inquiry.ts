@@ -379,7 +379,7 @@ export const DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_SECTIONS: ArticleSection[] = [
     heading: "31. 재산조회는 강제집행 자체가 아닙니다",
     blocks: [
       { type: "p", text: "재산조회로 예금, 부동산, 자동차 등 재산이 확인되더라도 그 재산에서 채권자에게 돈이 자동으로 지급되는 것은 아닙니다." },
-      { type: "p", text: "확인된 재산에 맞추어 채권압류 및 추심명령, 부동산 강제경매, 자동차 등에 대한 강제집행 등 별도의 절차를 다시 검토해야 합니다." },
+      { type: "p", text: "확인된 재산에 맞추어 [채권압류 및 추심명령](/legal-info/claim-seizure-collection-order), [부동산 강제경매](/legal-info/real-estate-compulsory-auction), 자동차 등에 대한 강제집행 등 별도의 절차를 다시 검토해야 합니다." },
       { type: "p", text: "구체적인 절차는 확인된 재산의 종류에 따라 달라집니다." },
     ],
   },
@@ -393,7 +393,7 @@ export const DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_SECTIONS: ArticleSection[] = [
   {
     heading: "33. 채무불이행자명부와도 다른 제도입니다",
     blocks: [
-      { type: "p", text: "채무불이행자명부 등재는 재산명시절차에서 채무자가 정당한 사유 없이 명시의무를 이행하지 않는 등 일정한 사유가 있는 경우에 문제될 수 있는 별도의 제도입니다." },
+      { type: "p", text: "[채무불이행자명부](/legal-info/debtor-default-list-registration) 등재는 재산명시절차에서 채무자가 정당한 사유 없이 명시의무를 이행하지 않는 등 일정한 사유가 있는 경우에 문제될 수 있는 별도의 제도입니다." },
       { type: "p", text: "재산명시나 재산조회 자체와 채무불이행자명부 등재를 같은 절차로 볼 수는 없으며, 그 요건과 효과도 다릅니다." },
     ],
   },

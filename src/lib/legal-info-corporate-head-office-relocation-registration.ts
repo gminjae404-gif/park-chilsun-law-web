@@ -325,7 +325,7 @@ export const CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_SECTIONS: ArticleSect
           "자본금 10억원 미만이고 이사가 1명 또는 2명인 경우",
           "정관과 현재 기관구성이 일치하지 않는 경우",
           "주주 사이에 정관변경 결의를 둘러싼 분쟁이 있는 경우",
-          "본점이전과 대표이사·임원변경을 동시에 하는 경우",
+          "본점이전과 대표이사·[임원변경](/legal-info/corporate-officer-change-registration)을 동시에 하는 경우",
           "본점이전과 상호변경을 동시에 하는 경우",
           "회사에 지배인 등 다른 관련 등기사항이 있는 경우",
         ],

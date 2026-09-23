@@ -471,7 +471,7 @@ export const LITIGATION_COSTS_DETERMINATION_SECTIONS: ArticleSection[] = [
     heading: "54. 확정결정과 강제집행",
     blocks: [
       { type: "p", text: "소송비용액확정결정은 항고로만 불복할 수 있는 재판으로서, 민사집행법 제56조 제1호에 따라 강제집행의 기초가 될 수 있는 집행권원에 해당합니다." },
-      { type: "p", text: "확정 또는 필요한 집행요건을 갖춘 후 상대방이 임의 지급하지 않으면 채권압류, 유체동산 집행, 부동산 집행 등 일반 강제집행이 문제될 수 있습니다." },
+      { type: "p", text: "확정 또는 필요한 집행요건을 갖춘 후 상대방이 임의 지급하지 않으면 [채권압류](/legal-info/claim-seizure-collection-order), 유체동산 집행, 부동산 집행 등 일반 강제집행이 문제될 수 있습니다." },
     ],
   },
   {

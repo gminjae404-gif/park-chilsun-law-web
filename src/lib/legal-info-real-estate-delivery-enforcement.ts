@@ -118,7 +118,12 @@ export const REAL_ESTATE_DELIVERY_ENFORCEMENT_SECTIONS: ArticleSection[] = [
       { type: "p", text: "실무에서는 다음과 같은 흐름으로 절차가 이어지는 경우가 있습니다." },
       {
         type: "list",
-        items: ["부동산 강제경매", "필요한 경우 부동산 점유이전금지가처분", "매각대금 완납 후 부동산 인도명령", "인도명령 등 집행권원에 기한 인도집행"],
+        items: [
+          "[부동산 강제경매](/legal-info/real-estate-compulsory-auction)",
+          "필요한 경우 [부동산 점유이전금지가처분](/legal-info/real-estate-possession-transfer-provisional-injunction)",
+          "매각대금 완납 후 [부동산 인도명령](/legal-info/real-estate-delivery-order)",
+          "인도명령 등 집행권원에 기한 인도집행",
+        ],
       },
       { type: "p", text: "다만 모든 사건이 이 순서를 그대로 거치는 것은 아니며, 사건에 따라 일부 단계가 생략되거나 다른 절차가 추가될 수 있습니다." },
     ],

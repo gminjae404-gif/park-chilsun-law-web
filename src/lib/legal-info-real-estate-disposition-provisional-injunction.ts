@@ -147,7 +147,7 @@ export const REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_SECTIONS: ArticleSec
         type: "p",
         text: "따라서 대여금이나 공사대금 등 단순 금전채권만 가지고 있는 채권자가 채무자의 일반재산인 부동산을 팔지 못하게 하기 위해 처분금지가처분을 신청할 수 있는 것은 아닙니다.",
       },
-      { type: "p", text: "이 경우에는 부동산 가압류가 일반적인 보전수단이 될 수 있으며, 부동산 가압류에 관한 절차는 이 글과 구분해서 확인해야 합니다." },
+      { type: "p", text: "이 경우에는 [부동산 가압류](/legal-info/real-estate-provisional-attachment)가 일반적인 보전수단이 될 수 있으며, 부동산 가압류에 관한 절차는 이 글과 구분해서 확인해야 합니다." },
     ],
   },
   {

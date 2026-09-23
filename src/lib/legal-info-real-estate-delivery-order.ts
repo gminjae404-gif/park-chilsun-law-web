@@ -328,7 +328,7 @@ export const REAL_ESTATE_DELIVERY_ORDER_SECTIONS: ArticleSection[] = [
         type: "p",
         text: "민사집행법 제136조 제6항에 따라 채무자·소유자 또는 점유자가 인도명령에 따르지 않으면 매수인은 집행관에게 그 집행을 위임할 수 있습니다.",
       },
-      { type: "p", text: "따라서 인도명령 결정 자체와 실제 현장 인도집행은 구분됩니다." },
+      { type: "p", text: "따라서 인도명령 결정 자체와 실제 현장 [인도집행](/legal-info/real-estate-delivery-enforcement)은 구분됩니다." },
     ],
   },
   {
@@ -380,7 +380,7 @@ export const REAL_ESTATE_DELIVERY_ORDER_SECTIONS: ArticleSection[] = [
         type: "p",
         text: "복잡한 점유관계 때문에 인도명령이 어려워 일반 인도소송을 진행해야 하는 경우에는 본안 중 점유자가 계속 바뀌는 것을 막기 위해 점유이전금지가처분을 검토할 수 있습니다.",
       },
-      { type: "p", text: "인도명령과 점유이전금지가처분을 같은 절차로 볼 수는 없습니다." },
+      { type: "p", text: "인도명령과 [점유이전금지가처분](/legal-info/real-estate-possession-transfer-provisional-injunction)을 같은 절차로 볼 수는 없습니다." },
     ],
   },
   {

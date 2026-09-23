@@ -199,7 +199,7 @@ export const MORTGAGE_ESTABLISHMENT_REGISTRATION_SECTIONS: ArticleSection[] = [
       { type: "p", text: "아닙니다." },
       { type: "p", text: "실제 피담보채무가 변제되었다고 해서 등기기록에 있는 근저당권설정등기가 자동으로 삭제되는 것은 아닙니다." },
       { type: "p", text: "채무가 정리된 경우에도 근저당권 말소를 위한 말소등기를 별도로 진행해야 할 수 있습니다." },
-      { type: "p", text: "근저당권 말소등기에 관한 구체적인 절차는 이 사이트의 근저당권 말소등기 준비서류와 절차 글에서 안내하고 있습니다." },
+      { type: "p", text: "근저당권 말소등기에 관한 구체적인 절차는 이 사이트의 [근저당권 말소등기 준비서류와 절차](/legal-info/mortgage-cancellation-registration) 글에서 안내하고 있습니다." },
     ],
   },
   {

@@ -172,7 +172,7 @@ export const INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_SECTIONS: ArticleSection[] 
   {
     heading: "10. 신청기간은 상속포기·한정승인의 3개월과 동일하지 않습니다",
     blocks: [
-      { type: "p", text: "상속포기·한정승인의 일반적인 기간은 민법 제1019조에서 상속개시 있음을 안 날부터 3개월을 기준으로 합니다." },
+      { type: "p", text: "[상속포기·한정승인](/legal-info/inheritance-renunciation-limited-acceptance)의 일반적인 기간은 민법 제1019조에서 상속개시 있음을 안 날부터 3개월을 기준으로 합니다." },
       { type: "p", text: "반면 상속재산파산의 신청기간은 채무자회생법 제300조가 민법 제1045조의 상속재산 분리청구기간을 기준으로 정합니다." },
       { type: "p", text: "민법 제1045조 제1항은 원칙적으로 상속개시된 날부터 3개월을 규정합니다." },
       {

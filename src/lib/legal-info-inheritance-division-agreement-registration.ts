@@ -178,7 +178,7 @@ export const INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_SECTIONS: ArticleSectio
     blocks: [
       {
         type: "p",
-        text: "공동상속인이 이번 부동산을 받지 않겠다거나 형제 한 명이 전부 상속한다는 방식으로 협의분할에 동의하는 것과, 가정법원에 민법 제1041조에 따른 상속포기를 신고하는 것은 서로 다른 제도입니다.",
+        text: "공동상속인이 이번 부동산을 받지 않겠다거나 형제 한 명이 전부 상속한다는 방식으로 협의분할에 동의하는 것과, 가정법원에 민법 제1041조에 따른 [상속포기](/legal-info/inheritance-renunciation-limited-acceptance)를 신고하는 것은 서로 다른 제도입니다.",
       },
       {
         type: "p",
