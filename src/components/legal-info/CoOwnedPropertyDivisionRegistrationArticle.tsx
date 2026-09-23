@@ -36,6 +36,7 @@ export default function CoOwnedPropertyDivisionRegistrationArticle() {
       relatedLinks={[
         { href: "/registration/real-estate", label: "부동산등기" },
         { href: "/legal-info/provisional-registration-procedure", label: "가등기 설정·본등기·말소 절차" },
+        { href: "/legal-info/inheritance-division-agreement-registration", label: "상속재산분할협의와 상속등기 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

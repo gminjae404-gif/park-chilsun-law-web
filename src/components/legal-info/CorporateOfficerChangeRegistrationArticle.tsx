@@ -35,6 +35,8 @@ export default function CorporateOfficerChangeRegistrationArticle() {
       references={CORPORATE_OFFICER_CHANGE_REGISTRATION_REFERENCES}
       relatedLinks={[
         { href: "/registration/corporate", label: "법인등기" },
+        { href: "/legal-info/corporate-head-office-relocation-registration", label: "주식회사 본점이전등기 준비서류와 절차" },
+        { href: "/legal-info/corporate-capital-increase-registration", label: "주식회사 유상증자·신주발행 변경등기 준비서류와 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

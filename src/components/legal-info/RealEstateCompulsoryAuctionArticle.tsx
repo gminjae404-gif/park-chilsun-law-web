@@ -37,6 +37,9 @@ export default function RealEstateCompulsoryAuctionArticle() {
         { href: "/enforcement", label: "강제집행" },
         { href: "/legal-info/payment-order-procedure", label: "지급명령 신청 절차와 준비자료" },
         { href: "/legal-info/claim-seizure-collection-order", label: "채권압류 및 추심명령 절차와 준비자료" },
+        { href: "/legal-info/real-estate-voluntary-auction", label: "부동산 임의경매 신청 절차와 준비자료" },
+        { href: "/legal-info/real-estate-auction-distribution-demand", label: "부동산 경매 배당요구 절차와 준비자료" },
+        { href: "/legal-info/real-estate-auction-withdrawal-stay-cancellation", label: "부동산 경매 취하·정지·취소 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

@@ -37,6 +37,7 @@ export default function ProvisionalRegistrationProcedureArticle() {
         { href: "/registration/real-estate", label: "부동산등기" },
         { href: "/legal-info/real-estate-sale-registration", label: "부동산 매매 소유권이전등기 준비서류와 절차" },
         { href: "/legal-info/mortgage-establishment-registration", label: "근저당권 설정등기 준비서류와 절차" },
+        { href: "/legal-info/ownership-transfer-cancellation-restoration", label: "소유권이전등기 말소·말소회복 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

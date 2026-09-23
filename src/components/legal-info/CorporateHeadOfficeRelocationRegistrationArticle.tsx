@@ -39,6 +39,7 @@ export default function CorporateHeadOfficeRelocationRegistrationArticle() {
           href: "/legal-info/corporate-officer-change-registration",
           label: "주식회사 임원변경등기 준비서류와 절차",
         },
+        { href: "/legal-info/corporate-capital-increase-registration", label: "주식회사 유상증자·신주발행 변경등기 준비서류와 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />
