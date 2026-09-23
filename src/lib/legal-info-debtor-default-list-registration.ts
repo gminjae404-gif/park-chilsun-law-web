@@ -103,7 +103,7 @@ export const DEBTOR_DEFAULT_LIST_REGISTRATION_SECTIONS: ArticleSection[] = [
   {
     heading: "3. 재산명시·재산조회와는 다른 제도입니다",
     blocks: [
-      { type: "p", text: "재산명시·재산조회의 주된 목적은 채무자의 집행재산을 파악하는 것입니다." },
+      { type: "p", text: "[재산명시·재산조회](/legal-info/debtor-property-disclosure-inquiry)의 주된 목적은 채무자의 집행재산을 파악하는 것입니다." },
       { type: "p", text: "채무불이행자명부등재는 법정 요건을 갖춘 채무자의 인적사항 등을 명부에 등재하여 채무이행을 간접적으로 촉진하고 거래안전을 도모하는 제도입니다." },
       { type: "p", text: "재산명시절차에서 채무자의 불출석, 재산목록 제출 거부, 선서 거부, 거짓 재산목록 제출 등의 사유가 발생한 경우 그 사정이 등재신청 사유로 연결될 수 있지만, 두 제도를 같은 신청으로 설명할 수는 없습니다." },
     ],

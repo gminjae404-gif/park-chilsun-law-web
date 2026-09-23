@@ -301,7 +301,7 @@ export const JEONSE_RIGHT_REGISTRATION_SECTIONS: ArticleSection[] = [
   {
     heading: "23. 국민주택채권은 근저당권 설정 글을 그대로 복사하지 않습니다",
     blocks: [
-      { type: "p", text: "근저당권 설정등기 글의 국민주택채권 내용을 전세권 설정등기에 그대로 적용할 수 있는 것은 아닙니다." },
+      { type: "p", text: "[근저당권 설정등기](/legal-info/mortgage-establishment-registration) 글의 국민주택채권 내용을 전세권 설정등기에 그대로 적용할 수 있는 것은 아닙니다." },
       {
         type: "p",
         text: "전세권 설정등기의 국민주택채권 매입의무가 있는지 여부는 2026. 9. 19. 현재 시행 중인 주택도시기금법, 같은 법 시행령의 매입대상 별표, 시행규칙을 직접 확인해야 합니다.",

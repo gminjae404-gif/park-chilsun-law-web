@@ -431,7 +431,7 @@ export const REAL_ESTATE_PROVISIONAL_ATTACHMENT_SECTIONS: ArticleSection[] = [
     heading: "33. 가압류가 자동으로 강제경매로 바뀌는 것은 아닙니다",
     blocks: [
       { type: "p", text: "채권자가 본안에서 승소하거나 집행권원을 확보했다고 해서 기존 부동산 가압류등기가 자동으로 강제경매절차로 전환되는 것은 아닙니다." },
-      { type: "p", text: "집행력 있는 집행권원을 확보한 뒤 별도로 부동산 강제경매를 신청하는 등 본집행 절차를 진행해야 합니다." },
+      { type: "p", text: "집행력 있는 집행권원을 확보한 뒤 별도로 [부동산 강제경매](/legal-info/real-estate-compulsory-auction)를 신청하는 등 본집행 절차를 진행해야 합니다." },
       { type: "p", text: "기존 가압류와 본압류·강제경매의 관계는 구체적인 집행절차에서 정리됩니다." },
     ],
   },

@@ -271,7 +271,7 @@ export const OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_SECTIONS: ArticleSection[] = [
     heading: "26. 부동산 강제경매 정지",
     blocks: [
       { type: "p", text: "청구이의와 강제집행정지결정을 부동산 강제경매에 적용하는 경우에는 경매사건번호, 매각기일, 현재 절차단계, 정지결정, 집행법원 제출 여부를 확인해야 합니다." },
-      { type: "p", text: "36편 「부동산 경매 취하·정지·취소 절차와 준비자료」와 함께 확인할 수 있습니다." },
+      { type: "p", text: "36편 「[부동산 경매 취하·정지·취소 절차와 준비자료](/legal-info/real-estate-auction-withdrawal-stay-cancellation)」와 함께 확인할 수 있습니다." },
     ],
   },
   {
@@ -314,7 +314,7 @@ export const OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_SECTIONS: ArticleSection[] = [
   {
     heading: "32. 청구이의와 집행문부여에 관한 이의(신청·소) 구분",
     blocks: [
-      { type: "p", text: "민사집행법 제34조의 집행문부여 등에 관한 이의신청과, 제45조의 집행문부여에 대한 이의의 소는 별도의 제도입니다." },
+      { type: "p", text: "민사집행법 제34조의 집행문부여 등에 관한 이의신청과, 제45조의 [집행문부여에 대한 이의의 소](/legal-info/succession-execution-clause-objection)는 별도의 제도입니다." },
       { type: "p", text: "제45조의 집행문부여에 대한 이의의 소는 채무자가 집행문 부여 시 증명된 조건의 성취 또는 승계 등의 사유를 다투어 집행문부여의 위법함을 주장하는 소송으로, 이의사유가 집행권원에 표시된 조건의 불성취와 당사자 승계의 부존재에 한정됩니다." },
       { type: "p", text: "청구이의는 청구권 자체의 소멸·감축 등을 다투는 것이고, 집행문부여에 대한 이의는 조건성취나 승계 등 집행문 부여의 실체적 요건을 다투는 것이므로, 실제 무엇을 다투는지를 먼저 확인해야 합니다." },
     ],
@@ -322,7 +322,7 @@ export const OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_SECTIONS: ArticleSection[] = [
   {
     heading: "33. 제3자이의의 소와 구분",
     blocks: [
-      { type: "p", text: "민사집행법 제48조에 따라, 제3자가 집행목적물에 대하여 소유권이 있다고 주장하거나 그 양도·인도를 막을 수 있는 권리가 있다고 주장하는 경우에는 채권자를 상대로 제3자이의의 소를 제기할 수 있습니다." },
+      { type: "p", text: "민사집행법 제48조에 따라, 제3자가 집행목적물에 대하여 소유권이 있다고 주장하거나 그 양도·인도를 막을 수 있는 권리가 있다고 주장하는 경우에는 채권자를 상대로 [제3자이의의 소](/legal-info/third-party-objection-enforcement-stay)를 제기할 수 있습니다." },
       { type: "p", text: "청구이의는 채무자가 채권자의 청구권을 다투는 것이고, 제3자이의는 집행대상 재산에 대해 제3자가 자신의 권리를 주장하는 것이므로, 배우자 등 제3자 소유물을 압류했다고 해서 채무자가 청구이의의 소로 해결할 수 있는 것은 아닙니다." },
     ],
   },

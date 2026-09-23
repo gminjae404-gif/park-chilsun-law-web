@@ -51,7 +51,7 @@ export const REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META = {
 export const REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_INTRO_PARAGRAPHS: string[] = [
   "이미 시작된 부동산 경매절차가 도중에 멈추거나 끝나는 경우가 있습니다. 그 이유는 신청채권자의 취하일 수도 있고, 법정 서류 제출에 따른 정지일 수도 있고, 법원의 취소일 수도 있습니다.",
   "그러나 '경매를 멈춘다'는 표현 하나로 이 모든 경우를 동일하게 설명할 수는 없습니다. 주체, 사유, 법률효과가 서로 다릅니다.",
-  "이 글은 9편·32편에서 다룬 경매신청 방법, 35편에서 다룬 매각허가 불복과 구분하여, 진행 중인 경매가 어떤 법적 근거로 멈추거나 종료되는지에 집중하여 안내합니다.",
+  "이 글은 9편·32편에서 다룬 경매신청 방법, 35편에서 다룬 [매각허가 불복](/legal-info/real-estate-auction-sale-permission-objection-appeal)과 구분하여, 진행 중인 경매가 어떤 법적 근거로 멈추거나 종료되는지에 집중하여 안내합니다.",
 ];
 
 export const REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_SECTIONS: ArticleSection[] = [
@@ -256,7 +256,7 @@ export const REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_SECTIONS: ArticleS
   {
     heading: "26. 제266조 제1항 제1호",
     blocks: [
-      { type: "p", text: "32편에서 다룬 임의경매와 연결됩니다. 민사집행법 제266조는 담보권 실행을 위한 경매에서 경매절차를 정지해야 하는 서류를 별도로 규정하며, 제49조와 같은 규정으로 섞어 볼 수 없습니다." },
+      { type: "p", text: "32편에서 다룬 [임의경매](/legal-info/real-estate-voluntary-auction)와 연결됩니다. 민사집행법 제266조는 담보권 실행을 위한 경매에서 경매절차를 정지해야 하는 서류를 별도로 규정하며, 제49조와 같은 규정으로 섞어 볼 수 없습니다." },
       { type: "p", text: "제1호는 담보권의 등기가 말소된 등기사항증명서를 말합니다. 등기말소 신청만 접수했다고 자동으로 이 요건이 충족된다고 볼 수는 없습니다." },
     ],
   },

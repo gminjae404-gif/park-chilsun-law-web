@@ -362,7 +362,12 @@ export const PAYMENT_ORDER_PROCEDURE_SECTIONS: ArticleSection[] = [
       },
       {
         type: "list",
-        items: ["예금채권 압류 및 추심", "급여채권 등에 대한 집행", "부동산 강제경매", "그 밖의 재산에 대한 강제집행"],
+        items: [
+          "[예금채권 압류 및 추심](/legal-info/claim-seizure-collection-order)",
+          "급여채권 등에 대한 집행",
+          "[부동산 강제경매](/legal-info/real-estate-compulsory-auction)",
+          "그 밖의 재산에 대한 강제집행",
+        ],
       },
       {
         type: "p",

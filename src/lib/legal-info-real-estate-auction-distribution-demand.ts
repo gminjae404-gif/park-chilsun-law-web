@@ -63,7 +63,7 @@ export const REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META = {
 export const REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_INTRO_PARAGRAPHS: string[] = [
   "부동산 경매절차가 진행 중이라는 사실을 알게 된 채권자는, 그 매각대금에서 자신의 채권을 배당받으려면 배당요구가 필요한지, 필요하다면 언제까지 어떤 방식으로 해야 하는지를 확인해야 합니다.",
   "다만 경매절차에 관계된 모든 채권자가 반드시 별도의 배당요구를 해야만 배당받는 것은 아닙니다.",
-  "이 글은 9편 「부동산 강제경매 신청 절차와 준비자료」와 32편 「부동산 임의경매 신청 절차와 준비자료」에서 다룬 경매신청부터 매각까지의 전체 흐름 중, 배당요구와 배당참가 요건에 집중하여 안내합니다.",
+  "이 글은 9편 「[부동산 강제경매 신청 절차와 준비자료](/legal-info/real-estate-compulsory-auction)」와 32편 「[부동산 임의경매 신청 절차와 준비자료](/legal-info/real-estate-voluntary-auction)」에서 다룬 경매신청부터 매각까지의 전체 흐름 중, 배당요구와 배당참가 요건에 집중하여 안내합니다.",
 ];
 
 export const REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_SECTIONS: ArticleSection[] = [

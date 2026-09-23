@@ -62,7 +62,7 @@ export const VEHICLE_PROVISIONAL_SEIZURE_META = {
 
 export const VEHICLE_PROVISIONAL_SEIZURE_INTRO_PARAGRAPHS: string[] = [
   "금전채권이나 금전으로 환산할 수 있는 채권을 가진 채권자가 채무자 명의 자동차를 확인했지만 아직 판결 등 집행권원을 확보하지 못한 경우, 장래의 자동차 강제집행을 보전하기 위해 자동차 가압류를 검토할 수 있습니다.",
-  "자동차 가압류는 30편 「자동차 강제집행 절차와 준비자료」에서 다룬 절차의 앞단계에 해당하는 보전처분이며, 자동차를 매각하여 채권을 회수하는 절차 자체는 아닙니다.",
+  "자동차 가압류는 30편 「[자동차 강제집행 절차와 준비자료](/legal-info/vehicle-enforcement)」에서 다룬 절차의 앞단계에 해당하는 보전처분이며, 자동차를 매각하여 채권을 회수하는 절차 자체는 아닙니다.",
   "이 글은 자동차 가압류의 요건과 절차, 관할, 담보제공, 자동차 인도명령, 가압류해방금액과 이후 본안소송·강제집행으로의 연결을 안내합니다.",
 ];
 
@@ -89,7 +89,7 @@ export const VEHICLE_PROVISIONAL_SEIZURE_SECTIONS: ArticleSection[] = [
     blocks: [
       { type: "p", text: "자동차 가압류는 아직 실제 채권회수를 위한 집행단계에 들어가기 전, 장래의 자동차 강제집행을 보전하기 위한 절차입니다." },
       { type: "p", text: "자동차 강제집행은 집행권원을 바탕으로 자동차를 실제로 매각하고 배당을 통해 채권의 만족을 얻는 절차입니다." },
-      { type: "p", text: "22편 「부동산 가압류 신청 절차와 준비자료」, 27편 「재산명시·재산조회 신청 절차와 준비자료」, 29편 「유체동산 강제집행 절차와 준비자료」, 30편 「자동차 강제집행 절차와 준비자료」와 각각 대상·목적이 다른 별개의 절차입니다." },
+      { type: "p", text: "22편 「[부동산 가압류 신청 절차와 준비자료](/legal-info/real-estate-provisional-attachment)」, 27편 「[재산명시·재산조회 신청 절차와 준비자료](/legal-info/debtor-property-disclosure-inquiry)」, 29편 「[유체동산 강제집행 절차와 준비자료](/legal-info/movable-property-enforcement)」, 30편 「자동차 강제집행 절차와 준비자료」와 각각 대상·목적이 다른 별개의 절차입니다." },
     ],
   },
   {

@@ -68,7 +68,7 @@ export const VEHICLE_ENFORCEMENT_INTRO_PARAGRAPHS: string[] = [
   "금전지급을 명한 집행권원을 확보한 채권자가 채무자 명의로 등록된 자동차를 발견한 경우, 그 자동차에 대한 강제집행을 검토할 수 있습니다.",
   "자동차는 물리적으로는 동산이지만 「자동차관리법」에 따라 등록되는 재산이어서, 집 안의 가전제품과 같은 일반 유체동산 압류와 같은 방법으로 진행되지 않습니다.",
   "민사집행규칙에 자동차집행에 관한 특별한 규정이 없으면 부동산에 대한 강제경매 규정을 따르며, 이때 등기는 등록으로, 등기부는 자동차등록원부로 대응하여 적용하는 구조를 가지고 있습니다.",
-  "이 글은 채권압류·추심명령(8편), 부동산 강제경매(9편), 재산명시·재산조회(27편), 유체동산 강제집행(29편)과 구분되는 자동차 강제집행의 절차와 준비자료를 안내합니다.",
+  "이 글은 [채권압류·추심명령](/legal-info/claim-seizure-collection-order)(8편), [부동산 강제경매](/legal-info/real-estate-compulsory-auction)(9편), [재산명시·재산조회](/legal-info/debtor-property-disclosure-inquiry)(27편), [유체동산 강제집행](/legal-info/movable-property-enforcement)(29편)과 구분되는 자동차 강제집행의 절차와 준비자료를 안내합니다.",
 ];
 
 export const VEHICLE_ENFORCEMENT_SECTIONS: ArticleSection[] = [

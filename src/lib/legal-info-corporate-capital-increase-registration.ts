@@ -432,7 +432,7 @@ export const CORPORATE_CAPITAL_INCREASE_REGISTRATION_SECTIONS: ArticleSection[] 
           "부동산이나 유가증권 등 다른 재산을 현물출자하는 경우",
           "종류주식을 발행하는 경우",
           "외국인이 신주를 인수하는 경우",
-          "증자와 임원변경·본점이전·정관변경 등을 동시에 하는 경우",
+          "증자와 [임원변경](/legal-info/corporate-officer-change-registration)·[본점이전](/legal-info/corporate-head-office-relocation-registration)·정관변경 등을 동시에 하는 경우",
           "주주 사이에 지분 또는 경영권 분쟁이 있는 경우",
         ],
       },

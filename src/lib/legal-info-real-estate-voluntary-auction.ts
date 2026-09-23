@@ -59,7 +59,7 @@ export const REAL_ESTATE_VOLUNTARY_AUCTION_META = {
 export const REAL_ESTATE_VOLUNTARY_AUCTION_INTRO_PARAGRAPHS: string[] = [
   "저당권이나 근저당권 등 부동산에 설정된 담보권을 가진 채권자가 변제기가 지나도 채무를 변제받지 못한 경우, 그 담보권을 실행하여 담보부동산을 경매로 매각하고 매각대금에서 채권의 만족을 얻는 절차를 검토할 수 있습니다.",
   "이 절차는 일반적으로 '임의경매'라고 불리지만, 민사집행법상 정식 표현은 '담보권 실행을 위한 경매'이며, 당사자들이 합의하여 자발적으로 진행하는 절차라는 의미는 아닙니다.",
-  "이 글은 9편 「부동산 강제경매 신청 절차와 준비자료」에서 다룬 집행권원에 기초한 강제경매와 구분되는, 담보권 실행을 위한 경매의 신청요건과 절차를 안내합니다.",
+  "이 글은 9편 「[부동산 강제경매 신청 절차와 준비자료](/legal-info/real-estate-compulsory-auction)」에서 다룬 집행권원에 기초한 강제경매와 구분되는, 담보권 실행을 위한 경매의 신청요건과 절차를 안내합니다.",
 ];
 
 export const REAL_ESTATE_VOLUNTARY_AUCTION_SECTIONS: ArticleSection[] = [
@@ -245,7 +245,7 @@ export const REAL_ESTATE_VOLUNTARY_AUCTION_SECTIONS: ArticleSection[] = [
     blocks: [
       { type: "p", text: "매수인이 대금을 완납한 이후에는 민사집행법 제136조에 따른 부동산 인도명령이 문제될 수 있습니다." },
       { type: "p", text: "이는 경매신청인이 신청하는 보전처분이나 경매개시 전에 점유자를 내보내는 절차가 아닙니다." },
-      { type: "p", text: "구체적인 절차는 25편 「부동산 인도명령 신청 절차와 준비자료」에서 확인할 수 있습니다." },
+      { type: "p", text: "구체적인 절차는 25편 「[부동산 인도명령 신청 절차와 준비자료](/legal-info/real-estate-delivery-order)」에서 확인할 수 있습니다." },
     ],
   },
   {
@@ -458,7 +458,7 @@ export const REAL_ESTATE_VOLUNTARY_AUCTION_SECTIONS: ArticleSection[] = [
   {
     heading: "46. 근저당권 설정과 임의경매 비교",
     blocks: [
-      { type: "p", text: "17편 「근저당권 설정등기 준비서류와 절차」에서 다룬 근저당권 설정등기는 채권을 담보하기 위한 담보권 설정 단계입니다." },
+      { type: "p", text: "17편 「[근저당권 설정등기 준비서류와 절차](/legal-info/mortgage-establishment-registration)」에서 다룬 근저당권 설정등기는 채권을 담보하기 위한 담보권 설정 단계입니다." },
       { type: "p", text: "이번 글의 임의경매는 채무불이행 등이 발생하여 그 담보권을 실행하는 단계입니다." },
       { type: "p", text: "근저당권을 설정했다고 해서 그것이 곧 경매신청은 아닙니다." },
     ],
@@ -466,7 +466,7 @@ export const REAL_ESTATE_VOLUNTARY_AUCTION_SECTIONS: ArticleSection[] = [
   {
     heading: "47. 부동산 가압류와 임의경매 비교",
     blocks: [
-      { type: "p", text: "22편 「부동산 가압류 신청 절차와 준비자료」에서 다룬 부동산 가압류는 장래의 강제집행을 보전하는 절차입니다." },
+      { type: "p", text: "22편 「[부동산 가압류 신청 절차와 준비자료](/legal-info/real-estate-provisional-attachment)」에서 다룬 부동산 가압류는 장래의 강제집행을 보전하는 절차입니다." },
       { type: "p", text: "이번 글의 임의경매는 이미 존재하는 담보권을 실제로 실행하여 매각·배당으로 연결하는 절차입니다." },
       { type: "p", text: "가압류 자체가 담보권인 것은 아닙니다." },
     ],

@@ -55,7 +55,7 @@ export const REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_META = {
 export const REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_INTRO_PARAGRAPHS: string[] = [
   "부동산 경매에서 최고가매수신고인이 정해진 뒤에도, 법원이 매각을 허가할지 여부를 다시 심리하는 절차가 남아 있습니다.",
   "이 단계에서 매각허가가 부당하다고 판단되면 매각허가에 대한 이의를 신청할 수 있고, 이미 내려진 매각허가·불허가결정에 불복하려면 즉시항고를 제기해야 합니다. 두 절차는 시점과 요건이 다릅니다.",
-  "이 글은 9편·32편에서 다룬 경매신청부터 매각까지의 전체 흐름, 33편·34편에서 다룬 배당요구·배당이의와 구분하여, 매각허가 여부에 대한 불복절차에만 집중하여 안내합니다.",
+  "이 글은 9편·32편에서 다룬 경매신청부터 매각까지의 전체 흐름, 33편·34편에서 다룬 [배당요구](/legal-info/real-estate-auction-distribution-demand)·[배당이의](/legal-info/real-estate-auction-distribution-objection)와 구분하여, 매각허가 여부에 대한 불복절차에만 집중하여 안내합니다.",
 ];
 
 export const REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_SECTIONS: ArticleSection[] = [
@@ -433,7 +433,7 @@ export const REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_SECTIONS: Arti
     heading: "47. 강제경매와 임의경매 적용",
     blocks: [
       { type: "p", text: "이 글에서 설명한 매각허가 절차는 부동산 강제경매뿐 아니라, 민사집행법 제268조에 따라 담보권 실행을 위한 경매에도 상당 부분 준용됩니다." },
-      { type: "p", text: "다만 임의경매에서는 담보권의 존재·소멸 등 별도 쟁점도 있으므로, 필요한 경우 32편을 함께 확인하는 것이 좋습니다." },
+      { type: "p", text: "다만 임의경매에서는 담보권의 존재·소멸 등 별도 쟁점도 있으므로, 필요한 경우 [32편](/legal-info/real-estate-voluntary-auction)을 함께 확인하는 것이 좋습니다." },
     ],
   },
   {
@@ -446,7 +446,7 @@ export const REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_SECTIONS: Arti
   {
     heading: "49. 매각허가와 인도명령",
     blocks: [
-      { type: "p", text: "25편에서 다룬 인도명령과 이 글에서 다룬 매각허가는 서로 다른 단계입니다." },
+      { type: "p", text: "25편에서 다룬 [인도명령](/legal-info/real-estate-delivery-order)과 이 글에서 다룬 매각허가는 서로 다른 단계입니다." },
       { type: "subheading", text: "매각허가" },
       { type: "p", text: "법원이 낙찰자를 매수인으로 인정하는 경매절차 단계입니다." },
       { type: "subheading", text: "인도명령" },

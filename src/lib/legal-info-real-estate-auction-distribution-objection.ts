@@ -66,7 +66,7 @@ export const REAL_ESTATE_AUCTION_DISTRIBUTION_OBJECTION_META = {
 export const REAL_ESTATE_AUCTION_DISTRIBUTION_OBJECTION_INTRO_PARAGRAPHS: string[] = [
   "부동산 경매 배당기일을 앞둔 채권자·채무자는, 배당표원안에서 확인한 채권액이나 순위가 잘못되었다고 판단될 때 어떤 방법으로 이의하고 그 이후 어떤 소송을 진행해야 하는지 확인해야 합니다.",
   "다만 단순히 배당이의의 소를 내면 된다는 설명만으로는 부족합니다. 누가 이의했는지, 누구의 어떤 채권을 다투는지에 따라 제기해야 하는 소송이 달라지기 때문입니다.",
-  "이 글은 33편 「부동산 경매 배당요구 절차와 준비자료」에 이어, 이미 작성된 배당표에 대한 이의와 그 이후의 소송절차에 집중하여 안내합니다.",
+  "이 글은 33편 「[부동산 경매 배당요구 절차와 준비자료](/legal-info/real-estate-auction-distribution-demand)」에 이어, 이미 작성된 배당표에 대한 이의와 그 이후의 소송절차에 집중하여 안내합니다.",
 ];
 
 export const REAL_ESTATE_AUCTION_DISTRIBUTION_OBJECTION_SECTIONS: ArticleSection[] = [

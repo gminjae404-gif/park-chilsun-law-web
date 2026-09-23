@@ -24,7 +24,7 @@ export const INHERITANCE_REGISTRATION_META = {
 
 export const INHERITANCE_REGISTRATION_INTRO_PARAGRAPHS: string[] = [
   "부동산 소유자가 사망하면 상속관계를 확인한 뒤 상속으로 인한 소유권이전등기를 진행할 수 있습니다.",
-  "상속등기는 단순히 가족관계증명서 한 장만으로 진행되는 것이 아니라 상속인의 범위, 상속재산분할 여부, 사망 시점, 대습상속이나 상속포기 여부 등에 따라 필요한 서류가 달라질 수 있습니다.",
+  "상속등기는 단순히 가족관계증명서 한 장만으로 진행되는 것이 아니라 상속인의 범위, [상속재산분할](/legal-info/inheritance-division-agreement-registration) 여부, 사망 시점, 대습상속이나 [상속포기](/legal-info/inheritance-renunciation-limited-acceptance) 여부 등에 따라 필요한 서류가 달라질 수 있습니다.",
   "아래 내용은 대한민국 국민인 피상속인에게 배우자와 자녀가 있는 일반적인 1순위 상속을 중심으로 안내합니다.",
 ];
 

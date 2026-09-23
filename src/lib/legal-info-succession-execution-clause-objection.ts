@@ -303,7 +303,7 @@ export const SUCCESSION_EXECUTION_CLAUSE_OBJECTION_SECTIONS: ArticleSection[] = 
       { type: "p", text: "집행권원에 표시된 청구권 자체의 소멸·변경 등을 주장합니다. 예: 판결 후 변제, 면제, 상계 등." },
       { type: "subheading", text: "집행문부여에 대한 이의" },
       { type: "p", text: "조건성취·당사자 승계 등 집행문 부여요건을 다툽니다." },
-      { type: "p", text: "청구이의와 승계집행문 이의는 같은 소송이 아닙니다." },
+      { type: "p", text: "[청구이의](/legal-info/objection-to-claim-enforcement-stay)와 승계집행문 이의는 같은 소송이 아닙니다." },
     ],
   },
   {
@@ -346,7 +346,7 @@ export const SUCCESSION_EXECUTION_CLAUSE_OBJECTION_SECTIONS: ArticleSection[] = 
     heading: "40. 지급명령 승계집행문",
     blocks: [
       { type: "p", text: "판결뿐 아니라 확정 지급명령에서도 당사자 승계가 발생하면 승계집행문 문제가 생길 수 있습니다." },
-      { type: "p", text: "7편에서 다룬 지급명령 신청 절차와 함께 확인해야 하는 부분입니다." },
+      { type: "p", text: "7편에서 다룬 [지급명령](/legal-info/payment-order-procedure) 신청 절차와 함께 확인해야 하는 부분입니다." },
     ],
   },
   {

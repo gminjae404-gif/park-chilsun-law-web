@@ -98,7 +98,7 @@ export const REAL_ESTATE_POSSESSION_TRANSFER_PROVISIONAL_INJUNCTION_SECTIONS: Ar
         type: "list",
         items: [
           "점유이전금지가처분: 사실상의 점유관계를 보전합니다.",
-          "처분금지가처분: 소유권이전·저당권 설정 등 법률상 처분과 등기관계를 보전합니다.",
+          "[처분금지가처분](/legal-info/real-estate-disposition-provisional-injunction): 소유권이전·저당권 설정 등 법률상 처분과 등기관계를 보전합니다.",
         ],
       },
       {

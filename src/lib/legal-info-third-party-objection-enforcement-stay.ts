@@ -53,7 +53,7 @@ export const THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META = {
 export const THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_INTRO_PARAGRAPHS: string[] = [
   "채권자가 채무자에 대한 집행권원으로 강제집행을 하였는데, 실제 집행목적물이 제3자의 소유이거나 제3자가 그 목적물의 양도·인도를 막을 수 있는 권리를 가지고 있는 경우가 있습니다.",
   "이 경우 그 제3자는 해당 집행을 배제하기 위하여 제3자이의의 소를 제기할 수 있고, 필요한 경우 강제집행정지나 집행처분 취소 등 잠정처분을 함께 검토해야 합니다.",
-  "이 글은 37편에서 다룬 청구이의의 소와 구분하여, 채무자가 아닌 제3자가 집행목적물에 관한 자신의 권리를 근거로 집행 배제를 구하는 절차에 집중하여 안내합니다.",
+  "이 글은 37편에서 다룬 [청구이의의 소](/legal-info/objection-to-claim-enforcement-stay)와 구분하여, 채무자가 아닌 제3자가 집행목적물에 관한 자신의 권리를 근거로 집행 배제를 구하는 절차에 집중하여 안내합니다.",
 ];
 
 export const THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_SECTIONS: ArticleSection[] = [
@@ -171,7 +171,7 @@ export const THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_SECTIONS: ArticleSection[] =
   {
     heading: "16. 유체동산 압류",
     blocks: [
-      { type: "p", text: "29편에서 다룬 것처럼, 집행관이 채무자가 점유하고 있는 물건을 압류했는데 실제 소유자가 제3자라고 주장하는 경우가 대표적인 실무사례입니다." },
+      { type: "p", text: "[29편](/legal-info/movable-property-enforcement)에서 다룬 것처럼, 집행관이 채무자가 점유하고 있는 물건을 압류했는데 실제 소유자가 제3자라고 주장하는 경우가 대표적인 실무사례입니다." },
       { type: "list", items: ["실제 구입자", "대금지급자", "소유권 취득시점", "보관장소", "점유경위", "사업용 자산 등록", "감가상각 장부", "세금계산서", "물품번호"] },
       { type: "p", text: "채무자가 점유하고 있다는 사정만으로 소유권이 확정되는 것은 아닙니다. 집행단계에서 점유관계 때문에 압류가 이루어질 수 있는 것과 본안에서 실제 소유권이 인정되는 것은 구분해야 합니다." },
     ],
@@ -241,7 +241,7 @@ export const THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_SECTIONS: ArticleSection[] =
   {
     heading: "25. 자동차 집행",
     blocks: [
-      { type: "p", text: "30편과 연결됩니다. 자동차 소유관계에서는 자동차등록원부, 등록명의, 실제 매매, 압류등록 시점, 이전등록 등 특별한 등록제도를 확인해야 합니다." },
+      { type: "p", text: "[30편](/legal-info/vehicle-enforcement)과 연결됩니다. 자동차 소유관계에서는 자동차등록원부, 등록명의, 실제 매매, 압류등록 시점, 이전등록 등 특별한 등록제도를 확인해야 합니다." },
       { type: "p", text: "부동산 법리를 그대로 복사할 수는 없습니다." },
     ],
   },
