@@ -16,6 +16,7 @@ import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-c
 import { MORTGAGE_ESTABLISHMENT_REGISTRATION_META } from "./legal-info-mortgage-establishment-registration";
 import { MOVABLE_PROPERTY_ENFORCEMENT_META } from "./legal-info-movable-property-enforcement";
 import { NAME_CHANGE_PERMISSION_PROCEDURE_META } from "./legal-info-name-change-permission-procedure";
+import { OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_META } from "./legal-info-objection-to-claim-enforcement-stay";
 import { OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META } from "./legal-info-ownership-transfer-cancellation-restoration";
 import { PAYMENT_ORDER_PROCEDURE_META } from "./legal-info-payment-order-procedure";
 import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "./legal-info-provisional-registration-procedure";
@@ -476,6 +477,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.cardSummary,
     category: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.category,
     href: REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META.href,
+  },
+  {
+    title: OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_META.title,
+    summary: OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_META.cardSummary,
+    category: OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_META.category,
+    href: OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_META.href,
   },
 ];
 
