@@ -35,6 +35,9 @@ export default function PaymentOrderProcedureArticle() {
       relatedLinks={[
         { href: "/civil", label: "민사" },
         { href: "/enforcement", label: "강제집행" },
+        { href: "/legal-info/claim-seizure-collection-order", label: "채권압류 및 추심명령 절차와 준비자료" },
+        { href: "/legal-info/real-estate-compulsory-auction", label: "부동산 강제경매 신청 절차와 준비자료" },
+        { href: "/legal-info/litigation-costs-determination", label: "소송비용액확정신청 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

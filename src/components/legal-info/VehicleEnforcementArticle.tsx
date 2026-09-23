@@ -36,6 +36,7 @@ export default function VehicleEnforcementArticle() {
         { href: "/legal-info/real-estate-compulsory-auction", label: "부동산 강제경매 신청 절차와 준비자료" },
         { href: "/legal-info/debtor-property-disclosure-inquiry", label: "재산명시·재산조회 신청 절차와 준비자료" },
         { href: "/legal-info/movable-property-enforcement", label: "유체동산 강제집행 절차와 준비자료" },
+        { href: "/legal-info/vehicle-provisional-seizure", label: "자동차 가압류 신청 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

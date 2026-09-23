@@ -36,6 +36,7 @@ export default function MortgageEstablishmentRegistrationArticle() {
       relatedLinks={[
         { href: "/registration/real-estate", label: "부동산등기" },
         { href: "/legal-info/mortgage-cancellation-registration", label: "근저당권 말소등기 준비서류와 절차" },
+        { href: "/legal-info/jeonse-right-registration", label: "전세권 설정등기와 말소등기 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

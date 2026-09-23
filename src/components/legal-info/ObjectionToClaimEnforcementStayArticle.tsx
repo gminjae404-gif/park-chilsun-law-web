@@ -32,11 +32,11 @@ export default function ObjectionToClaimEnforcementStayArticle() {
       noticeParagraphs={OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_NOTICE_PARAGRAPHS}
       references={OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_REFERENCES}
       relatedLinks={[
-        { href: "/legal-info/payment-order-procedure", label: "지급명령 신청 절차와 준비자료" },
         { href: "/legal-info/claim-seizure-collection-order", label: "채권압류 및 추심명령 절차와 준비자료" },
         { href: "/legal-info/real-estate-compulsory-auction", label: "부동산 강제경매 신청 절차와 준비자료" },
-        { href: "/legal-info/real-estate-auction-distribution-objection", label: "부동산 경매 배당이의·배당이의의 소 절차와 준비자료" },
         { href: "/legal-info/real-estate-auction-withdrawal-stay-cancellation", label: "부동산 경매 취하·정지·취소 절차와 준비자료" },
+        { href: "/legal-info/third-party-objection-enforcement-stay", label: "제3자이의의 소와 강제집행정지 절차와 준비자료" },
+        { href: "/legal-info/succession-execution-clause-objection", label: "승계집행문 부여와 집행문부여에 대한 이의 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

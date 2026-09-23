@@ -37,6 +37,7 @@ export default function RealEstateDeliveryOrderArticle() {
         { href: "/enforcement", label: "강제집행" },
         { href: "/legal-info/real-estate-compulsory-auction", label: "부동산 강제경매 신청 절차와 준비자료" },
         { href: "/legal-info/real-estate-possession-transfer-provisional-injunction", label: "부동산 점유이전금지가처분 신청 절차와 준비자료" },
+        { href: "/legal-info/real-estate-delivery-enforcement", label: "부동산 인도집행 절차와 집행관 강제집행 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

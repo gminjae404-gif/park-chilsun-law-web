@@ -37,6 +37,7 @@ export default function InheritanceDivisionAgreementRegistrationArticle() {
         { href: "/family/inheritance", label: "가사·상속" },
         { href: "/legal-info/inheritance-registration", label: "상속등기 준비서류와 절차" },
         { href: "/legal-info/inheritance-renunciation-limited-acceptance", label: "상속포기와 한정승인 절차와 준비자료" },
+        { href: "/legal-info/co-owned-property-division-registration", label: "공유물분할에 따른 소유권이전등기 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

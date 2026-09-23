@@ -36,6 +36,7 @@ export default function RealEstateSaleRegistrationArticle() {
       relatedLinks={[
         { href: "/registration/real-estate", label: "부동산등기" },
         { href: "/legal-info/inheritance-registration", label: "상속등기 준비서류와 절차" },
+        { href: "/legal-info/real-estate-gift-registration", label: "증여에 의한 소유권이전등기 준비서류와 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

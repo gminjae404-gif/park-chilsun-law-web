@@ -36,6 +36,7 @@ export default function InheritanceRenunciationLimitedAcceptanceArticle() {
       relatedLinks={[
         { href: "/family/inheritance", label: "가사·상속" },
         { href: "/legal-info/inheritance-registration", label: "상속등기 준비서류와 절차" },
+        { href: "/legal-info/inheritance-estate-bankruptcy-procedure", label: "상속재산파산 신청 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

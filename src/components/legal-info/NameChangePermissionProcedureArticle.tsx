@@ -35,6 +35,8 @@ export default function NameChangePermissionProcedureArticle() {
       relatedLinks={[
         { href: "/family/name-change", label: "개명" },
         { href: "/family", label: "가사·상속" },
+        { href: "/legal-info/adult-guardianship-procedure", label: "성년후견 신청 절차와 준비자료" },
+        { href: "/legal-info/adult-adoption-registration", label: "성년자 일반입양 신고 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

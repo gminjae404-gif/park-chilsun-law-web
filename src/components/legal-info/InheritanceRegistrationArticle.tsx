@@ -36,6 +36,8 @@ export default function InheritanceRegistrationArticle() {
       relatedLinks={[
         { href: "/registration/real-estate", label: "부동산등기" },
         { href: "/family/inheritance", label: "가사·상속" },
+        { href: "/legal-info/inheritance-renunciation-limited-acceptance", label: "상속포기와 한정승인 절차와 준비자료" },
+        { href: "/legal-info/inheritance-division-agreement-registration", label: "상속재산분할협의와 상속등기 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

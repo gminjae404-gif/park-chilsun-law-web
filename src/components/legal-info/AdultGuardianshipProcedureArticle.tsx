@@ -35,6 +35,8 @@ export default function AdultGuardianshipProcedureArticle() {
       relatedLinks={[
         { href: "/family/guardianship", label: "성년후견" },
         { href: "/family", label: "가사·상속" },
+        { href: "/legal-info/name-change-permission-procedure", label: "개명허가 신청 절차와 준비자료" },
+        { href: "/legal-info/adult-adoption-registration", label: "성년자 일반입양 신고 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

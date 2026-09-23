@@ -39,6 +39,7 @@ export default function MortgageCancellationRegistrationArticle() {
           href: "/legal-info/real-estate-sale-registration",
           label: "부동산 매매 소유권이전등기 준비서류와 절차",
         },
+        { href: "/legal-info/mortgage-establishment-registration", label: "근저당권 설정등기 준비서류와 절차" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />

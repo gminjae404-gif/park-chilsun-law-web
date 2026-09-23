@@ -37,6 +37,7 @@ export default function DebtorPropertyDisclosureInquiryArticle() {
         { href: "/legal-info/payment-order-procedure", label: "지급명령 신청 절차와 준비자료" },
         { href: "/legal-info/claim-seizure-collection-order", label: "채권압류 및 추심명령 절차와 준비자료" },
         { href: "/legal-info/real-estate-compulsory-auction", label: "부동산 강제경매 신청 절차와 준비자료" },
+        { href: "/legal-info/debtor-default-list-registration", label: "채무불이행자명부등재 신청 절차와 준비자료" },
         { href: "/legal-info", label: "법률정보 목록으로" },
       ]}
     />
