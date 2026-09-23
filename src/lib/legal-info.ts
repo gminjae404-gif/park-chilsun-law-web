@@ -12,6 +12,7 @@ import { INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META } from "./legal-info-inher
 import { INHERITANCE_REGISTRATION_META } from "./legal-info-inheritance-registration";
 import { INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META } from "./legal-info-inheritance-renunciation-limited-acceptance";
 import { JEONSE_RIGHT_REGISTRATION_META } from "./legal-info-jeonse-right-registration";
+import { LITIGATION_COSTS_DETERMINATION_META } from "./legal-info-litigation-costs-determination";
 import { MORTGAGE_CANCELLATION_REGISTRATION_META } from "./legal-info-mortgage-cancellation-registration";
 import { MORTGAGE_ESTABLISHMENT_REGISTRATION_META } from "./legal-info-mortgage-establishment-registration";
 import { MOVABLE_PROPERTY_ENFORCEMENT_META } from "./legal-info-movable-property-enforcement";
@@ -497,6 +498,12 @@ export const LEGAL_INFO_ARTICLES: LegalInfoArticleSummary[] = [
     summary: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.cardSummary,
     category: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.category,
     href: SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META.href,
+  },
+  {
+    title: LITIGATION_COSTS_DETERMINATION_META.title,
+    summary: LITIGATION_COSTS_DETERMINATION_META.cardSummary,
+    category: LITIGATION_COSTS_DETERMINATION_META.category,
+    href: LITIGATION_COSTS_DETERMINATION_META.href,
   },
 ];
 
