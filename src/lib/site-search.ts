@@ -166,6 +166,19 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "배우자물건압류",
     "법인재산압류",
   ],
+  "/legal-info/succession-execution-clause-objection": [
+    "승계집행문",
+    "승계집행문신청",
+    "승계집행문부여",
+    "승계집행문이의",
+    "집행문부여이의",
+    "집행문이의",
+    "집행문부여의소",
+    "집행문부여이의의소",
+    "상속승계집행문",
+    "채권양도승계집행문",
+    "상속포기승계집행문",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
