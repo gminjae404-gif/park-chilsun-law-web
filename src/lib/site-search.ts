@@ -179,6 +179,17 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "채권양도승계집행문",
     "상속포기승계집행문",
   ],
+  "/legal-info/litigation-costs-determination": [
+    "소송비용",
+    "소송비용확정",
+    "소송비용액확정",
+    "소송비용액확정신청",
+    "소송비용계산",
+    "소송비용청구",
+    "변호사비청구",
+    "변호사비소송비용",
+    "소송비용계산서",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {

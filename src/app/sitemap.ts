@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal-info/objection-to-claim-enforcement-stay", priority: 0.4 },
     { path: "/legal-info/third-party-objection-enforcement-stay", priority: 0.4 },
     { path: "/legal-info/succession-execution-clause-objection", priority: 0.4 },
+    { path: "/legal-info/litigation-costs-determination", priority: 0.4 },
     { path: "/privacy-policy", priority: 0.3 },
   ];
 
