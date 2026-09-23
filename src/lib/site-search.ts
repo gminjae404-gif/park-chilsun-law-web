@@ -154,6 +154,18 @@ const SEARCH_ALIASES: Record<string, string[]> = {
     "지급명령청구이의",
     "공정증서청구이의",
   ],
+  "/legal-info/third-party-objection-enforcement-stay": [
+    "제3자이의",
+    "제3자이의소",
+    "제3자이의의소",
+    "제3자 이의",
+    "제3자재산압류",
+    "제3자 재산 압류",
+    "타인재산압류",
+    "배우자재산압류",
+    "배우자물건압류",
+    "법인재산압류",
+  ],
 };
 
 const SEARCH_INDEX: SearchItem[] = [...SERVICE_SEARCH_ITEMS, ...LEGAL_INFO_SEARCH_ITEMS].map((item) => {
