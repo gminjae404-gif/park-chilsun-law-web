@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LegalInfoArticles from "@/components/legal-info/LegalInfoArticles";
@@ -10,11 +11,29 @@ import { LEGAL_INFO_FOOTER_NOTICE, LEGAL_INFO_HERO } from "@/lib/legal-info";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 페이지와 동일하게 짧은 title만 지정합니다.
+const title = "법률정보";
+const description =
+  "사건번호와 사건검색, 법원 절차 용어, 가족관계·주민등록 증명서 발급과 공식 법률정보 확인처를 안내합니다.";
+const canonicalPath = "/legal-info";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "법률정보",
-  description:
-    "사건번호와 사건검색, 법원 절차 용어, 가족관계·주민등록 증명서 발급과 공식 법률정보 확인처를 안내합니다.",
-  alternates: { canonical: "/legal-info" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // Header "법률정보" 대분류가 연결되는 페이지(/legal-info)입니다. 업무분야를

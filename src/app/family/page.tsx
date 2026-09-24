@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQPreview from "@/components/FAQPreview";
@@ -16,11 +17,29 @@ import { FAMILY_FAQ_HEADING, FAMILY_FAQ_ITEMS } from "@/lib/family";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 페이지와 동일하게 짧은 title만 지정합니다.
+const title = "가사·상속";
+const description =
+  "혼인·이혼, 친자·입양·가족관계, 후견, 상속 등 가사·상속 분야에서 현재 가족관계와 필요한 절차를 확인할 수 있는 안내 페이지입니다.";
+const canonicalPath = "/family";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "가사·상속",
-  description:
-    "혼인·이혼, 친자·입양·가족관계, 후견, 상속 등 가사·상속 분야에서 현재 가족관계와 필요한 절차를 확인할 수 있는 안내 페이지입니다.",
-  alternates: { canonical: "/family" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // 가사·상속(/family) 페이지입니다. 이 페이지의 가장 중요한 설계

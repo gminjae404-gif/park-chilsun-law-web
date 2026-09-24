@@ -1,12 +1,31 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PracticeAreaCards from "@/components/office/PracticeAreaCards";
 
+const title = "업무분야 전체보기";
+const description = "부동산등기, 법인등기, 민사, 강제집행, 가사·상속 등 주요 업무분야를 안내합니다.";
+const canonicalPath = "/services";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "업무분야 전체보기",
-  description: "부동산등기, 법인등기, 민사, 강제집행, 가사·상속 등 주요 업무분야를 안내합니다.",
-  alternates: { canonical: "/services" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // "업무분야 전체보기" 페이지입니다. 카드 그리드는 홈의 PracticeAreasOverview와

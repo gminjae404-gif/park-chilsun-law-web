@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQPreview from "@/components/FAQPreview";
@@ -27,11 +28,29 @@ import {
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 상세페이지와 동일하게 짧은 title만 지정합니다.
+const title = "개명허가";
+const description =
+  "개명과 가족관계등록부 정정을 구분하고, 개명허가 신청부터 허가 후 개명신고와 후속 명의변경까지 확인할 수 있는 안내 페이지입니다.";
+const canonicalPath = "/family/name-change";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "개명허가",
-  description:
-    "개명과 가족관계등록부 정정을 구분하고, 개명허가 신청부터 허가 후 개명신고와 후속 명의변경까지 확인할 수 있는 안내 페이지입니다.",
-  alternates: { canonical: "/family/name-change" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // 가사·상속(/family) 하위의 개명허가 상세 안내 페이지(/family/name-change)

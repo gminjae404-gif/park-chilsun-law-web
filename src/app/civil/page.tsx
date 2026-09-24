@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProcessSection from "@/components/ProcessSection";
@@ -21,11 +22,29 @@ import {
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 페이지와 동일하게 짧은 title만 지정합니다.
+const title = "민사소송";
+const description =
+  "대여금·매매대금·공사대금·임대차·손해배상 등 민사분쟁의 기본 확인사항과 민사소송 진행 흐름을 안내합니다.";
+const canonicalPath = "/civil";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "민사소송",
-  description:
-    "대여금·매매대금·공사대금·임대차·손해배상 등 민사분쟁의 기본 확인사항과 민사소송 진행 흐름을 안내합니다.",
-  alternates: { canonical: "/civil" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // civil-page-design-audit에서 확정한 구조로 기존 ServicePlaceholder

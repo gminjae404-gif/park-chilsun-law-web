@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProcessSection from "@/components/ProcessSection";
@@ -27,11 +28,31 @@ import {
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 페이지와 동일하게 짧은 title만 지정합니다.
+const title = "부동산등기";
+const description =
+  "매매·증여·상속에 따른 소유권이전등기와 근저당권·전세권 등 부동산등기의 기본 절차와 준비자료를 안내합니다.";
+const canonicalPath = "/registration/real-estate";
+// title.template과 별개로 openGraph/twitter title은 자동으로 template이
+// 적용되지 않으므로, article 페이지와 동일하게 여기서 직접 조합합니다.
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "부동산등기",
-  description:
-    "매매·증여·상속에 따른 소유권이전등기와 근저당권·전세권 등 부동산등기의 기본 절차와 준비자료를 안내합니다.",
-  alternates: { canonical: "/registration/real-estate" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // services-architecture-audit에서 첫 실제 업무 상세페이지로 선정된 부동산등기
