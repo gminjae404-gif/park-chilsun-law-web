@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProcessSection from "@/components/ProcessSection";
@@ -29,11 +30,29 @@ import {
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 페이지와 동일하게 짧은 title만 지정합니다.
+const title = "법인등기";
+const description =
+  "회사 설립과 임원·상호·목적·본점·자본금 등 주요 변경등기의 기본 확인사항과 진행 흐름을 안내합니다.";
+const canonicalPath = "/registration/corporate";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "법인등기",
-  description:
-    "회사 설립과 임원·상호·목적·본점·자본금 등 주요 변경등기의 기본 확인사항과 진행 흐름을 안내합니다.",
-  alternates: { canonical: "/registration/corporate" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // corporate-registration-design-audit에서 "안 3"(ProcessSection/

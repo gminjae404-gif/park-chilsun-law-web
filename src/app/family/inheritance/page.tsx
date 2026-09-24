@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQPreview from "@/components/FAQPreview";
@@ -24,11 +25,29 @@ import { INHERITANCE_FAQ_HEADING, INHERITANCE_FAQ_ITEMS } from "@/lib/family-inh
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 상세페이지와 동일하게 짧은 title만 지정합니다.
+const title = "상속 실무 안내";
+const description =
+  "상속 발생 후 먼저 확인할 사항부터 상속포기·한정승인, 상속재산분할, 상속등기, 해외 상속인, 유언·유증까지 상황별로 확인할 절차와 준비서류를 안내합니다.";
+const canonicalPath = "/family/inheritance";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "상속 실무 안내",
-  description:
-    "상속 발생 후 먼저 확인할 사항부터 상속포기·한정승인, 상속재산분할, 상속등기, 해외 상속인, 유언·유증까지 상황별로 확인할 절차와 준비서류를 안내합니다.",
-  alternates: { canonical: "/family/inheritance" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // 가사·상속(/family) 하위의 상속 실무 안내 페이지(/family/inheritance)입니다.

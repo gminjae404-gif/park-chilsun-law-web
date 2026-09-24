@@ -3,10 +3,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { HEADER_BRAND_NAME, PRIVACY_POLICY_SECTIONS } from "@/lib/constants";
 
+const title = "개인정보처리방침";
+const description = "법무사 박칠선 사무소 홈페이지의 개인정보 수집·이용 안내와 개인정보처리방침을 확인할 수 있습니다.";
+const canonicalPath = "/privacy-policy";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "개인정보처리방침",
-  description: "법무사 박칠선 사무소 홈페이지의 개인정보 수집·이용 안내와 개인정보처리방침을 확인할 수 있습니다.",
-  alternates: { canonical: "/privacy-policy" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 export default function PrivacyPolicyPage() {

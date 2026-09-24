@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQPreview from "@/components/FAQPreview";
@@ -13,11 +14,29 @@ import { LEASE_FAQ_HEADING, LEASE_FAQ_ITEMS } from "@/lib/civil-lease";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 상세페이지와 동일하게 짧은 title만 지정합니다.
+const title = "임대차·보증금";
+const description =
+  "임대차 종료 후 보증금 반환, 임차권등기명령, 제소전화해, 차임·원상회복·건물인도 및 관련 민사·집행 절차에서 확인할 사항을 안내합니다.";
+const canonicalPath = "/civil/lease";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "임대차·보증금",
-  description:
-    "임대차 종료 후 보증금 반환, 임차권등기명령, 제소전화해, 차임·원상회복·건물인도 및 관련 민사·집행 절차에서 확인할 사항을 안내합니다.",
-  alternates: { canonical: "/civil/lease" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // 민사소송(/civil) 하위의 "임대차·보증금" 상세페이지(/civil/lease)입니다.

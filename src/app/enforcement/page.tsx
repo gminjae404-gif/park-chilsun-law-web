@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProcessSection from "@/components/ProcessSection";
@@ -23,11 +24,29 @@ import {
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 페이지와 동일하게 짧은 title만 지정합니다.
+const title = "강제집행";
+const description =
+  "판결·지급명령 등 집행의 기초가 되는 문서와 집행대상을 확인하고, 부동산·채권·유체동산·부동산 인도 등 강제집행 절차를 살펴볼 수 있는 안내 페이지입니다.";
+const canonicalPath = "/enforcement";
+const ogTitle = `${title} | ${HEADER_BRAND_NAME}`;
+
 export const metadata: Metadata = {
-  title: "강제집행",
-  description:
-    "판결·지급명령 등 집행의 기초가 되는 문서와 집행대상을 확인하고, 부동산·채권·유체동산·부동산 인도 등 강제집행 절차를 살펴볼 수 있는 안내 페이지입니다.",
-  alternates: { canonical: "/enforcement" },
+  title,
+  description,
+  alternates: { canonical: canonicalPath },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: canonicalPath,
+    title: ogTitle,
+    description,
+    siteName: HEADER_BRAND_NAME,
+  },
+  twitter: {
+    card: "summary",
+    title: ogTitle,
+    description,
+  },
 };
 
 // 강제집행(/enforcement) 페이지입니다. 민사(/civil)와 마찬가지로
