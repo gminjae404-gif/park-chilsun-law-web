@@ -372,7 +372,7 @@ export const REAL_ESTATE_AUCTION_DISTRIBUTION_OBJECTION_SECTIONS: ArticleSection
     heading: "37. 판결 내용",
     blocks: [
       { type: "p", text: "민사집행법 제157조에 따라, 배당이의의 소 판결에서는 다툼이 있는 부분에 관하여 배당받을 채권자와 그 액수를 정합니다." },
-      { type: "p", text: "그렇게 정하는 것이 적당하지 않다고 인정한 때에는 판결로 배당표를 다시 만들고 다른 배당절차를 밟도록 명할 수 있습니다." },
+      { type: "p", text: "그렇게 정하는 것이 적당하지 않다고 인정한 때에는 판결로 배당표를 다시 만들고 다른 배당절차를 밟도록 명하여야 합니다." },
     ],
   },
   {
