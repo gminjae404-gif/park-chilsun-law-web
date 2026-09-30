@@ -204,7 +204,7 @@ export const REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_SECTIONS: ArticleS
   {
     heading: "20. 제49조 제5호",
     blocks: [
-      { type: "p", text: "집행권원이 소 취하나 그 밖의 사유로 효력을 잃었음을 증명하는, 법원사무관등이 작성한 조서의 정본 또는 증명서를 말합니다." },
+      { type: "p", text: "집행권원이 소 취하나 그 밖의 사유로 효력을 잃었음을 증명하는 조서등본 또는 법원사무관등이 작성한 증서를 말합니다." },
     ],
   },
   {

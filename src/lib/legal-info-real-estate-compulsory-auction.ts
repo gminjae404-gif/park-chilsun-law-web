@@ -575,7 +575,7 @@ export const REAL_ESTATE_COMPULSORY_AUCTION_REFERENCES: LegalReference[] = [
   { source: "「민사집행법」 제39조", detail: "집행개시의 요건" },
   { source: "「민사집행법」 제56조", detail: "그 밖의 집행권원" },
   { source: "「민사집행법」 제58조", detail: "지급명령과 집행" },
-  { source: "「민사집행법」 제78조", detail: "부동산에 대한 집행방법" },
+  { source: "「민사집행법」 제78조", detail: "집행방법" },
   { source: "「민사집행법」 제79조", detail: "집행법원" },
   { source: "「민사집행법」 제80조", detail: "강제경매신청서" },
   { source: "「민사집행법」 제81조", detail: "첨부서류" },
@@ -593,6 +593,6 @@ export const REAL_ESTATE_COMPULSORY_AUCTION_REFERENCES: LegalReference[] = [
   { source: "「민사집행법」 제145조", detail: "매각대금의 배당" },
   { source: "「민사집행법」 제146조", detail: "배당기일" },
   { source: "「민사집행법」 제148조", detail: "배당받을 채권자의 범위" },
-  { source: "「민사집행법」 제264조", detail: "부동산에 대한 담보권 실행 경매신청" },
+  { source: "「민사집행법」 제264조", detail: "부동산에 대한 경매신청" },
   { source: "「민사집행법」 제274조", detail: "유치권 등에 의한 경매" },
 ];
