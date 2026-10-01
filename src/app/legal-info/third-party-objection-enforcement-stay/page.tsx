@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import ThirdPartyObjectionEnforcementStayArticle from "@/components/legal-info/ThirdPartyObjectionEnforcementStayArticle";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import { THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META } from "@/lib/legal-info-third-party-objection-enforcement-stay";
+import { getLegalInfoArticleJsonLd } from "@/lib/structured-data";
 
 // title.template(layout.tsx)이 "%s | 법무사 박칠선 사무소"를 자동으로
 // 붙여주므로 title은 짧은 값만 지정하면 됩니다. openGraph/twitter는
@@ -38,6 +40,7 @@ export const metadata: Metadata = {
 export default function ThirdPartyObjectionEnforcementStayPage() {
   return (
     <>
+      <JsonLd data={getLegalInfoArticleJsonLd(THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META)} />
       <Header />
       <main id="main-content" className="flex-1">
         <ThirdPartyObjectionEnforcementStayArticle />

@@ -5,6 +5,7 @@ import FAQPreview from "@/components/FAQPreview";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import SiteSearch from "@/components/SiteSearch";
+import JsonLd from "@/components/JsonLd";
 import OfficeHero from "@/components/office/OfficeHero";
 import OfficeGuide from "@/components/office/OfficeGuide";
 import PracticeAreasOverview from "@/components/office/PracticeAreasOverview";
@@ -14,6 +15,7 @@ import RegistrationTypesSection from "@/components/registration/RegistrationType
 import { HOME_FAQ_ITEMS } from "@/lib/constants";
 import { REAL_ESTATE_TYPES } from "@/lib/real-estate-registration";
 import { isConsultationEmailConfigured } from "@/lib/consultation-email";
+import { getHomeJsonLdGraph } from "@/lib/structured-data";
 
 // title/description은 layout.tsx의 title.default·description을 그대로
 // 사용합니다(홈 페이지는 별도로 지정하지 않음). canonical만 명시합니다.
@@ -54,6 +56,7 @@ export default function Home() {
 
   return (
     <>
+      <JsonLd data={getHomeJsonLdGraph()} />
       <Header />
       <main id="main-content" className="flex-1">
         <OfficeHero />

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import PracticeAreaCards from "@/components/office/PracticeAreaCards";
+import { getCollectionPageWithBreadcrumbJsonLd } from "@/lib/structured-data";
 
 const title = "업무분야 전체보기";
 const description = "부동산등기, 법인등기, 민사, 강제집행, 가사·상속 등 주요 업무분야를 안내합니다.";
@@ -36,6 +38,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={getCollectionPageWithBreadcrumbJsonLd({ name: title, description, path: canonicalPath })} />
       <Header />
       <main id="main-content" className="flex-1">
         <section className="bg-slate-50">

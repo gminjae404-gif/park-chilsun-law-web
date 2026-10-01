@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import LegalInfoArticles from "@/components/legal-info/LegalInfoArticles";
 import LegalInfoCaseGuide from "@/components/legal-info/LegalInfoCaseGuide";
 import LegalInfoTerms from "@/components/legal-info/LegalInfoTerms";
 import LegalInfoDocuments from "@/components/legal-info/LegalInfoDocuments";
 import LegalInfoOfficialLinks from "@/components/legal-info/LegalInfoOfficialLinks";
 import { LEGAL_INFO_FOOTER_NOTICE, LEGAL_INFO_HERO } from "@/lib/legal-info";
+import { getCollectionPageWithBreadcrumbJsonLd } from "@/lib/structured-data";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 페이지와 동일하게 짧은 title만 지정합니다.
@@ -54,6 +56,7 @@ export const metadata: Metadata = {
 export default function LegalInfoPage() {
   return (
     <>
+      <JsonLd data={getCollectionPageWithBreadcrumbJsonLd({ name: title, description, path: canonicalPath })} />
       <Header />
       <main id="main-content" className="flex-1">
         <section className="bg-slate-50">

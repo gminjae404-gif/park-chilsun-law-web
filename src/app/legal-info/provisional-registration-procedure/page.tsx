@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import ProvisionalRegistrationProcedureArticle from "@/components/legal-info/ProvisionalRegistrationProcedureArticle";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import { PROVISIONAL_REGISTRATION_PROCEDURE_META } from "@/lib/legal-info-provisional-registration-procedure";
+import { getLegalInfoArticleJsonLd } from "@/lib/structured-data";
 
 // title.template(layout.tsx)이 "%s | 법무사 박칠선 사무소"를 자동으로
 // 붙여주므로 title은 짧은 값만 지정합니다. openGraph/twitter는 홈이나
@@ -38,6 +40,7 @@ export const metadata: Metadata = {
 export default function ProvisionalRegistrationProcedurePage() {
   return (
     <>
+      <JsonLd data={getLegalInfoArticleJsonLd(PROVISIONAL_REGISTRATION_PROCEDURE_META)} />
       <Header />
       <main id="main-content" className="flex-1">
         <ProvisionalRegistrationProcedureArticle />
