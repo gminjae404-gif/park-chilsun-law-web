@@ -46,6 +46,8 @@ export const REAL_ESTATE_GIFT_REGISTRATION_META = {
   title: "증여에 의한 소유권이전등기 준비서류와 절차",
   category: "부동산등기 · 증여",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "부동산을 증여할 때 확인해야 할 증여계약, 계약서 검인, 증여자·수증자 준비서류, 취득세·증여세, 부담부증여, 농지취득자격증명 및 소유권이전등기 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

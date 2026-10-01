@@ -29,6 +29,8 @@ export const CORPORATE_CAPITAL_INCREASE_REGISTRATION_META = {
   title: "주식회사 유상증자·신주발행 변경등기 준비서류와 절차",
   category: "법인등기 · 유상증자",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "주식회사의 유상증자를 진행할 때 신주발행 결정, 주주배정·제3자배정, 주금납입, 가수금 출자전환, 현물출자 및 변경등기 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

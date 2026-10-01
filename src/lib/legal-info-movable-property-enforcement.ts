@@ -58,6 +58,8 @@ export const MOVABLE_PROPERTY_ENFORCEMENT_META = {
   title: "유체동산 강제집행 절차와 준비자료",
   category: "민사·집행 · 유체동산강제집행",
   asOfDate: "2026. 9. 21.",
+  updatedAt: "2026-09-21",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "집행권원을 확보한 뒤 집행관을 통해 채무자 소유 유체동산을 압류·매각하는 절차와 압류금지물건, 2026년 현재 압류금지 생계비, 제3자 소유 주장, 배우자 공유재산, 동산담보권과 집행비용을 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

@@ -44,6 +44,8 @@ export const REAL_ESTATE_PROVISIONAL_ATTACHMENT_META = {
   title: "부동산 가압류 신청 절차와 준비자료",
   category: "민사·집행 · 부동산가압류",
   asOfDate: "2026. 9. 20.",
+  updatedAt: "2026-09-20",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "금전채권을 보전하기 위해 부동산 가압류를 신청할 때 확인해야 할 피보전권리, 보전의 필요성, 관할법원, 소명자료, 담보제공, 가압류등기, 본안소송 및 취소절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

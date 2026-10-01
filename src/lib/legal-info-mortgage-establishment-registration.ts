@@ -40,6 +40,8 @@ export const MORTGAGE_ESTABLISHMENT_REGISTRATION_META = {
   title: "근저당권 설정등기 준비서류와 절차",
   category: "부동산등기 · 근저당권",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "부동산에 근저당권을 설정할 때 확인해야 할 채무자·설정자·근저당권자의 구분, 채권최고액, 물상보증, 공동근저당, 등록면허세 및 준비서류와 등기절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

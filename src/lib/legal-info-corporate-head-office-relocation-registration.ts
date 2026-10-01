@@ -25,6 +25,8 @@ export const CORPORATE_HEAD_OFFICE_RELOCATION_REGISTRATION_META = {
   title: "주식회사 본점이전등기 준비서류와 절차",
   category: "법인등기 · 본점이전",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "주식회사의 본점을 이전할 때 정관변경 필요 여부, 회사의 결의절차, 동일관할·타관할 이전, 변경등기 기한과 일반적인 준비자료를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

@@ -13,6 +13,8 @@ export const INHERITANCE_REGISTRATION_META = {
   title: "상속등기 준비서류와 절차",
   category: "부동산등기 · 상속",
   asOfDate: "2026. 9. 18.",
+  updatedAt: "2026-09-18",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "상속등기 진행 전 확인할 사항과 일반적인 준비서류, 협의분할, 취득세 및 등기 절차를 안내합니다. 상속관계에 따라 필요한 서류는 달라질 수 있습니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

@@ -43,6 +43,8 @@ export const CO_OWNED_PROPERTY_DIVISION_REGISTRATION_META = {
   title: "공유물분할에 따른 소유권이전등기 절차",
   category: "부동산등기 · 공유물분할",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-25",
+  legalReviewedAt: "2026-09-25",
   seoDescription:
     "공유 부동산을 분할할 때 확인해야 할 협의분할과 재판상 분할, 현물분할·가격배상·경매분할, 토지분할, 판결에 따른 지분이전등기와 취득세 및 기존 담보권 문제를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

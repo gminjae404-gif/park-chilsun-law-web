@@ -50,6 +50,8 @@ export const JEONSE_RIGHT_REGISTRATION_META = {
   title: "전세권 설정등기와 말소등기 절차",
   category: "부동산등기 · 전세권",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "전세권을 설정하거나 말소할 때 확인해야 할 전세금, 존속기간, 설정범위, 선순위 권리, 전세권 설정등기 준비서류, 전세금 반환과 말소등기 및 경매청구 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

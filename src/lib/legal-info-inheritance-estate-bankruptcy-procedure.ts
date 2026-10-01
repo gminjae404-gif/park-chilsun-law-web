@@ -40,6 +40,8 @@ export const INHERITANCE_ESTATE_BANKRUPTCY_PROCEDURE_META = {
   title: "상속재산파산 신청 절차와 준비자료",
   category: "가사·상속 · 상속재산파산",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-25",
   seoDescription:
     "피상속인의 채무가 상속재산으로 모두 변제되지 않는 경우 검토할 수 있는 상속재산파산의 신청요건, 신청권자, 한정승인과의 관계, 관할법원, 파산관재인과 상속재산 청산절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

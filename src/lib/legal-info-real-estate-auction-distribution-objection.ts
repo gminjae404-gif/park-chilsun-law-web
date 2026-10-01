@@ -54,6 +54,8 @@ export const REAL_ESTATE_AUCTION_DISTRIBUTION_OBJECTION_META = {
   title: "부동산 경매 배당이의·배당이의의 소 절차와 준비자료",
   category: "민사·집행 · 부동산경매",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-25",
+  legalReviewedAt: "2026-09-25",
   seoDescription:
     "부동산 경매 배당표의 채권액·순위가 잘못되었다고 판단될 때 채권자·채무자가 배당기일에 이의하는 방법과, 배당이의의 소·청구이의의 소를 구분하는 기준, 배당기일부터 1주 이내 후속조치, 관할과 준비자료를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

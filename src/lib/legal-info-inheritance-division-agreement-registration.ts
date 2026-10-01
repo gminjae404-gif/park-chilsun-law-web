@@ -40,6 +40,8 @@ export const INHERITANCE_DIVISION_AGREEMENT_REGISTRATION_META = {
   title: "상속재산분할협의와 상속등기 절차",
   category: "가사·상속 · 상속재산분할",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-25",
   seoDescription:
     "공동상속인이 상속재산을 협의하여 분할할 때 확인해야 할 상속인 전원 참여, 미성년자·후견 이해상반, 특별수익·기여분, 상속포기, 협의분할서 작성 및 부동산 상속등기 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

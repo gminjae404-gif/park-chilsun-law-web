@@ -46,6 +46,8 @@ export const PROVISIONAL_REGISTRATION_PROCEDURE_META = {
   title: "가등기 설정·본등기·말소 절차",
   category: "부동산등기 · 가등기",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "소유권이전청구권 등 가등기를 할 때 확인해야 할 가등기의 대상과 순위보전효, 신청방법, 본등기, 중간등기의 처리, 담보가등기와의 차이 및 가등기 말소절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

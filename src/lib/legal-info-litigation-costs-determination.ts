@@ -44,6 +44,8 @@ export const LITIGATION_COSTS_DETERMINATION_META = {
   title: "소송비용액확정신청 절차와 준비자료",
   category: "민사·집행 · 소송비용",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-23",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "판결·결정 등에서 소송비용의 부담자 또는 부담비율만 정해지고 실제 금액은 정해지지 않은 경우, 그 금액을 법원에서 구체적으로 확정받는 민사소송법 제110조 소송비용액확정신청의 관할, 변호사보수 계산, 비용계산서 작성, 준비자료를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

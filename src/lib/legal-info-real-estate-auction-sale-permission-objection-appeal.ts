@@ -43,6 +43,8 @@ export const REAL_ESTATE_AUCTION_SALE_PERMISSION_OBJECTION_APPEAL_META = {
   title: "부동산 경매 매각허가에 대한 이의·즉시항고 절차와 준비자료",
   category: "민사·집행 · 부동산경매",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-22",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "부동산 경매 최고가매수신고 이후 매각결정기일에서의 매각허가 여부 심리, 매각허가에 대한 이의사유(민사집행법 제121조 1~7호), 매각허가여부결정에 대한 즉시항고 기간과 매각대금 10분의 1 항고보증, 매각허가결정 확정 후 제127조 취소신청을 구분하여 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

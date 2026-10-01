@@ -55,6 +55,8 @@ export const VEHICLE_ENFORCEMENT_META = {
   title: "자동차 강제집행 절차와 준비자료",
   category: "민사·집행 · 자동차강제집행",
   asOfDate: "2026. 9. 21.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "금전채권 집행권원을 확보한 채권자가 채무자 명의 자동차를 강제경매하는 절차를 안내합니다. 자동차등록원부 확인, 관할, 자동차 인도명령, 보관·운행허가, 평가와 매각방법, 집행실익 확인사항을 다룹니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

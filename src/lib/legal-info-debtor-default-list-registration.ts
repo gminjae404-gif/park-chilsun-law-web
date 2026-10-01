@@ -66,6 +66,8 @@ export const DEBTOR_DEFAULT_LIST_REGISTRATION_META = {
   title: "채무불이행자명부등재 신청 절차와 준비자료",
   category: "민사·집행 · 채무불이행자명부등재",
   asOfDate: "2026. 9. 21.",
+  updatedAt: "2026-09-21",
+  legalReviewedAt: "2026-09-21",
   seoDescription:
     "금전지급 집행권원을 확보했지만 채무자가 이행하지 않거나 재산명시절차를 위반한 경우 검토하는 채무불이행자명부등재의 등재사유, 관할, 준비서류, 법원의 심리와 말소절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

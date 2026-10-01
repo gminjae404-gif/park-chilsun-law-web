@@ -47,6 +47,8 @@ export const REAL_ESTATE_VOLUNTARY_AUCTION_META = {
   title: "부동산 임의경매 신청 절차와 준비자료",
   category: "민사·집행 · 부동산경매",
   asOfDate: "2026. 9. 22.",
+  updatedAt: "2026-09-22",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "저당권·근저당권 등 부동산 담보권을 실행하기 위한 임의경매(담보권 실행을 위한 경매) 신청 절차를 안내합니다. 강제경매와의 차이, 담보권 증명서류, 관할, 준비자료, 배당순위, 경매개시결정에 대한 이의와 정지사유를 다룹니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

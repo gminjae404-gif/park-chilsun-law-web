@@ -36,6 +36,8 @@ export const SUCCESSION_EXECUTION_CLAUSE_OBJECTION_META = {
   title: "승계집행문 부여와 집행문부여에 대한 이의 절차와 준비자료",
   category: "민사·집행 · 강제집행",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-23",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "판결·지급명령·집행증서 등 집행권원을 강제집행에 사용할 때 필요한 집행문·승계집행문 부여요건과, 이미 부여된 집행문을 다투는 집행문부여 등에 관한 이의신청·집행문부여에 대한 이의의 소 절차, 상속·채권양도·법인합병 승계 사례와 준비자료를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

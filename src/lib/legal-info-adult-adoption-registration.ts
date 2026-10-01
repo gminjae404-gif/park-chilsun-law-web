@@ -32,6 +32,8 @@ export const ADULT_ADOPTION_REGISTRATION_META = {
   title: "성년자 일반입양 신고 절차와 준비자료",
   category: "가사·상속 · 입양",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "성년자를 일반입양할 때 확인해야 할 입양 당사자의 요건, 부모와 배우자의 동의, 입양신고, 친생부모와의 관계, 성·본 및 상속관계 등 일반입양의 법적 효과를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

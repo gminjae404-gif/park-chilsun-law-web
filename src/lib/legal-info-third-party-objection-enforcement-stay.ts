@@ -41,6 +41,8 @@ export const THIRD_PARTY_OBJECTION_ENFORCEMENT_STAY_META = {
   title: "제3자이의의 소와 강제집행정지 절차와 준비자료",
   category: "민사·집행 · 강제집행",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "채권자가 채무자에 대한 집행권원으로 강제집행을 하였는데 실제 집행목적물이 제3자 소유이거나 제3자가 양도·인도를 막을 수 있는 권리를 가진 경우, 그 집행을 배제하기 위한 제3자이의의 소와 필요한 강제집행정지·집행처분 취소 잠정처분을 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

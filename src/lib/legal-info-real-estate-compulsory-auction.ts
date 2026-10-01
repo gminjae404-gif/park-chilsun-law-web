@@ -28,6 +28,8 @@ export const REAL_ESTATE_COMPULSORY_AUCTION_META = {
   title: "부동산 강제경매 신청 절차와 준비자료",
   category: "민사·집행 · 부동산경매",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "판결·지급명령 등 집행권원을 가지고 채무자 소유 부동산에 강제경매를 신청할 때 필요한 집행준비, 신청서류, 경매개시결정, 배당요구, 매각 및 배당 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

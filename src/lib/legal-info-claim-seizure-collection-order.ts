@@ -27,6 +27,8 @@ export const CLAIM_SEIZURE_COLLECTION_ORDER_META = {
   title: "채권압류 및 추심명령 절차와 준비자료",
   category: "민사·집행 · 채권집행",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "판결·지급명령 등 집행권원을 확보한 뒤 예금채권·급여채권 등에 채권압류 및 추심명령을 신청할 때 확인해야 할 집행준비, 제3채무자, 압류효력, 추심 및 추심신고 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO
