@@ -47,6 +47,8 @@ export const DEBTOR_PROPERTY_DISCLOSURE_INQUIRY_META = {
   title: "재산명시·재산조회 신청 절차와 준비자료",
   category: "민사·집행 · 재산명시·재산조회",
   asOfDate: "2026. 9. 21.",
+  updatedAt: "2026-09-21",
+  legalReviewedAt: "2026-10-01",
   seoDescription:
     "금전채권 강제집행을 위해 집행권원을 확보했지만 채무자의 재산을 알기 어려운 경우 활용하는 재산명시와 재산조회의 신청요건, 명시기일과 재산목록, 재산조회 법정사유와 후속 강제집행 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

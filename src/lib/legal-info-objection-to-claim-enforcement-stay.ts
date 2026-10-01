@@ -39,6 +39,8 @@ export const OBJECTION_TO_CLAIM_ENFORCEMENT_STAY_META = {
   title: "청구이의의 소와 강제집행정지 절차와 준비자료",
   category: "민사·집행 · 강제집행",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-23",
+  legalReviewedAt: "2026-09-25",
   seoDescription:
     "집행권원에 표시된 청구권이 현재는 존재하지 않거나 집행되어서는 안 된다는 이유로 그 집행력을 배제하는 청구이의의 소와, 실제 집행을 멈추기 위한 강제집행정지 등 잠정처분을 안내합니다. 판결·지급명령·집행증서 등 집행권원 종류별 이의사유 제한과 관할, 담보 요건을 구분합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

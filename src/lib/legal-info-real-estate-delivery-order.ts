@@ -49,6 +49,8 @@ export const REAL_ESTATE_DELIVERY_ORDER_META = {
   title: "부동산 인도명령 신청 절차와 준비자료",
   category: "민사·집행 · 부동산인도명령",
   asOfDate: "2026. 9. 21.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "경매 매수인이 매각대금 완납 후 부동산을 인도받기 위해 신청하는 인도명령의 신청기간, 상대방, 점유자 심문, 대항할 수 있는 권원, 유치권 및 집행관을 통한 인도집행 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

@@ -23,6 +23,8 @@ export const CORPORATE_OFFICER_CHANGE_REGISTRATION_META = {
   title: "주식회사 임원변경등기 준비서류와 절차",
   category: "법인등기 · 임원변경",
   asOfDate: "2026. 9. 18.",
+  updatedAt: "2026-09-18",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "주식회사의 이사·대표이사·감사 변경 시 확인해야 할 임기, 취임·중임·사임·퇴임, 변경등기 기한 및 일반적인 준비자료를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

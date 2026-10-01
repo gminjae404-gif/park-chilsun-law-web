@@ -36,6 +36,8 @@ export const ADULT_GUARDIANSHIP_PROCEDURE_META = {
   title: "성년후견 신청 절차와 준비자료",
   category: "가사·상속 · 성년후견",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "성년후견을 신청할 때 확인해야 할 사무처리능력, 성년후견·한정후견·특정후견의 차이, 관할법원, 진단·감정, 후견인 선임과 권한 및 후견개시 후 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

@@ -47,6 +47,8 @@ export const REAL_ESTATE_POSSESSION_TRANSFER_PROVISIONAL_INJUNCTION_META = {
   title: "부동산 점유이전금지가처분 신청 절차와 준비자료",
   category: "민사·집행 · 점유이전금지가처분",
   asOfDate: "2026. 9. 20.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "건물·토지의 인도 또는 명도청구를 보전하기 위한 부동산 점유이전금지가처분의 요건, 현재 점유자 확인, 집행관 집행, 점유승계와 승계집행문 및 본안 인도집행 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

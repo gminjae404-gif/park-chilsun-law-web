@@ -47,6 +47,8 @@ export const REAL_ESTATE_DISPOSITION_PROVISIONAL_INJUNCTION_META = {
   title: "부동산 처분금지가처분 신청 절차와 준비자료",
   category: "민사·집행 · 처분금지가처분",
   asOfDate: "2026. 9. 20.",
+  updatedAt: "2026-09-20",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "부동산 처분금지가처분을 신청할 때 확인해야 할 피보전권리, 보전의 필요성, 관할법원, 담보제공, 가처분등기, 후행등기의 효력과 본안 승소 후 등기절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

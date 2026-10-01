@@ -39,6 +39,8 @@ export const REAL_ESTATE_AUCTION_WITHDRAWAL_STAY_CANCELLATION_META = {
   title: "부동산 경매 취하·정지·취소 절차와 준비자료",
   category: "민사·집행 · 부동산경매",
   asOfDate: "2026. 9. 23.",
+  updatedAt: "2026-09-30",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "이미 시작된 부동산 경매절차가 신청채권자의 취하, 법정 서류 제출에 따른 정지, 법원의 취소, 담보권 실행 경매의 특별한 정지·취소, 무잉여 등 법정사유로 중단되거나 종료되는 구조를 구분하여 안내합니다. 매수신고 후 취하 동의, 강제경매·임의경매 정지서류, 무잉여 통지 후 1주 대응을 다룹니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

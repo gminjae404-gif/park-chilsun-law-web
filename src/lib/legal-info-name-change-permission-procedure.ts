@@ -34,6 +34,8 @@ export const NAME_CHANGE_PERMISSION_PROCEDURE_META = {
   title: "개명허가 신청 절차와 준비자료",
   category: "가사·상속 · 개명",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "이름을 변경하려는 경우 확인해야 할 개명허가의 기준, 관할 가정법원, 신청이유와 준비자료, 미성년자 신청, 개명허가 후 1개월 이내 신고 및 후속 명의변경 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

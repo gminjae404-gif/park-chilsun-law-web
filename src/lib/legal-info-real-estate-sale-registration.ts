@@ -15,6 +15,8 @@ export const REAL_ESTATE_SALE_REGISTRATION_META = {
   title: "부동산 매매 소유권이전등기 준비서류와 절차",
   category: "부동산등기 · 매매",
   asOfDate: "2026. 9. 18.",
+  updatedAt: "2026-09-18",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "부동산 매매 후 소유권이전등기를 진행할 때 확인할 사항과 매도인·매수인의 일반적인 준비서류, 부동산거래신고, 취득세 및 등기 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

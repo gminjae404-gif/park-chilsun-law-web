@@ -51,6 +51,8 @@ export const VEHICLE_PROVISIONAL_SEIZURE_META = {
   title: "자동차 가압류 신청 절차와 준비자료",
   category: "민사·집행 · 자동차가압류",
   asOfDate: "2026. 9. 22.",
+  updatedAt: "2026-09-22",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "장래 자동차 강제집행을 보전하기 위한 자동차 가압류 신청 절차를 안내합니다. 청구채권과 보전의 필요성, 자동차등록원부 확인, 관할, 담보제공, 자동차 인도명령, 가압류해방금액과 이후 본안·강제집행 연결까지 다룹니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

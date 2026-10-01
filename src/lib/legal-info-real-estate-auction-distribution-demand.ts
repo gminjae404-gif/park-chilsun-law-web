@@ -51,6 +51,8 @@ export const REAL_ESTATE_AUCTION_DISTRIBUTION_DEMAND_META = {
   title: "부동산 경매 배당요구 절차와 준비자료",
   category: "민사·집행 · 부동산경매",
   asOfDate: "2026. 9. 22.",
+  updatedAt: "2026-09-22",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "부동산 강제경매·임의경매 절차에서 채권자가 매각대금 배당에 참가하기 위한 배당요구 요건과 절차를 안내합니다. 배당요구가 필요한 채권자와 필요 없는 채권자의 구분, 배당요구 종기, 준비자료, 임차인·가압류채권자·근저당권자별 유의사항, 배당표와 배당이의의 기초를 다룹니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

@@ -18,6 +18,8 @@ export const MORTGAGE_CANCELLATION_REGISTRATION_META = {
   title: "근저당권 말소등기 준비서류와 절차",
   category: "부동산등기 · 근저당권",
   asOfDate: "2026. 9. 18.",
+  updatedAt: "2026-09-18",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "대출 상환 등으로 근저당권을 말소할 때 확인할 사항과 일반적인 준비자료, 등기필정보가 없는 경우, 매매와 동시에 말소하는 경우의 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

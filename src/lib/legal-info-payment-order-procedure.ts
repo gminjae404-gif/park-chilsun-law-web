@@ -29,6 +29,8 @@ export const PAYMENT_ORDER_PROCEDURE_META = {
   title: "지급명령 신청 절차와 준비자료",
   category: "민사·집행 · 지급명령",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "대여금·물품대금·공사대금 등 금전채권에 지급명령을 신청할 때 확인할 사항과 채무자 주소, 청구원인, 준비자료, 송달·이의신청 및 확정 후 강제집행 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

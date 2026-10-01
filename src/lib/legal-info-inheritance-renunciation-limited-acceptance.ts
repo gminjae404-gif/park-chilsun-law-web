@@ -32,6 +32,8 @@ export const INHERITANCE_RENUNCIATION_LIMITED_ACCEPTANCE_META = {
   title: "상속포기와 한정승인 절차와 준비자료",
   category: "가사·상속 · 상속포기·한정승인",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-30",
   seoDescription:
     "상속채무가 있거나 상속재산과 채무를 정확히 알기 어려운 경우 검토할 수 있는 상속포기와 한정승인의 차이, 3개월 기간, 특별한정승인, 법정단순승인 및 한정승인 후 청산절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO

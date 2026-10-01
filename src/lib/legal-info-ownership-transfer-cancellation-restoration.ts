@@ -44,6 +44,8 @@ export const OWNERSHIP_TRANSFER_CANCELLATION_RESTORATION_META = {
   title: "소유권이전등기 말소·말소회복 절차",
   category: "부동산등기 · 말소·회복",
   asOfDate: "2026. 9. 19.",
+  updatedAt: "2026-09-19",
+  legalReviewedAt: "2026-09-25",
   seoDescription:
     "소유권이전등기를 말소하거나 잘못 말소된 등기를 회복할 때 확인해야 할 원인무효·해제·취소, 공동신청, 판결에 의한 단독신청, 이해관계 있는 제3자의 승낙 및 말소회복등기 절차를 안내합니다.",
   // /legal-info 목록 카드에서 사용하는 요약 문구입니다(상세페이지 SEO
