@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import { HEADER_BRAND_NAME, PRIVACY_POLICY_SECTIONS } from "@/lib/constants";
+import { getSimpleWebPageJsonLd } from "@/lib/structured-data";
 
 const title = "개인정보처리방침";
 const description = "법무사 박칠선 사무소 홈페이지의 개인정보 수집·이용 안내와 개인정보처리방침을 확인할 수 있습니다.";
@@ -30,6 +32,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <JsonLd data={getSimpleWebPageJsonLd({ name: title, description, path: canonicalPath })} />
       <Header />
       <main id="main-content" className="flex-1">
         <section className="border-b border-gray-200 bg-white">

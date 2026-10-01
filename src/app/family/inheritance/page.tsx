@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import FAQPreview from "@/components/FAQPreview";
 import Reveal from "@/components/Reveal";
 import InheritanceHero from "@/components/family-inheritance/InheritanceHero";
@@ -22,6 +23,7 @@ import InheritanceDocumentChecklist from "@/components/family-inheritance/Inheri
 import InheritanceDocumentCaution from "@/components/family-inheritance/InheritanceDocumentCaution";
 import InheritanceCTA from "@/components/family-inheritance/InheritanceCTA";
 import { INHERITANCE_FAQ_HEADING, INHERITANCE_FAQ_ITEMS } from "@/lib/family-inheritance";
+import { getServicePageJsonLd } from "@/lib/structured-data";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 상세페이지와 동일하게 짧은 title만 지정합니다.
@@ -85,6 +87,7 @@ export const metadata: Metadata = {
 export default function FamilyInheritancePage() {
   return (
     <>
+      <JsonLd data={getServicePageJsonLd({ name: title, description, path: canonicalPath })} />
       {/* Header 자체는 수정하지 않고, 이 페이지에서만 인쇄 시 숨깁니다. */}
       <div className="print:hidden">
         <Header />

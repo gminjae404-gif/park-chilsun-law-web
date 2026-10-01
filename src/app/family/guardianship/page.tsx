@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import FAQPreview from "@/components/FAQPreview";
 import ProcessSection from "@/components/ProcessSection";
 import Reveal from "@/components/Reveal";
@@ -24,6 +25,7 @@ import {
   GUARDIANSHIP_PROCESS_NOTE,
   GUARDIANSHIP_PROCESS_STEPS,
 } from "@/lib/family-guardianship";
+import { getServicePageJsonLd } from "@/lib/structured-data";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 상세페이지와 동일하게 짧은 title만 지정합니다.
@@ -84,6 +86,7 @@ export const metadata: Metadata = {
 export default function FamilyGuardianshipPage() {
   return (
     <>
+      <JsonLd data={getServicePageJsonLd({ name: title, description, path: canonicalPath })} />
       <div className="print:hidden">
         <Header />
       </div>

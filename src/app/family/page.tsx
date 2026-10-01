@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HEADER_BRAND_NAME } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import FAQPreview from "@/components/FAQPreview";
 import FamilyHero from "@/components/family/FamilyHero";
 import FamilyIntro from "@/components/family/FamilyIntro";
@@ -14,6 +15,7 @@ import FamilyInheritanceNote from "@/components/family/FamilyInheritanceNote";
 import FamilyCTA from "@/components/family/FamilyCTA";
 import Reveal from "@/components/Reveal";
 import { FAMILY_FAQ_HEADING, FAMILY_FAQ_ITEMS } from "@/lib/family";
+import { getServicePageJsonLd } from "@/lib/structured-data";
 
 // title.template(layout.tsx)이 "%s | 사무소명"을 자동으로 붙여주므로 다른
 // 업무 페이지와 동일하게 짧은 title만 지정합니다.
@@ -79,6 +81,7 @@ export const metadata: Metadata = {
 export default function FamilyPage() {
   return (
     <>
+      <JsonLd data={getServicePageJsonLd({ name: title, description, path: canonicalPath })} />
       <Header />
       <main id="main-content" className="flex-1">
         <FamilyHero />
