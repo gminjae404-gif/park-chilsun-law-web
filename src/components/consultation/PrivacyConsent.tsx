@@ -8,12 +8,13 @@ type PrivacyConsentProps = {
   error?: string;
 };
 
-// 보유·이용 기간은 실제 운영정책이 확정되기 전까지 임의의 기간(예: 1년, 3년)으로
-// 정하지 않고 placeholder로만 표시합니다.
+// 보유·이용 기간은 /privacy-policy(PRIVACY_POLICY_SECTIONS, 3번 항목)와
+// 동일하게 "상담 접수일로부터 1년"으로 확정되어 있습니다. 두 곳의 표현이
+// 달라지지 않도록 값을 바꿀 때는 양쪽을 함께 수정합니다.
 const PRIVACY_NOTICE_ITEMS: { label: string; value: string }[] = [
   { label: "수집·이용 목적", value: "상담 신청 접수 및 상담 연락" },
   { label: "수집 항목", value: "이름, 연락처, 상담 희망 시간, 문의 유형, 문의 내용" },
-  { label: "보유·이용 기간", value: "실제 운영정책 확정 후 입력 예정" },
+  { label: "보유·이용 기간", value: "상담 접수일로부터 1년" },
   { label: "동의를 거부할 권리", value: "동의를 거부할 수 있음" },
   {
     label: "동의 거부에 따른 안내",
