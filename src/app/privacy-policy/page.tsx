@@ -41,9 +41,8 @@ export default function PrivacyPolicyPage() {
               개인정보처리방침
             </h1>
             <p className="mt-4 text-sm leading-6 text-gray-600">
-              {HEADER_BRAND_NAME}는 법무사사무소 홈페이지 제안용 샘플(DEMO)이며, 특정
-              사무소의 실제 정보는 아직 적용되지 않았습니다. 이 페이지는 상담 신청 과정에서
-              수집하는 개인정보의 처리 방침 예시를 안내합니다.
+              {HEADER_BRAND_NAME} 홈페이지는 상담 신청 과정에서 수집하는 개인정보의
+              처리방침을 다음과 같이 안내합니다.
             </p>
 
             <p className="mt-6 bg-slate-50 p-4 text-sm leading-6 text-gray-600">
