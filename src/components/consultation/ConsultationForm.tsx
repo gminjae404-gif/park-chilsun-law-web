@@ -7,6 +7,8 @@ import { formatPhoneInput, parsePhoneInput } from "@/lib/format";
 import {
   INITIAL_CONSULTATION_FORM_DATA,
   INQUIRY_TYPE_OPTIONS,
+  MAX_MESSAGE_LENGTH,
+  MAX_NAME_LENGTH,
   PREFERRED_TIME_OPTIONS,
   type ConsultationFormData,
   type InquiryType,
@@ -48,6 +50,12 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
   const [data, setData] = useState<ConsultationFormData>(INITIAL_CONSULTATION_FORM_DATA);
   const [hasAttempted, setHasAttempted] = useState(false);
   const [status, setStatus] = useState<SubmitStatus>("idle");
+  // 사람에게는 보이지 않는 필드입니다. 일부 자동입력 bot만 값을 채우므로,
+  // 값이 있으면 서버에서 조용히 거부합니다.
+  const [honeypot, setHoneypot] = useState("");
+  // 폼이 처음 렌더된 시각입니다. 서버에서 "제출까지 걸린 시간"을 계산해
+  // 사람이 입력할 수 없는 속도의 제출을 거부하는 데만 사용합니다.
+  const [renderedAt] = useState(() => Date.now());
 
   // prefillInquiryType prop이 바뀌었을 때(자가진단 결과에서 "상담 신청하기"를 누른 경우)
   // 렌더링 중에 문의 유형만 반영합니다. (React 권장 패턴: prop 변경에 따른 state 조정)
@@ -96,6 +104,8 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
           preferredTime: data.preferredTime,
           inquiryType: data.inquiryType,
           message: data.message,
+          honeypot,
+          renderedAt,
         }),
       });
       setStatus(response.ok ? "sent" : "error");
@@ -106,6 +116,24 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
 
   return (
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6">
+      {/* 사람 이용자에게는 보이지 않는 bot 방어용 필드입니다(honeypot).
+          display:none 대신 화면 밖으로 밀어내는 방식만 사용해 일부 bot이
+          "보이지 않음"을 display 속성만으로 판단해 건너뛰는 것을
+          피합니다. 실제 키보드 이용자가 접근하지 않도록 tabIndex=-1,
+          스크린리더에는 aria-hidden으로 숨깁니다. */}
+      <div className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="consultationWebsite">웹사이트</label>
+        <input
+          id="consultationWebsite"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(event) => setHoneypot(event.target.value)}
+        />
+      </div>
+
       {/* 상담 영역의 "홈페이지 상담신청" 채널 버튼(ConsultationCTA)이 이
           id로 스크롤 이동합니다. 모바일에서는 sticky header(안내 배너
           포함 시 약 110px)에 가려지지 않도록 scroll-mt로 여유를 둡니다. */}
@@ -117,6 +145,7 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
           id="consultationName"
           type="text"
           autoComplete="name"
+          maxLength={MAX_NAME_LENGTH}
           value={data.name}
           onChange={(event) => updateField("name", event.target.value)}
           aria-invalid={Boolean(visibleErrors.name)}
@@ -182,6 +211,7 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
         <textarea
           id="consultationMessage"
           rows={4}
+          maxLength={MAX_MESSAGE_LENGTH}
           value={data.message}
           onChange={(event) => updateField("message", event.target.value)}
           className="mt-2 w-full rounded-sm border border-gray-300 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"

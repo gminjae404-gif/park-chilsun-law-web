@@ -46,10 +46,8 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p className="mt-6 bg-slate-50 p-4 text-sm leading-6 text-gray-600">
-              ※ 아래 항목 중 &ldquo;운영정책 확정 후 반영 예정&rdquo;으로 표시된 부분은 아직
-              구체적인 정책이 확정되지 않아 임의로 작성하지 않은 항목입니다. 정책이 확정되는
-              대로 해당 내용으로 교체됩니다. 홈페이지 상담 신청 기능을 통해 입력하신 정보는
-              상담 접수 및 상담 연락을 위해 사무실 상담 이메일로 전송됩니다.
+              ※ 홈페이지 상담 신청 기능을 통해 입력하신 정보는 상담 접수 및 상담 연락을 위해
+              사무실 상담 이메일로 전송됩니다.
             </p>
 
             <dl className="mt-10 flex flex-col gap-8">
