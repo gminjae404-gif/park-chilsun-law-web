@@ -39,6 +39,15 @@ function findLabel(options: { value: string; label: string }[], value: string | 
   return options.find((option) => option.value === value)?.label ?? value;
 }
 
+// 이메일 subject 헤더에만 적용하는 방어입니다. 줄바꿈(\r, \n)이 포함된
+// 이름이 들어오면 일부 메일 클라이언트/서버에서 헤더가 의도치 않게
+// 분리될 수 있으므로 subject 조합 직전에만 제거합니다. text 본문의
+// payload.name 사용에는 영향을 주지 않습니다(nodemailer가 본문은 그대로
+// 처리).
+function sanitizeForHeader(value: string): string {
+  return value.replace(/[\r\n]+/g, " ");
+}
+
 export type ConsultationEmailPayload = Pick<
   ConsultationFormData,
   "name" | "phone" | "preferredTime" | "inquiryType" | "message"
@@ -72,7 +81,7 @@ export async function sendConsultationEmail(
       from: `"법무사 박칠선 사무소 홈페이지" <${user}>`,
       to,
       replyTo: undefined,
-      subject: `[홈페이지 상담신청] ${inquiryLabel} - ${payload.name}`,
+      subject: `[홈페이지 상담신청] ${inquiryLabel} - ${sanitizeForHeader(payload.name)}`,
       text: [
         `이름: ${payload.name}`,
         `연락처: ${payload.phone}`,

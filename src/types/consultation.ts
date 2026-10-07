@@ -1,6 +1,13 @@
 // 상담 신청 폼에서 사용하는 타입, 선택지, 초기값을 정의합니다.
-// 이 데이터는 이 폼의 React state에만 존재하며, 서버로 전송하거나
-// 저장하지 않습니다.
+// 이 데이터는 SMTP 환경변수가 설정되지 않은 동안에는(emailConfigured=false)
+// 이 폼의 React state에만 존재하며 서버로 전송되지 않습니다. 설정이 끝난
+// 뒤(emailConfigured=true)에는 제출 시 /api/consultation으로 전송되어
+// 사무실 상담 이메일로만 전달되고, 별도 저장소에 저장되지는 않습니다.
+
+// name·message 입력값의 서버/클라이언트 공통 최대 길이입니다. 두 곳에서
+// 값이 달라지지 않도록 이 상수를 그대로 가져다 씁니다.
+export const MAX_NAME_LENGTH = 50;
+export const MAX_MESSAGE_LENGTH = 2000;
 
 export type PreferredTime = "morning" | "afternoon" | "evening" | "any";
 
