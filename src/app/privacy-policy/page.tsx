@@ -62,7 +62,7 @@ export default function PrivacyPolicyPage() {
             </dl>
 
             <p className="mt-10 text-xs text-gray-500">
-              공고일자·시행일자는 운영정책 확정 후 반영 예정입니다.
+              이 개인정보처리방침은 2026년 10월 7일에 공고되었으며, 2026년 10월 7일부터 시행됩니다.
             </p>
           </div>
         </section>
