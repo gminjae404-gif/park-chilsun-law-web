@@ -34,7 +34,7 @@ function ProblemItem({
   return (
     <li className="border-b border-gray-200 py-6">
       <div className="flex items-baseline gap-2">
-        <span aria-hidden="true" className="w-6 shrink-0 text-xs font-semibold tabular-nums text-brand/60">
+        <span aria-hidden="true" className="w-6 shrink-0 text-xs font-semibold tabular-nums text-brand">
           {String(index).padStart(2, "0")}
         </span>
         <h3 className="text-base font-semibold text-gray-900 sm:text-lg">{problem.title}</h3>

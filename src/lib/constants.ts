@@ -230,3 +230,20 @@ export const PRIVACY_POLICY_SECTIONS: PrivacyPolicySection[] = [
     content: `개인정보 보호책임자는 ${SITE_CONFIG.judicialScrivenerName} 법무사입니다. 개인정보 처리에 관한 문의는 대표전화(${SITE_CONFIG.representativePhone}) 또는 이메일(${SITE_CONFIG.contactEmail})로 할 수 있습니다.`,
   },
 ];
+
+// 홈 상담 영역과 같은 활성화 기준으로 수집방법을 안내합니다.
+// 기존에 확정한 보유기간·파기·책임자 등 운영 방침은 변경하지 않습니다.
+export function getPrivacyPolicySections(emailConfigured: boolean): PrivacyPolicySection[] {
+  if (emailConfigured) return PRIVACY_POLICY_SECTIONS;
+  return PRIVACY_POLICY_SECTIONS.map((section, index) => {
+    if (index === 0) return {
+      ...section,
+      content: "전화 또는 이메일로 상담을 요청할 때 전달하신 이름, 연락처, 문의 내용 등을 상담 및 연락을 위해 이용합니다. 현재 홈페이지에는 개인정보를 입력해 제출하는 온라인 상담 신청 폼을 제공하지 않습니다.",
+    };
+    if (index === 7) return {
+      ...section,
+      content: "이용자는 개인정보 수집·이용에 동의를 거부할 권리가 있습니다. 현재 홈페이지에서는 온라인 상담 신청 기능을 제공하지 않으며, 개인정보 처리에 관한 문의는 아래 대표전화 또는 이메일로 할 수 있습니다.",
+    };
+    return section;
+  });
+}

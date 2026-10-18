@@ -24,10 +24,10 @@ export default function ConsultationCTA({ prefillInquiryType, emailConfigured }:
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            상담 내용을 미리 정리해서 남겨 주세요.
+            {emailConfigured ? "상담 내용을 미리 정리해서 남겨 주세요." : "궁금한 내용을 전화 또는 이메일로 문의해 주세요."}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-200 sm:text-base">
-            문의 유형과 상담 희망 시간을 알려주시면 더 정확한 안내가 가능합니다.
+            {emailConfigured ? "문의 유형과 상담 희망 시간을 알려주시면 더 정확한 안내가 가능합니다." : "문의하실 업무와 현재 상황을 말씀해 주시면 상담에 필요한 내용을 안내합니다."}
           </p>
         </div>
 

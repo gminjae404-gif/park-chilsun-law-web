@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { HEADER_BRAND_NAME, PRIVACY_POLICY_SECTIONS } from "@/lib/constants";
+import { HEADER_BRAND_NAME, getPrivacyPolicySections } from "@/lib/constants";
+import { isConsultationEmailConfigured } from "@/lib/consultation-email";
 import { getSimpleWebPageJsonLd } from "@/lib/structured-data";
 
 const title = "개인정보처리방침";
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
+  const emailConfigured = isConsultationEmailConfigured();
   return (
     <>
       <JsonLd data={getSimpleWebPageJsonLd({ name: title, description, path: canonicalPath })} />
@@ -46,12 +48,13 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p className="mt-6 bg-slate-50 p-4 text-sm leading-6 text-gray-600">
-              ※ 홈페이지 상담 신청 기능을 통해 입력하신 정보는 상담 접수 및 상담 연락을 위해
-              사무실 상담 이메일로 전송됩니다.
+              {emailConfigured
+                ? "홈페이지 상담 신청 기능에 입력하신 정보는 상담 접수 및 연락을 위해 사무실 상담 이메일로 전송됩니다."
+                : "현재 상담은 대표전화 또는 이메일로 접수합니다. 홈페이지에서 상담 내용을 입력해 전송하는 폼은 제공하지 않습니다."}
             </p>
 
             <dl className="mt-10 flex flex-col gap-8">
-              {PRIVACY_POLICY_SECTIONS.map((section) => (
+              {getPrivacyPolicySections(emailConfigured).map((section) => (
                 <div key={section.title}>
                   <dt className="text-base font-semibold text-gray-900">{section.title}</dt>
                   <dd className="mt-2 text-sm leading-6 text-gray-600">{section.content}</dd>

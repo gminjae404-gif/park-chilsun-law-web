@@ -78,8 +78,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, reason: "invalid_body" }, { status: 400 });
   }
 
-  const { name, phone, preferredTime, inquiryType, message, honeypot, renderedAt } =
+  const { name, phone, preferredTime, inquiryType, message, agreedToPrivacyPolicy, honeypot, renderedAt } =
     body as Record<string, unknown>;
+
+  // 화면의 체크 상태와 별개로 직접 요청에서도 명시적 동의를 확인합니다.
+  if (agreedToPrivacyPolicy !== true) {
+    return NextResponse.json({ ok: false, reason: "privacy_consent_required" }, { status: 400 });
+  }
 
   // honeypot: 화면에 보이지 않는 필드로, 사람은 채울 수 없고 일부
   // 자동입력 bot만 채웁니다. 값이 있으면 조용히 거부합니다.
