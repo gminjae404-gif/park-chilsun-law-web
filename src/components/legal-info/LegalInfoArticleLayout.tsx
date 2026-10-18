@@ -67,9 +67,9 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
   );
 }
 
-function ArticleSectionView({ section }: { section: ArticleSection }) {
+function ArticleSectionView({ section, id }: { section: ArticleSection; id: string }) {
   return (
-    <section>
+    <section id={id} className="scroll-mt-24">
       <h2 className="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">{section.heading}</h2>
       <div className="mt-4 flex flex-col gap-4">
         {section.blocks.map((block, index) => (
@@ -116,10 +116,17 @@ export default function LegalInfoArticleLayout({
 }: LegalInfoArticleLayoutProps) {
   const phone = SITE_CONFIG.representativePhone;
   const email = SITE_CONFIG.contactEmail;
+  const contents = [
+    ...sectionsBeforeProcess.map((section, index) => ({ href: `#article-before-${index + 1}`, label: section.heading })),
+    { href: "#process", label: processHeading },
+    ...sectionsAfterProcess.map((section, index) => ({ href: `#article-after-${index + 1}`, label: section.heading })),
+    { href: "#article-references", label: "관련 근거" },
+    { href: "#article-related", label: "관련 업무·문의" },
+  ];
 
   return (
     <>
-      <section className="border-b border-gray-200 bg-slate-50">
+      <section id="article-top" className="scroll-mt-24 border-b border-gray-200 bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <p className="text-sm font-medium text-gray-500">{category}</p>
           <h1 className="mt-3 max-w-2xl text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl sm:leading-tight break-keep">
@@ -140,8 +147,23 @@ export default function LegalInfoArticleLayout({
               ))}
             </div>
 
-            {sectionsBeforeProcess.map((section) => (
-              <ArticleSectionView key={section.heading} section={section} />
+            <details className="rounded-sm border border-gray-200 bg-slate-50 p-4 sm:p-5">
+              <summary className="min-h-11 cursor-pointer rounded-sm py-2 text-base font-semibold text-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+                필요한 내용 바로 찾기 · 목차 {contents.length}개
+              </summary>
+              <nav aria-label="이 글 목차" tabIndex={0} className="mt-3 max-h-96 overflow-y-auto overscroll-contain rounded-sm px-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+                <ul className="grid gap-x-6 sm:grid-cols-2">
+                  {contents.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className="inline-flex min-h-11 items-center rounded-sm py-2 text-sm leading-6 text-gray-700 underline underline-offset-4 hover:text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </details>
+
+            {sectionsBeforeProcess.map((section, index) => (
+              <ArticleSectionView key={section.heading} section={section} id={`article-before-${index + 1}`} />
             ))}
           </div>
         </div>
@@ -157,8 +179,8 @@ export default function LegalInfoArticleLayout({
       <section className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <div className="mx-auto flex max-w-3xl flex-col gap-16">
-            {sectionsAfterProcess.map((section) => (
-              <ArticleSectionView key={section.heading} section={section} />
+            {sectionsAfterProcess.map((section, index) => (
+              <ArticleSectionView key={section.heading} section={section} id={`article-after-${index + 1}`} />
             ))}
 
             <div className="rounded-sm bg-slate-50 p-6">
@@ -172,7 +194,7 @@ export default function LegalInfoArticleLayout({
               <p className="mt-4 text-xs text-gray-500">법률정보 기준일: {asOfDate}</p>
             </div>
 
-            <div>
+            <div id="article-references" className="scroll-mt-24">
               <h2 className="text-base font-semibold text-gray-900 sm:text-lg">관련 근거</h2>
               <dl className="mt-4 flex flex-col gap-3 border-t border-gray-200 pt-4">
                 {references.map((reference) => (
@@ -184,7 +206,7 @@ export default function LegalInfoArticleLayout({
               </dl>
             </div>
 
-            <div className="border-t border-gray-200 pt-10">
+            <div id="article-related" className="scroll-mt-24 border-t border-gray-200 pt-10">
               <h2 className="text-base font-semibold text-gray-900 sm:text-lg">관련 업무</h2>
               <ul className="mt-4 flex flex-col gap-3">
                 {relatedLinks.map((link) => (
@@ -199,6 +221,8 @@ export default function LegalInfoArticleLayout({
                   </li>
                 ))}
               </ul>
+
+              <Link href="#article-top" className="mt-6 inline-flex min-h-11 items-center rounded-sm text-sm font-medium text-brand underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">글 처음으로 ↑</Link>
 
               {(phone || email) && (
                 <div className="mt-8 border-t border-gray-200 pt-6">

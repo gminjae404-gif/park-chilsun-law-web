@@ -50,7 +50,7 @@ export default function LegalInfoCaseGuide() {
                 {link.label}
                 <span aria-hidden="true">↗</span>
               </a>
-              <span className="ml-1 text-xs text-gray-400">({link.source} · 새 창)</span>
+              <span className="ml-1 text-xs text-gray-600">({link.source} · 새 창)</span>
             </li>
           ))}
         </ul>

@@ -104,6 +104,7 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
           preferredTime: data.preferredTime,
           inquiryType: data.inquiryType,
           message: data.message,
+          agreedToPrivacyPolicy: data.agreedToPrivacyPolicy,
           honeypot,
           renderedAt,
         }),
@@ -240,7 +241,7 @@ export default function ConsultationForm({ prefillInquiryType, emailConfigured }
           "현재는 상담신청 기능을 준비 중입니다. 입력하신 정보는 전송되거나 저장되지 않았습니다."}
         {status === "sent" && "상담 신청이 접수되었습니다. 빠른 시일 내에 연락드리겠습니다."}
         {status === "error" &&
-          "일시적인 오류로 접수에 실패했습니다. 대표전화 또는 카카오톡으로 문의해 주세요."}
+          "접수하지 못했습니다. 잠시 후 다시 시도하거나 대표전화 또는 이메일로 문의해 주세요."}
       </p>
     </form>
   );

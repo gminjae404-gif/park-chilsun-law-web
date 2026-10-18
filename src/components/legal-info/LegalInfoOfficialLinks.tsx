@@ -33,7 +33,7 @@ export default function LegalInfoOfficialLinks() {
                 공식 사이트 바로가기
                 <span aria-hidden="true">↗</span>
               </a>
-              <span className="ml-1 text-xs text-gray-400">(새 창)</span>
+              <span className="ml-1 text-xs text-gray-600">(새 창)</span>
             </li>
           ))}
         </ul>
