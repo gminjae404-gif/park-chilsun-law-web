@@ -56,7 +56,7 @@ export const REAL_ESTATE_DELIVERY_ENFORCEMENT_META = {
   title: "부동산 인도집행 절차와 집행관 강제집행 준비자료",
   category: "민사·집행 · 부동산인도집행",
   asOfDate: "2026. 9. 21.",
-  updatedAt: "2026-09-21",
+  updatedAt: "2026-10-24",
   legalReviewedAt: "2026-10-01",
   seoDescription:
     "인도명령이나 건물·토지 인도판결 등 집행권원을 확보한 뒤 집행관을 통해 실제 부동산 점유를 회복하는 인도집행 절차와 채권자 출석, 제3자 점유 확인, 동산 처리, 준비자료를 안내합니다.",
@@ -199,7 +199,7 @@ export const REAL_ESTATE_DELIVERY_ENFORCEMENT_SECTIONS: ArticleSection[] = [
   {
     heading: "12. 집행권원이 상대방에게 송달되어 있는지도 확인합니다",
     blocks: [
-      { type: "p", text: "강제집행을 개시하려면 원칙적으로 집행권원이 상대방에게 송달되어 있거나 송달될 수 있는 상태여야 합니다." },
+      { type: "p", text: "강제집행을 개시하려면 원칙적으로 집행권원을 채무자에게 미리 송달하거나 집행 개시와 동시에 송달하여야 합니다." },
       { type: "p", text: "송달 여부와 시점은 사건기록을 통해 확인합니다." },
     ],
   },
