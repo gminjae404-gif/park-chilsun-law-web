@@ -15,7 +15,7 @@ export const REAL_ESTATE_SALE_REGISTRATION_META = {
   title: "부동산 매매 소유권이전등기 준비서류와 절차",
   category: "부동산등기 · 매매",
   asOfDate: "2026. 9. 18.",
-  updatedAt: "2026-09-18",
+  updatedAt: "2026-10-24",
   legalReviewedAt: "2026-09-30",
   seoDescription:
     "부동산 매매 후 소유권이전등기를 진행할 때 확인할 사항과 매도인·매수인의 일반적인 준비서류, 부동산거래신고, 취득세 및 등기 절차를 안내합니다.",
@@ -168,7 +168,7 @@ export const REAL_ESTATE_SALE_REGISTRATION_SECTIONS: ArticleSection[] = [
       },
       {
         type: "p",
-        text: "다만 실제 등기절차에서는 소유권이전등기 신청 전에 취득세 신고·납부를 완료하고 관련 납부정보를 확인하여 진행하는 경우가 일반적입니다.",
+        text: "다만 신고·납부기한 이내에 소유권이전등기를 신청하려는 경우에는 지방세법 제20조제4항에 따라 등기신청서를 등기관서에 접수하는 날까지 취득세를 신고·납부하여야 합니다. 실제 등기절차에 필요한 납부정보도 함께 확인합니다.",
       },
       { type: "p", text: "취득세율은 다음과 같은 사정에 따라 달라질 수 있습니다." },
       {
