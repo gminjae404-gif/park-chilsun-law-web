@@ -13,7 +13,7 @@ export const INHERITANCE_REGISTRATION_META = {
   title: "상속등기 준비서류와 절차",
   category: "부동산등기 · 상속",
   asOfDate: "2026. 9. 18.",
-  updatedAt: "2026-09-18",
+  updatedAt: "2026-11-22",
   legalReviewedAt: "2026-09-30",
   seoDescription:
     "상속등기 진행 전 확인할 사항과 일반적인 준비서류, 협의분할, 취득세 및 등기 절차를 안내합니다. 상속관계에 따라 필요한 서류는 달라질 수 있습니다.",
@@ -58,7 +58,7 @@ export const INHERITANCE_REGISTRATION_SECTIONS: ArticleSection[] = [
     blocks: [
       {
         type: "p",
-        text: "피상속인이 2008년 1월 1일 이후 사망신고가 되었고 배우자와 자녀가 상속인인 일반적인 경우에는 상속관계를 확인하기 위하여 주로 다음 서류가 필요합니다.",
+        text: "피상속인이 2008년 1월 1일 이후 사망신고가 되었고 배우자와 자녀가 상속인인 일반적인 경우에는 상속관계와 등기명의인의 동일성을 확인하기 위하여 주로 다음 서류가 필요합니다.",
       },
       { type: "subheading", text: "[피상속인 관련]" },
       {
@@ -68,6 +68,7 @@ export const INHERITANCE_REGISTRATION_SECTIONS: ArticleSection[] = [
           "가족관계증명서(상세)",
           "친양자입양관계증명서(상세)",
           "구 호적법상 제적등본(필요한 경우 전적 전 제적등본 포함)",
+          "피상속인의 말소자 주민등록등본 또는 초본(등기명의인과 피상속인의 동일성 확인이 필요한 경우)",
         ],
       },
       {
