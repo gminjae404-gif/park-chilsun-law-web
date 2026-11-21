@@ -84,7 +84,7 @@ export default function Header() {
           {HEADER_BRAND_NAME}
         </Link>
 
-        {/* 데스크톱 메뉴: 부동산등기/법인등기/민사·집행/가사·상속/상담신청
+        {/* 데스크톱 메뉴: 부동산등기/법인등기/민사·집행/가사·상속/상담 문의
             5개가 한 줄에 들어오므로 md(768px)부터 전환합니다. */}
         <nav aria-label="주 메뉴" className="hidden md:block">
           <ul ref={navRef} className="flex items-center gap-4 lg:gap-6">
@@ -156,7 +156,7 @@ export default function Header() {
             })}
             <li>
               <Link href="/#consultation" className={navLinkClassName(false)}>
-                상담신청
+                상담 문의
               </Link>
             </li>
           </ul>
@@ -259,7 +259,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className={mobileNavLinkClassName(false)}
               >
-                상담신청
+                상담 문의
               </Link>
             </li>
           </ul>

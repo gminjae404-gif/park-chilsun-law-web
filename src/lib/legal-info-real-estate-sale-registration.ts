@@ -15,7 +15,7 @@ export const REAL_ESTATE_SALE_REGISTRATION_META = {
   title: "부동산 매매 소유권이전등기 준비서류와 절차",
   category: "부동산등기 · 매매",
   asOfDate: "2026. 9. 18.",
-  updatedAt: "2026-10-24",
+  updatedAt: "2026-11-22",
   legalReviewedAt: "2026-09-30",
   seoDescription:
     "부동산 매매 후 소유권이전등기를 진행할 때 확인할 사항과 매도인·매수인의 일반적인 준비서류, 부동산거래신고, 취득세 및 등기 절차를 안내합니다.",
@@ -126,6 +126,10 @@ export const REAL_ESTATE_SALE_REGISTRATION_SECTIONS: ArticleSection[] = [
       {
         type: "p",
         text: "등기의무자가 등기소에 출석하여 확인을 받는 방법이 있고, 법무사 또는 변호사인 등기신청 대리인이 등기의무자 본인임과 위임사실을 확인하는 법정 절차 등을 이용할 수 있습니다.",
+      },
+      {
+        type: "p",
+        text: "2026. 11. 3. 시행된 부동산등기규칙 제111조에 따라 등기필정보가 없을 때 본인 확인에는 주민등록증·운전면허증 등 외에 주소와 주민등록번호가 기재된 장애인등록증도 사용할 수 있습니다.",
       },
       {
         type: "p",
@@ -335,6 +339,7 @@ export const REAL_ESTATE_SALE_REGISTRATION_REFERENCES: LegalReference[] = [
   { source: "「부동산등기법」 제51조", detail: "등기필정보가 없는 경우" },
   { source: "「부동산등기규칙」 제60조", detail: "인감증명의 제출" },
   { source: "「부동산등기규칙」 제62조", detail: "인감증명 등의 유효기간" },
+  { source: "「부동산등기규칙」 제111조", detail: "등기필정보가 없을 때 본인 확인에 사용하는 신분증 및 확인서면" },
   { source: "「부동산 거래신고 등에 관한 법률」 제3조", detail: "부동산 거래의 신고" },
   { source: "「부동산등기 특별조치법」 제2조", detail: "소유권이전등기등 신청의무" },
   { source: "「지방세법」 제20조", detail: "신고 및 납부" },

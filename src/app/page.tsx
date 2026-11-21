@@ -12,7 +12,7 @@ import PracticeAreasOverview from "@/components/office/PracticeAreasOverview";
 import DirectionsSection from "@/components/office/DirectionsSection";
 import LegalInfoLink from "@/components/office/LegalInfoLink";
 import RegistrationTypesSection from "@/components/registration/RegistrationTypesSection";
-import { HOME_FAQ_ITEMS } from "@/lib/constants";
+import { getHomeFaqItems } from "@/lib/constants";
 import { REAL_ESTATE_TYPES } from "@/lib/real-estate-registration";
 import { isConsultationEmailConfigured } from "@/lib/consultation-email";
 import { getHomeJsonLdGraph } from "@/lib/structured-data";
@@ -84,7 +84,7 @@ export default function Home() {
         </Reveal>
         <HomeInteractiveSections emailConfigured={emailConfigured}>
           <Reveal>
-            <FAQPreview items={HOME_FAQ_ITEMS} heading="자주 묻는 질문" id="faq" />
+            <FAQPreview items={getHomeFaqItems(emailConfigured)} heading="자주 묻는 질문" id="faq" />
           </Reveal>
         </HomeInteractiveSections>
         <Reveal>
